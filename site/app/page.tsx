@@ -1,3 +1,5 @@
+'use client';
+
 import {
   ArrowRight,
   CheckCircle2,
@@ -7,13 +9,9 @@ import {
   Scale,
   ShieldCheck,
 } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-const milestones = [
-  { value: '15', label: 'días' },
-  { value: '08', label: 'horas' },
-  { value: '16', label: 'min' },
-  { value: '09', label: 'seg' },
-];
+const launchDate = new Date('2026-09-16T00:00:00-05:00').getTime();
 
 const focusAreas = [
   'Derechos humanos',
@@ -21,7 +19,40 @@ const focusAreas = [
   'Acompañamiento jurídico',
 ];
 
+function getCountdown() {
+  const distance = Math.max(launchDate - Date.now(), 0);
+
+  return [
+    {
+      value: Math.floor(distance / (1000 * 60 * 60 * 24)),
+      label: 'días',
+    },
+    {
+      value: Math.floor((distance / (1000 * 60 * 60)) % 24),
+      label: 'horas',
+    },
+    {
+      value: Math.floor((distance / (1000 * 60)) % 60),
+      label: 'min',
+    },
+    {
+      value: Math.floor((distance / 1000) % 60),
+      label: 'seg',
+    },
+  ];
+}
+
 export default function Home() {
+  const [milestones, setMilestones] = useState(getCountdown);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setMilestones(getCountdown());
+    }, 1000);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <main className="min-h-screen overflow-hidden bg-[#f7faf3] text-[#30313a]">
       <section className="relative isolate flex min-h-screen flex-col bg-[radial-gradient(circle_at_18%_20%,rgba(255,145,23,0.28),transparent_30%),linear-gradient(135deg,#86b83d_0%,#5e982f_42%,#f7931d_100%)]">
@@ -96,7 +127,7 @@ export default function Home() {
                   className="rounded-[8px] border border-white/70 bg-white/60 px-3 py-4 text-center shadow-[0_16px_45px_rgba(67,82,45,0.09)] backdrop-blur"
                 >
                   <span className="block text-2xl font-black text-[#f7931d] sm:text-3xl">
-                    {item.value}
+                    {String(item.value).padStart(2, '0')}
                   </span>
                   <span className="mt-1 block text-xs font-bold uppercase tracking-[0.16em] text-[#6b6c73]">
                     {item.label}
