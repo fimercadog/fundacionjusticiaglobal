@@ -80,7 +80,7 @@ export default function Home() {
             <a href="#contacto">Contacto</a>
           </nav>
           <span className="relative inline-flex h-12 w-12">
-            <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-70 animate-ping motion-reduce:hidden" />
+            <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-70 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] motion-reduce:hidden" />
             <a
               href="https://wa.me/573183993023?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20la%20plataforma%20de%20Fundaci%C3%B3n%20Justicia%20Global."
               target="_blank"
