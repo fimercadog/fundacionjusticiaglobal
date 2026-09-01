@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 
 const milestones = [
-  { value: '42', label: 'días' },
+  { value: '15', label: 'días' },
   { value: '08', label: 'horas' },
   { value: '16', label: 'min' },
   { value: '09', label: 'seg' },
