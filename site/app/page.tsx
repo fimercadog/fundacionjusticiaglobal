@@ -19,39 +19,40 @@ const focusAreas = [
   'Acompañamiento jurídico',
 ];
 
+const countdownUnits = [
+  { label: 'días', ms: 1000 * 60 * 60 * 24, mod: Infinity },
+  { label: 'horas', ms: 1000 * 60 * 60, mod: 24 },
+  { label: 'min', ms: 1000 * 60, mod: 60 },
+  { label: 'seg', ms: 1000, mod: 60 },
+];
+
 function getCountdown() {
   const distance = Math.max(launchDate - Date.now(), 0);
 
-  return [
-    {
-      value: Math.floor(distance / (1000 * 60 * 60 * 24)),
-      label: 'días',
-    },
-    {
-      value: Math.floor((distance / (1000 * 60 * 60)) % 24),
-      label: 'horas',
-    },
-    {
-      value: Math.floor((distance / (1000 * 60)) % 60),
-      label: 'min',
-    },
-    {
-      value: Math.floor((distance / 1000) % 60),
-      label: 'seg',
-    },
-  ];
+  return countdownUnits.map((unit) => ({
+    label: unit.label,
+    value: Math.floor((distance / unit.ms) % unit.mod),
+  }));
 }
 
 export default function Home() {
-  const [milestones, setMilestones] = useState(getCountdown);
+  // Start null so server and first client render match; fill in after mount to
+  // avoid a Date.now() hydration mismatch on the seconds digit.
+  const [milestones, setMilestones] = useState<
+    { label: string; value: number }[] | null
+  >(null);
 
   useEffect(() => {
+    setMilestones(getCountdown());
     const timer = window.setInterval(() => {
       setMilestones(getCountdown());
     }, 1000);
 
     return () => window.clearInterval(timer);
   }, []);
+
+  const display =
+    milestones ?? countdownUnits.map((unit) => ({ label: unit.label, value: -1 }));
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#f7faf3] text-[#30313a]">
@@ -121,13 +122,13 @@ export default function Home() {
             </div>
 
             <div className="mt-8 grid max-w-xl grid-cols-4 gap-3">
-              {milestones.map((item) => (
+              {display.map((item) => (
                 <div
                   key={item.label}
                   className="rounded-[8px] border border-white/70 bg-white/60 px-3 py-4 text-center shadow-[0_16px_45px_rgba(67,82,45,0.09)] backdrop-blur"
                 >
                   <span className="block text-2xl font-black text-[#f7931d] sm:text-3xl">
-                    {String(item.value).padStart(2, '0')}
+                    {item.value < 0 ? '--' : String(item.value).padStart(2, '0')}
                   </span>
                   <span className="mt-1 block text-xs font-bold uppercase tracking-[0.16em] text-[#6b6c73]">
                     {item.label}
