@@ -54,10 +54,11 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: '/og.png',
+        url: '/og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Fundación Justicia Global',
+        type: 'image/jpeg',
+        alt: 'Fundación Justicia Global — Plataforma digital próximamente',
       },
     ],
   },
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description,
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
   icons: {
     icon: '/favicon.svg',
