@@ -12,22 +12,87 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const siteUrl = 'https://fundacionjusticiaglobal.org';
+const title = 'Fundación Justicia Global | Próximamente';
+const description =
+  'Fundación Justicia Global prepara una plataforma digital para acercar derechos humanos, acompañamiento jurídico y gestión social a más comunidades.';
+
 export const metadata: Metadata = {
-  title: 'Fundación Justicia Global | Próximamente',
-  description:
-    'Plataforma digital de Fundación Justicia Global para derechos humanos, acompañamiento jurídico y gestión social.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: '%s | Fundación Justicia Global',
+  },
+  description,
+  applicationName: 'Fundación Justicia Global',
+  keywords: [
+    'Fundación Justicia Global',
+    'derechos humanos',
+    'acompañamiento jurídico',
+    'gestión social',
+    'justicia social',
+    'orientación jurídica',
+    'Colombia',
+  ],
+  authors: [{ name: 'Fundación Justicia Global', url: siteUrl }],
+  creator: 'Fundación Justicia Global',
+  publisher: 'Fundación Justicia Global',
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+  },
   openGraph: {
-    title: 'Fundación Justicia Global | Próximamente',
-    description:
-      'Plataforma digital para acercar derechos humanos y gestión social a más comunidades.',
-    images: ['/og.png'],
+    type: 'website',
+    locale: 'es_CO',
+    url: siteUrl,
+    siteName: 'Fundación Justicia Global',
+    title,
+    description,
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Fundación Justicia Global',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fundación Justicia Global | Próximamente',
-    description:
-      'Plataforma digital para acercar derechos humanos y gestión social a más comunidades.',
+    title,
+    description,
     images: ['/og.png'],
+  },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  category: 'nonprofit',
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'NGO',
+  name: 'Fundación Justicia Global',
+  url: siteUrl,
+  logo: `${siteUrl}/favicon.svg`,
+  description,
+  areaServed: 'CO',
+  knowsAbout: [
+    'Derechos humanos',
+    'Acompañamiento jurídico',
+    'Gestión social',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'información',
+    url: 'https://wa.me/573183993023',
+    availableLanguage: ['es'],
   },
 };
 
@@ -37,7 +102,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es-CO">
+      <head>
+        <meta name="theme-color" content="#8fbb36" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

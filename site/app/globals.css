@@ -132,15 +132,3 @@ body {
     @apply font-sans;
   }
 }
-
-@keyframes wa-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
-  }
-  70% {
-    box-shadow: 0 0 0 22px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
