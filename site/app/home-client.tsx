@@ -63,7 +63,7 @@ export default function HomeClient() {
         <div className="absolute right-[-12vw] top-[-12vw] -z-10 h-[42vw] w-[42vw] rounded-full border-52 border-white/18" />
         <div className="absolute bottom-[-16vw] left-[44%] -z-10 h-[34vw] w-[34vw] rounded-full border-44 border-white/15" />
 
-        <header className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-7 sm:px-10 lg:px-14">
+        <header className="mx-auto flex w-full max-w-7xl items-center px-6 py-7 sm:px-10 lg:px-14">
           <a className="flex items-center gap-3" href="#" aria-label="Fundación Justicia Global">
             <span className="grid h-12 w-12 place-items-center rounded-full bg-white shadow-[0_14px_35px_rgba(72,88,39,0.18)]">
               <Scale className="h-7 w-7 text-[#8fbb36]" strokeWidth={2.4} />
@@ -77,11 +77,6 @@ export default function HomeClient() {
               </span>
             </span>
           </a>
-          <nav className="hidden items-center gap-9 text-sm font-semibold text-[#4c4d56] md:flex">
-            <a href="#mision">Misión</a>
-            <a href="#programas">Programas</a>
-            <a href="#contacto">Contacto</a>
-          </nav>
         </header>
 
         <div className="mx-auto grid w-full max-w-7xl flex-1 items-center gap-10 px-6 pb-16 pt-8 sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:px-14 lg:pb-20">
