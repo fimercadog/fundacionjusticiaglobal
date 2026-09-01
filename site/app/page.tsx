@@ -5,7 +5,6 @@ import {
   CheckCircle2,
   Globe2,
   HeartHandshake,
-  MessageCircle,
   Scale,
   ShieldCheck,
 } from 'lucide-react';
@@ -61,8 +60,8 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden bg-[#f7faf3] text-[#30313a]">
       <section className="relative isolate flex min-h-screen flex-col bg-[radial-gradient(circle_at_18%_20%,rgba(255,145,23,0.28),transparent_30%),linear-gradient(135deg,#86b83d_0%,#5e982f_42%,#f7931d_100%)]">
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.88)_46%,rgba(255,255,255,0.15)_46.3%,rgba(255,255,255,0)_100%)]" />
-        <div className="absolute right-[-12vw] top-[-12vw] -z-10 h-[42vw] w-[42vw] rounded-full border-[52px] border-white/18" />
-        <div className="absolute bottom-[-16vw] left-[44%] -z-10 h-[34vw] w-[34vw] rounded-full border-[44px] border-white/15" />
+        <div className="absolute right-[-12vw] top-[-12vw] -z-10 h-[42vw] w-[42vw] rounded-full border-52 border-white/18" />
+        <div className="absolute bottom-[-16vw] left-[44%] -z-10 h-[34vw] w-[34vw] rounded-full border-44 border-white/15" />
 
         <header className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-7 sm:px-10 lg:px-14">
           <a className="flex items-center gap-3" href="#" aria-label="Fundación Justicia Global">
@@ -83,15 +82,6 @@ export default function Home() {
             <a href="#programas">Programas</a>
             <a href="#contacto">Contacto</a>
           </nav>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-11 items-center gap-2 rounded-full bg-[#f7931d] px-5 text-sm font-bold text-white shadow-[0_14px_28px_rgba(247,147,29,0.26)] transition hover:bg-[#e98012]"
-          >
-            <MessageCircle className="h-4 w-4" />
-            WhatsApp
-          </a>
         </header>
 
         <div className="mx-auto grid w-full max-w-7xl flex-1 items-center gap-10 px-6 pb-16 pt-8 sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:px-14 lg:pb-20">
@@ -143,9 +133,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[640px]">
-            <div className="absolute inset-x-8 bottom-[-34px] h-28 rounded-full bg-[#3f5528]/20 blur-3xl" />
-            <div className="relative ml-auto grid min-h-[560px] max-w-[430px] place-items-center rounded-[42px] border-[10px] border-[#2f3138] bg-[#fdfefa] p-5 shadow-[0_38px_90px_rgba(42,46,31,0.32)] sm:rotate-3">
+          <div className="relative mx-auto w-full max-w-160">
+            <div className="absolute inset-x-8 -bottom-8.5 h-28 rounded-full bg-[#3f5528]/20 blur-3xl" />
+            <div className="relative ml-auto grid min-h-140 max-w-107.5 place-items-center rounded-[42px] border-10 border-[#2f3138] bg-[#fdfefa] p-5 shadow-[0_38px_90px_rgba(42,46,31,0.32)] sm:rotate-3">
               <div className="absolute top-5 h-5 w-28 rounded-full bg-[#2f3138]" />
               <div className="h-full w-full rounded-[28px] bg-[#f8fbf2] p-5">
                 <div className="flex items-center justify-between">
@@ -225,7 +215,7 @@ export default function Home() {
         target="_blank"
         rel="noreferrer"
         aria-label="Escríbenos por WhatsApp"
-        className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#f7931d] text-white shadow-[0_14px_30px_rgba(247,147,29,0.4)] transition hover:bg-[#e98012] animate-[wa-pulse_2s_ease-out_infinite] motion-reduce:animate-none sm:bottom-7 sm:right-7"
+        className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_14px_30px_rgba(37,211,102,0.45)] transition hover:bg-[#1ebe5d] animate-[wa-pulse_2s_ease-out_infinite] motion-reduce:animate-none sm:bottom-7 sm:right-7"
       >
         <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor" aria-hidden="true">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.36.101 11.944c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.71 1.454h.006c6.585 0 11.946-5.36 11.949-11.945a11.821 11.821 0 00-3.499-8.404z" />
