@@ -94,17 +94,14 @@ export default function HomeClient() {
               <Globe2 className="h-4 w-4" />
               Muy pronto
             </div>
-            <h1 className="text-5xl font-black leading-[0.98] tracking-normal text-[#2e3037] sm:text-6xl lg:text-7xl">
-              Una plataforma para acercar justicia social a más comunidades.
-            </h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-[#5b5c65]">
+            <h1 className="text-2xl font-black leading-tight tracking-normal text-[#2e3037] sm:text-3xl lg:text-[2.15rem] lg:leading-[1.2]">
               Promovemos los derechos humanos y la responsabilidad social
               empresarial mediante auditorías y consultorías especializadas,
               orientadas a garantizar justicia, transparencia e integridad,
               combatir la corrupción y reducir la desigualdad, fortaleciendo a
               comunidades vulnerables y servidores públicos en Colombia y a nivel
               global.
-            </p>
+            </h1>
 
             <div
               id="contacto"
@@ -215,14 +212,19 @@ export default function HomeClient() {
           </div>
         </div>
 
-        <footer className="mx-auto mt-6 flex w-full max-w-7xl flex-col gap-2 px-6 pb-8 text-sm font-semibold text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.28)] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
-          <p>Fundación Justicia Global · NIT {nit}</p>
-          <p className="flex flex-wrap items-center gap-x-5 gap-y-1">
-            <a className="hover:text-white/80" href={mailtoUrl}>
+      </section>
+
+      <footer className="bg-[#30313a] text-white">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-6 py-6 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
+          <p className="font-semibold">
+            Fundación Justicia Global · NIT {nit}
+          </p>
+          <p className="flex flex-wrap items-center gap-x-5 gap-y-1 text-white/80">
+            <a className="font-semibold hover:text-white" href={mailtoUrl}>
               {email}
             </a>
             <a
-              className="hover:text-white/80"
+              className="font-semibold hover:text-white"
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
@@ -230,8 +232,8 @@ export default function HomeClient() {
               WhatsApp +57 316 246 2649
             </a>
           </p>
-        </footer>
-      </section>
+        </div>
+      </footer>
 
       <div className="fixed bottom-5 right-5 z-50 h-14 w-14 sm:bottom-7 sm:right-7">
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]" />
