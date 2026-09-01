@@ -3,7 +3,7 @@ import {
   CheckCircle2,
   Globe2,
   HeartHandshake,
-  Mail,
+  MessageCircle,
   Scale,
   ShieldCheck,
 } from 'lucide-react';
@@ -52,8 +52,8 @@ export default function Home() {
             href="#contacto"
             className="inline-flex h-11 items-center gap-2 rounded-full bg-[#f7931d] px-5 text-sm font-bold text-white shadow-[0_14px_28px_rgba(247,147,29,0.26)] transition hover:bg-[#e98012]"
           >
-            <Mail className="h-4 w-4" />
-            Avisarme
+            <MessageCircle className="h-4 w-4" />
+            WhatsApp
           </a>
         </header>
 
@@ -71,27 +71,23 @@ export default function Home() {
               formación y gestión de casos con enfoque en derechos humanos.
             </p>
 
-            <form
+            <div
               id="contacto"
-              className="mt-9 flex w-full max-w-xl flex-col gap-3 rounded-[8px] border border-white/80 bg-white/88 p-3 shadow-[0_24px_70px_rgba(51,69,35,0.16)] backdrop-blur sm:flex-row"
+              className="mt-9 flex w-full max-w-xl flex-col gap-3 rounded-[8px] border border-white/80 bg-white/88 p-3 shadow-[0_24px_70px_rgba(51,69,35,0.16)] backdrop-blur sm:flex-row sm:items-center"
             >
-              <label className="sr-only" htmlFor="email">
-                Correo electrónico
-              </label>
-              <input
-                id="email"
-                type="email"
-                placeholder="Tu correo electrónico"
-                className="min-h-12 flex-1 rounded-[6px] border border-[#dbe6cb] bg-[#fbfdf8] px-4 text-base text-[#30313a] outline-none transition placeholder:text-[#8a8b91] focus:border-[#8fbb36] focus:ring-4 focus:ring-[#8fbb36]/18"
-              />
-              <button
-                type="submit"
+              <p className="min-h-12 flex-1 rounded-[6px] border border-[#dbe6cb] bg-[#fbfdf8] px-4 py-3 text-sm font-semibold leading-6 text-[#4c4d56]">
+                Escríbenos para recibir información sobre el lanzamiento.
+              </p>
+              <a
+                href="https://wa.me/573183993023?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20la%20plataforma%20de%20Fundaci%C3%B3n%20Justicia%20Global."
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[6px] bg-[#8fbb36] px-6 text-sm font-black uppercase tracking-[0.08em] text-white shadow-[0_14px_24px_rgba(143,187,54,0.25)] transition hover:bg-[#7ca62e]"
               >
-                Notificarme
+                WhatsApp
                 <ArrowRight className="h-4 w-4" />
-              </button>
-            </form>
+              </a>
+            </div>
 
             <div className="mt-8 grid max-w-xl grid-cols-4 gap-3">
               {milestones.map((item) => (
