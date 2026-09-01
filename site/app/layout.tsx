@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 const siteUrl = 'https://fundacionjusticiaglobal.org';
 const title = 'Fundación Justicia Global | Próximamente';
 const description =
-  'Fundación Justicia Global prepara una plataforma digital para acercar derechos humanos, acompañamiento jurídico y gestión social a más comunidades.';
+  'Promovemos los derechos humanos y la responsabilidad social empresarial mediante auditorías y consultorías especializadas: justicia, transparencia e integridad, lucha contra la corrupción y reducción de la desigualdad en Colombia y a nivel global.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
     images: ['/og.jpg'],
   },
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/logo.png',
   },
   category: 'nonprofit',
 };
@@ -81,18 +81,24 @@ const jsonLd = {
   '@type': 'NGO',
   name: 'Fundación Justicia Global',
   url: siteUrl,
-  logo: `${siteUrl}/favicon.svg`,
+  logo: `${siteUrl}/logo.png`,
+  image: `${siteUrl}/og.jpg`,
   description,
-  areaServed: 'CO',
+  email: 'fundacionjusticiaglobal@gmail.com',
+  telephone: '+573162462649',
+  taxID: '901516277-7',
+  areaServed: ['CO', 'Global'],
   knowsAbout: [
     'Derechos humanos',
-    'Acompañamiento jurídico',
-    'Gestión social',
+    'Responsabilidad social empresarial',
+    'Auditorías y consultorías',
+    'Transparencia y lucha contra la corrupción',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'información',
-    url: 'https://wa.me/573183993023',
+    email: 'fundacionjusticiaglobal@gmail.com',
+    telephone: '+573162462649',
     availableLanguage: ['es'],
   },
 };

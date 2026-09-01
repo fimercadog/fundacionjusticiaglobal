@@ -1,19 +1,22 @@
 'use client';
 
 import {
-  ArrowRight,
   CheckCircle2,
   Globe2,
   HeartHandshake,
-  Scale,
+  Mail,
   ShieldCheck,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const launchDate = new Date('2026-09-16T00:00:00-05:00').getTime();
 
+const phone = '573162462649';
 const whatsappUrl =
-  'https://wa.me/573183993023?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20la%20plataforma%20de%20Fundaci%C3%B3n%20Justicia%20Global.';
+  `https://wa.me/${phone}?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20la%20plataforma%20de%20Fundaci%C3%B3n%20Justicia%20Global.`;
+const email = 'fundacionjusticiaglobal@gmail.com';
+const mailtoUrl = `mailto:${email}?subject=Informaci%C3%B3n%20plataforma%20Fundaci%C3%B3n%20Justicia%20Global`;
+const nit = '901.516.277-7';
 
 const focusAreas = [
   'Derechos humanos',
@@ -65,8 +68,14 @@ export default function HomeClient() {
 
         <header className="mx-auto flex w-full max-w-7xl items-center px-6 py-7 sm:px-10 lg:px-14">
           <a className="flex items-center gap-3" href="#" aria-label="Fundación Justicia Global">
-            <span className="grid h-12 w-12 place-items-center rounded-full bg-white shadow-[0_14px_35px_rgba(72,88,39,0.18)]">
-              <Scale className="h-7 w-7 text-[#8fbb36]" strokeWidth={2.4} />
+            <span className="grid h-12 w-12 place-items-center overflow-hidden rounded-full bg-white shadow-[0_14px_35px_rgba(72,88,39,0.18)]">
+              <img
+                src="/logo.png"
+                alt="Fundación Justicia Global"
+                width={48}
+                height={48}
+                className="h-full w-full scale-110 object-cover"
+              />
             </span>
             <span className="leading-tight">
               <span className="block text-[11px] font-semibold uppercase tracking-[0.32em] text-[#55565f]">
@@ -89,8 +98,12 @@ export default function HomeClient() {
               Una plataforma para acercar justicia social a más comunidades.
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-[#5b5c65]">
-              Estamos preparando una experiencia digital para conectar orientación,
-              formación y gestión de casos con enfoque en derechos humanos.
+              Promovemos los derechos humanos y la responsabilidad social
+              empresarial mediante auditorías y consultorías especializadas,
+              orientadas a garantizar justicia, transparencia e integridad,
+              combatir la corrupción y reducir la desigualdad, fortaleciendo a
+              comunidades vulnerables y servidores públicos en Colombia y a nivel
+              global.
             </p>
 
             <div
@@ -101,13 +114,11 @@ export default function HomeClient() {
                 Escríbenos para recibir información sobre el lanzamiento.
               </p>
               <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
+                href={mailtoUrl}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[6px] bg-[#8fbb36] px-6 text-sm font-black uppercase tracking-[0.08em] text-white shadow-[0_14px_24px_rgba(143,187,54,0.25)] transition hover:bg-[#7ca62e]"
               >
-                WhatsApp
-                <ArrowRight className="h-4 w-4" />
+                <Mail className="h-4 w-4" />
+                Correo
               </a>
             </div>
 
@@ -203,6 +214,23 @@ export default function HomeClient() {
             </div>
           </div>
         </div>
+
+        <footer className="mx-auto mt-6 flex w-full max-w-7xl flex-col gap-2 px-6 pb-8 text-sm font-semibold text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.28)] sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-14">
+          <p>Fundación Justicia Global · NIT {nit}</p>
+          <p className="flex flex-wrap items-center gap-x-5 gap-y-1">
+            <a className="hover:text-white/80" href={mailtoUrl}>
+              {email}
+            </a>
+            <a
+              className="hover:text-white/80"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp +57 316 246 2649
+            </a>
+          </p>
+        </footer>
       </section>
 
       <div className="fixed bottom-5 right-5 z-50 h-14 w-14 sm:bottom-7 sm:right-7">
