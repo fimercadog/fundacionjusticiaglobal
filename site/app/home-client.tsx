@@ -92,7 +92,7 @@ export default function HomeClient() {
           <div className="max-w-2xl">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#8fbb36]/25 bg-white/78 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#638c28] shadow-[0_12px_30px_rgba(80,112,38,0.08)] backdrop-blur">
               <Globe2 className="h-4 w-4" />
-              Muy pronto
+              Estamos actualizando nuestro sitio web
             </div>
             <h1 className="text-2xl font-black leading-tight tracking-normal text-[#2e3037] sm:text-3xl lg:text-[2.15rem] lg:leading-[1.2]">
               Promovemos los derechos humanos y la responsabilidad social
@@ -108,7 +108,7 @@ export default function HomeClient() {
               className="mt-9 flex w-full max-w-xl flex-col gap-3 rounded-[8px] border border-white/80 bg-white/88 p-3 shadow-[0_24px_70px_rgba(51,69,35,0.16)] backdrop-blur sm:flex-row sm:items-center"
             >
               <p className="min-h-12 flex-1 rounded-[6px] border border-[#dbe6cb] bg-[#fbfdf8] px-4 py-3 text-sm font-semibold leading-6 text-[#4c4d56]">
-                Escríbenos para recibir información sobre el lanzamiento.
+                Escríbenos para recibir información sobre la actualización.
               </p>
               <a
                 href={mailtoUrl}
@@ -119,7 +119,10 @@ export default function HomeClient() {
               </a>
             </div>
 
-            <div className="mt-8 grid max-w-xl grid-cols-4 gap-3">
+            <p className="mt-8 text-xs font-bold uppercase tracking-[0.16em] text-[#6b6c73]">
+              La actualización estará finalizada en:
+            </p>
+            <div className="mt-3 grid max-w-xl grid-cols-4 gap-3">
               {display.map((item) => (
                 <div
                   key={item.label}
