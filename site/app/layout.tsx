@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
 const geistSans = Geist({
@@ -12,8 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
+  subsets: ['latin'],
+});
+
 const siteUrl = 'https://fundacionjusticiaglobal.org';
-const title = 'Fundación Justicia Global | Próximamente';
+const title = 'Fundación Justicia Global';
 const description =
   'Promovemos los derechos humanos y la responsabilidad social empresarial mediante auditorías y consultorías especializadas: justicia, transparencia e integridad, lucha contra la corrupción y reducción de la desigualdad en Colombia y a nivel global.';
 
@@ -111,14 +116,14 @@ export default function RootLayout({
   return (
     <html lang="es-CO">
       <head>
-        <meta name="theme-color" content="#8fbb36" />
+        <meta name="theme-color" content="#1b1f2a" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
         {children}
       </body>

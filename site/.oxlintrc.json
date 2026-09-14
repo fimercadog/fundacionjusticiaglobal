@@ -32,6 +32,10 @@
     "next-env.d.ts"
   ],
   "rules": {
+    // This site exports to static HTML (scripts/export-static.mjs) with no
+    // image-optimizer route at request time, so next/image's /_next/image
+    // URLs 404 in production — plain <img> is required here, not a lint gap.
+    "nextjs/no-img-element": "off",
     "no-array-constructor": "error",
     "no-var": "error",
     "prefer-const": "error",
