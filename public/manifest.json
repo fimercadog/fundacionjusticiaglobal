@@ -1,0 +1,21 @@
+{
+  "name": "Fundación Justicia Global",
+  "short_name": "Justicia Global",
+  "description": "Transformamos realidades territoriales mediante la formulación rigurosa de proyectos MGA, la investigación aplicada y la articulación de la Quinta Hélice.",
+  "start_url": "../index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7F992C",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

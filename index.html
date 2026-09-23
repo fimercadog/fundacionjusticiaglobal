@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Fundación Justicia Global — Brazo Técnico Articulador & Investigación Aplicada</title>
+<meta name="description" content="Transformamos realidades territoriales mediante la formulación rigurosa de proyectos MGA, la investigación aplicada y la articulación de la Quinta Hélice.">
+
+<!-- Favicon e Iconos de Aplicación Web -->
+<link rel="shortcut icon" href="public/img/logo.png" type="image/png">
+<link rel="icon" type="image/png" sizes="32x32" href="public/img/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="public/img/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="public/img/logo.png">
+<link rel="manifest" href="public/manifest.json">
+
+<!-- Nombres y Leyendas de Aplicación Web (Favicon / App Title) -->
+<meta name="application-name" content="Fundación Justicia Global">
+<meta name="apple-mobile-web-app-title" content="Justicia Global">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#7F992C">
+<meta name="msapplication-TileColor" content="#7F992C">
+<meta name="msapplication-TileImage" content="public/img/logo.png">
+
+<!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fundación Justicia Global">
+<meta property="og:title" content="Fundación Justicia Global — Por un mundo más justo, transparente e inclusivo">
+<meta property="og:description" content="Transformamos realidades territoriales mediante la formulación rigurosa de proyectos MGA, la investigación aplicada y la articulación de la Quinta Hélice.">
+<meta property="og:image" content="public/img/og-banner.jpg">
+<meta property="og:image:secure_url" content="public/img/og-banner.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fundación Justicia Global - Cultivando un futuro sostenible y justo">
+<meta property="og:locale" content="es_CO">
+
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fundación Justicia Global — Por un mundo más justo, transparente e inclusivo">
+<meta name="twitter:description" content="Transformamos realidades territoriales mediante la formulación rigurosa de proyectos MGA, la investigación aplicada y la articulación de la Quinta Hélice.">
+<meta name="twitter:image" content="public/img/og-banner.jpg">
+
+<!-- Schema.org JSON-LD para SEO y buscadores -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Fundación Justicia Global",
+  "alternateName": "FJG",
+  "description": "Transformamos realidades territoriales mediante la formulación rigurosa de proyectos MGA, la investigación aplicada y la articulación de la Quinta Hélice.",
+  "logo": "public/img/logo.png",
+  "image": "public/img/og-banner.jpg",
+  "knowsAbout": ["Proyectos MGA", "Investigación Aplicada", "Quinta Hélice", "Gestión Social"],
+  "sameAs": [
+    "https://www.facebook.com/share/1EXgjUVpbJ/",
+    "https://www.instagram.com/fjusticiaglobal"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+  :root{
+    --green:#7F992C;
+    --green-dark:#122A17;
+    --green-light:#eef4d8;
+    --orange:#F07203;
+    --orange-dark:#c85c00;
+    --ink:#262626;
+    --body-text:#1a1a1a;
+    --cream:#ffffff;
+    --white:#ffffff;
+    --border-color:#e5e5e5;
+    --shadow-lvl1: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-lvl2: 0 6px 18px rgba(0, 0, 0, 0.09);
+    --shadow-lvl3: 0 12px 32px rgba(0, 0, 0, 0.14);
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [id] {
+    scroll-margin-top: 85px;
+  }
+
+  html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--cream);
+    font-family: 'Nunito', sans-serif;
+    color: var(--body-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  h1, h2, h3, h4, .display {
+    font-family: 'Poppins', sans-serif;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  p, span, a, li, label, div {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* ===== NAVBAR ORGÁNICO E INTEGRADO (MATERIAL DESIGN M3 METRICS) ===== */
+  .site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 64px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: navEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes navEntrance {
+    from { opacity: 0; transform: translateY(-100%); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .site-header.scrolled {
+    background: #ffffff;
+    box-shadow: var(--shadow-lvl2);
+    border-bottom-color: var(--border-color);
+  }
+
+  .header-inner {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  /* Centrado del logo en Móvil (< 900px) */
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .nav-logo {
+    width: auto;
+    max-width: 60px;
+    height: 46px;
+    max-height: 46px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-brand:hover .nav-logo {
+    transform: scale(1.02);
+  }
+
+  /* Botón Hamburguesa Móvil (M3 Touch Target 48x48px) */
+  .nav-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1002;
+    box-shadow: var(--shadow-lvl1);
+  }
+
+  .nav-toggle:hover, .nav-toggle.active {
+    background: var(--green-light);
+    color: var(--green);
+    border-color: var(--green);
+  }
+
+  /* Desplegable Móvil */
+  .nav-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
+    right: 16px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu.active {
+    max-height: 480px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 16px;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    color: var(--body-text);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.25s ease, color 0.25s ease, padding-left 0.25s ease;
+    width: 100%;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    background: var(--green-light);
+    color: var(--green);
+    font-weight: 700;
+    padding-left: 20px;
+  }
+
+  .nav-cta {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 12px 18px;
+    min-height: 44px;
+  }
+
+  /* Base Wrapper for Mobile */
+  .wrap {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 16px 16px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* Base Layout for Mobile: Stacked Vertical Flow */
+  .top-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .col-main, .col-visual {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hero Header Block (Logo + Vertical Green Divider + Slogan) */
+  .hero-header-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+  .hero-logo-col {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-header-logo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+  }
+  .hero-divider {
+    display: none;
+  }
+  .hero-slogan-col {
+    width: 100%;
+  }
+
+  /* Headline */
+  .headline {
+    border-left: 4px solid var(--orange);
+    padding-left: 16px;
+    margin: 0 0 16px;
+    font-weight: 900;
+    font-size: clamp(22px, 6vw, 38px);
+    line-height: 1.2;
+    letter-spacing: .2px;
+    width: 100%;
+  }
+  .headline .l1 { color: var(--ink); display: block; }
+  .headline .l2 { color: var(--green); display: block; }
+  .headline .l3 { color: var(--orange); display: block; }
+  .headline .l4 { color: var(--ink); display: block; }
+
+  .lede {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--body-text);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .lede b, p b, span b, div b, li b { color: var(--green); font-weight: 800; }
+  .lede b.o, p b.o, span b.o, div b.o, li b.o { color: var(--orange); font-weight: 800; }
+  .lede b.g, p b.g, span b.g, div b.g, li b.g { color: var(--green); font-weight: 800; }
+
+  /* CTAs Mobile First & Micro-interactions */
+  .cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14.5px;
+    padding: 14px 20px;
+    min-height: 48px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+  .btn:active {
+    transform: translateY(0) scale(0.97);
+  }
+  .btn i {
+    transition: transform 0.3s ease;
+  }
+  .btn:hover i {
+    transform: scale(1.15) rotate(-4deg);
+  }
+  .btn-primary { background: var(--orange); color: var(--white); box-shadow: 0 6px 18px rgba(240,114,3,0.25); }
+  .btn-primary:hover { background: var(--orange-dark); box-shadow: 0 10px 24px rgba(240,114,3,0.38); }
+  .btn-whatsapp { background: #25D366; color: var(--white); box-shadow: 0 6px 18px rgba(37,211,102,0.25); }
+  .btn-whatsapp:hover { background: #1da851; box-shadow: 0 10px 24px rgba(37,211,102,0.38); }
+  .btn-outline { background: transparent; color: var(--green-dark); border: 2px solid var(--green); }
+  .btn-outline:hover { background: var(--green); color: var(--white); box-shadow: 0 6px 18px rgba(127,153,44,0.3); }
+
+  /* Services Pill & List Mobile */
+  .services-pill {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: .4px;
+    padding: 8px 16px;
+    border-radius: 20px 20px 20px 0;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    max-width: 100%;
+  }
+  .services-list {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .services-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+    width: 100%;
+    min-width: 0;
+  }
+  .services-list li:last-child { border-bottom: none; }
+  .svc-icon {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    font-size: 14px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, color 0.3s ease;
+  }
+  .services-list li:hover .svc-icon {
+    transform: scale(1.15) rotate(4deg);
+    background: var(--green);
+    color: var(--white);
+  }
+  .services-list p {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    padding-top: 2px;
+  }
+  .services-list b { font-weight: 800; color: var(--ink); }
+
+  /* Panel Hero Mobile */
+  .panel {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+    background: var(--white);
+    width: 100%;
+    min-width: 0;
+  }
+  .panel .hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .panel:hover .hero-img {
+    transform: scale(1.04);
+  }
+  .band {
+    background: var(--green-dark);
+    color: #fff;
+    text-align: center;
+    padding: 24px 16px 20px;
+    width: 100%;
+  }
+  .band .kicker {
+    font-family: 'Poppins', sans-serif;
+    color: var(--green);
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 12.5px;
+  }
+  .band h3 {
+    margin: 4px 0 0;
+    font-size: clamp(18px, 5vw, 28px);
+    font-weight: 800;
+  }
+  .band .script {
+    font-family: 'Caveat', cursive;
+    color: var(--orange);
+    font-size: clamp(28px, 8vw, 44px);
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 2px;
+    position: relative;
+  }
+  .band .script svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 12px;
+  }
+
+  /* Core Values Grid Mobile */
+  .values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+    width: 100%;
+  }
+  .values .v {
+    padding: 8px 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .values .v:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.12);
+  }
+  .values .v i { font-size: 18px; margin-bottom: 4px; color: var(--green); display: block; transition: transform 0.3s ease; }
+  .values .v:hover i { transform: scale(1.2); }
+  .values .v div {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: .2px;
+  }
+
+  /* Service Row Cards (Matching Graphic Mockup 100%) */
+  .svc-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background: #ffffff;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 3px solid var(--green);
+    border-bottom: 3px solid var(--green);
+  }
+  .svc-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  }
+  .svc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  }
+  .svc-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .svc-card:hover img {
+    transform: scale(1.05);
+  }
+  .svc-card span {
+    display: block;
+    background: var(--green);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 1.25;
+    text-align: center;
+    padding: 10px 6px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+  }
+
+  /* Section Head Mobile */
+  .section-head {
+    text-align: center;
+    margin: 48px auto 24px;
+    width: 100%;
+  }
+  .section-head .services-pill { margin: 0 0 10px; border-radius: 20px; }
+  .section-head h2 {
+    font-size: clamp(20px, 5.5vw, 32px);
+    font-weight: 900;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .section-head p {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: #4a4a4a;
+  }
+
+  /* Ejes Grid Mobile & Hover */
+  .ejes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+  .eje-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    width: 100%;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  }
+  .eje-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.08);
+    border-color: #d0d0d0;
+  }
+  .eje-card .icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--green-light);
+    color: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, color 0.35s ease;
+  }
+  .eje-card:hover .icon {
+    transform: scale(1.15) rotate(4deg);
+    background: var(--green);
+    color: var(--white);
+  }
+  .eje-card h3 { font-size: 15.5px; font-weight: 800; color: var(--ink); margin: 0 0 6px; }
+  .eje-card p { font-size: 13.5px; line-height: 1.5; color: #555; }
+
+  /* Pilares Grid Mobile & Hover */
+  .pilares-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+  .pilar-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  }
+  .pilar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.08);
+    border-color: #d0d0d0;
+  }
+  .pilar-card .num {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 12px;
+    transition: transform 0.35s ease;
+  }
+  .pilar-card:hover .num {
+    transform: scale(1.12);
+  }
+  .pilar-card h3 { font-size: 16.5px; font-weight: 800; color: var(--ink); margin: 0 0 6px; }
+  .pilar-card .tag { color: var(--orange); font-weight: 700; font-size: 12.5px; margin-bottom: 10px; display: block; }
+  .pilar-card p { margin: 0 0 14px; font-size: 13.5px; line-height: 1.55; color: #3d3d3d; }
+  .pilar-card ul { list-style: none; margin: 0 0 16px; }
+  .pilar-card ul li { position: relative; padding-left: 20px; margin-bottom: 6px; font-size: 13px; color: #444; }
+  .pilar-card ul li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green); font-weight: bold; }
+
+  /* Quinta Hélice Mobile & Hover */
+  .quinta-helice {
+    background: var(--green-dark);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 28px 18px;
+    margin-top: 48px;
+    width: 100%;
+  }
+  .quinta-helice h2 { color: var(--white); text-align: center; margin: 0 0 8px; font-size: clamp(20px, 5vw, 30px); }
+  .quinta-helice .subtitle { text-align: center; color: rgba(255,255,255,0.8); margin: 0 auto 28px; font-size: 14px; line-height: 1.5; }
+  .helice-grid { display: grid; grid-template-columns: 1fr; gap: 14px; width: 100%; }
+  .helice-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.35s ease, background 0.35s ease;
+  }
+  .helice-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.12);
+  }
+  .helice-card .h-icon { font-size: 26px; color: var(--green); margin-bottom: 8px; transition: transform 0.35s ease; }
+  .helice-card:hover .h-icon { transform: scale(1.18); }
+  .helice-card h4 { font-size: 15px; font-weight: 800; margin: 0 0 4px; color: var(--orange); }
+  .helice-card p { font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,0.85); }
+
+  /* Testimonios Mobile & Hover */
+  .testimonios-grid { display: grid; grid-template-columns: 1fr; gap: 16px; width: 100%; }
+  .testimonio-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px 16px;
+    width: 100%;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .testimonio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+  }
+  .badge-example { display: inline-block; background: #fff3e6; color: var(--orange-dark); font-size: 10.5px; font-weight: 800; padding: 3px 8px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #ffd8b3; }
+  .testimonio-card text { display: block; font-style: italic; font-size: 13.5px; line-height: 1.55; color: #333; margin-bottom: 12px; }
+  .testimonio-card .author { display: flex; align-items: center; gap: 10px; }
+  .testimonio-card .avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--green-light); color: var(--green); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; }
+  .testimonio-card .info b { display: block; font-size: 13px; color: var(--ink); }
+  .testimonio-card .info span { font-size: 11.5px; color: #666; }
+
+  /* Legal Blocks Mobile */
+  .legal-block { margin-top: 16px; background: #fff; border-left: 4px solid var(--green); border-radius: 0 12px 12px 0; padding: 16px 18px; border: 1px solid var(--border-color); border-left: 4px solid var(--green); width: 100%; }
+  .legal-block h4 { margin: 0 0 4px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 13.5px; color: var(--green); }
+  .legal-block p { margin: 0; font-size: 13px; line-height: 1.55; color: #3d3d3d; }
+
+  /* Contact Section Mobile */
+  .contact-section { background: var(--white); border: 1px solid var(--border-color); border-radius: 20px; padding: 24px 18px; margin-top: 48px; width: 100%; }
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 24px; width: 100%; }
+  .contact-info h3 { font-size: 22px; font-weight: 900; color: var(--ink); margin: 0 0 8px; }
+  .contact-info p { font-size: 14px; line-height: 1.55; color: #555; margin: 0 0 20px; }
+  .direct-channels { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+  .channel-card { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #f9f9f9; border: 1px solid var(--border-color); border-radius: 14px; text-decoration: none; color: var(--ink); width: 100%; transition: transform 0.25s ease; }
+  .channel-card:hover { transform: translateX(4px); }
+  .channel-card .c-icon { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--white); flex-shrink: 0; }
+  .channel-card .c-icon.wa { background: #25D366; }
+  .channel-card .c-icon.mail { background: var(--orange); }
+  .channel-card div b { display: block; font-size: 13.5px; }
+  .channel-card div span { font-size: 12px; color: #666; }
+  .contact-form { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+  .form-group { display: flex; flex-direction: column; gap: 4px; width: 100%; }
+  .form-group label { font-size: 12.5px; font-weight: 700; color: var(--ink); }
+  .form-group input, .form-group select, .form-group textarea { padding: 12px; border: 1px solid #ddd8ce; border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 13.5px; background: #fafafa; color: var(--body-text); width: 100%; transition: border-color 0.25s ease; }
+  .form-group textarea { resize: vertical; max-width: 100%; min-height: 110px; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--green); background: #fff; }
+
+  /* Footer Styled to Match Flyer 100% */
+  .footer { margin-top: 56px; width: 100%; }
+  .footer-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    background: var(--white);
+    border: 3px solid var(--green);
+    border-radius: 24px;
+    padding: 20px 16px;
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    overflow: hidden;
+  }
+  .footer-blob {
+    background: var(--green);
+    color: #fff;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 15.5px;
+    line-height: 1.2;
+    letter-spacing: .3px;
+  }
+  .footer-blob i { font-size: 32px; flex-shrink: 0; }
+  .footer-msg {
+    font-size: 15px;
+    line-height: 1.45;
+    color: #262626;
+    font-family: 'Nunito', sans-serif;
+  }
+  .footer-msg b {
+    display: block;
+    color: var(--green);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 18.5px;
+    margin-top: 4px;
+  }
+  .footer-social { width: 100%; text-align: center; }
+  .footer-social .label {
+    color: var(--orange);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: .6px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .footer-social .icons { display: flex; gap: 12px; justify-content: center; align-items: center; }
+  .footer-social .icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
+    box-shadow: 0 2px 8px rgba(127,153,44,0.3);
+  }
+  .footer-social .icons a:hover {
+    transform: scale(1.15) rotate(4deg);
+    background: var(--orange);
+    box-shadow: 0 4px 14px rgba(240,114,3,0.38);
+  }
+  .footer-bottom { background: var(--green); color: #fff; text-align: center; padding: 14px; font-size: 14.5px; font-weight: 700; border-radius: 0 0 16px 16px; margin-top: 8px; }
+  .credit { text-align: center; padding: 14px; font-size: 12px; color: #6b6b6b; }
+
+  /* ===== SECCIÓN QUIÉNES SOMOS, MISIÓN Y VISIÓN ===== */
+  .nosotros-section {
+    padding: 60px 0 20px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .nosotros-title-block {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .nosotros-tag {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .nosotros-title-block h2 {
+    font-size: clamp(26px, 3.2vw, 38px);
+    color: var(--green-dark);
+    font-weight: 900;
+  }
+  .nosotros-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  @media (min-width: 768px) {
+    .nosotros-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .mv-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: var(--shadow-lvl1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  .mv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--green);
+  }
+  .mv-card.vision::before {
+    background: var(--orange);
+  }
+  .mv-card.quienes::before {
+    background: var(--green-dark);
+  }
+  .mv-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lvl2);
+    border-color: rgba(127, 153, 44, 0.3);
+  }
+  .mv-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: var(--green-light);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .mv-card.vision .mv-icon {
+    background: #fff3e6;
+    color: var(--orange);
+  }
+  .mv-card.quienes .mv-icon {
+    background: #eef4d8;
+    color: var(--green-dark);
+  }
+  .mv-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  /* ===== SECCIÓN GALERÍA DE FOTOS E IMPACTO ===== */
+  .galeria-section {
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .galeria-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .galeria-tag {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .galeria-header h2 {
+    font-size: clamp(26px, 3.2vw, 38px);
+    color: var(--green-dark);
+    font-weight: 900;
+  }
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 600px) {
+    .galeria-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 992px) {
+    .galeria-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .galeria-item {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lvl1);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  .galeria-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lvl3);
+  }
+  .galeria-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #f0f4ea;
+  }
+  .galeria-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .galeria-item:hover .galeria-img-wrap img {
+    transform: scale(1.08);
+  }
+  .galeria-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 42, 23, 0.55);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .galeria-item:hover .galeria-overlay {
+    opacity: 1;
+  }
+  .galeria-zoom-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 14px rgba(240,114,3,0.4);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+  }
+  .galeria-item:hover .galeria-zoom-icon {
+    transform: scale(1);
+  }
+  .galeria-caption {
+    padding: 16px 20px;
+  }
+  .galeria-badge {
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .galeria-caption h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  /* ===== SECCIÓN MENSAJE DE LA PRESIDENCIA ===== */
+  .presidencia-section {
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .presidencia-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f4f8ec 100%);
+    border: 1px solid rgba(127, 153, 44, 0.25);
+    border-radius: 24px;
+    padding: 36px 28px;
+    box-shadow: var(--shadow-lvl2);
+    position: relative;
+    overflow: hidden;
+  }
+  .presidencia-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--green);
+  }
+  .presidencia-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .presidencia-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--green-dark);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(18,42,23,0.3);
+  }
+  .presidencia-info h3 {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.2;
+  }
+  .presidencia-info span {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    display: block;
+    margin-top: 4px;
+  }
+  .presidencia-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 16px;
+  }
+  .presidencia-quote {
+    background: #ffffff;
+    border-left: 4px solid var(--orange);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 16.5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: var(--green-dark);
+    margin-top: 20px;
+    box-shadow: var(--shadow-lvl1);
+  }
+
+  /* ===== SECCIÓN NUESTROS ALIADOS ESTRATÉGICOS ===== */
+  .aliados-section {
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .aliados-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .aliados-tag {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .aliados-header h2 {
+    font-size: clamp(26px, 3.2vw, 38px);
+    color: var(--green-dark);
+    font-weight: 900;
+  }
+  .aliados-header p {
+    font-size: 16px;
+    color: #4a4a4a;
+    max-width: 780px;
+    margin: 12px auto 0;
+    line-height: 1.6;
+  }
+  .aliados-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 768px) {
+    .aliados-grid {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+  .aliado-featured {
+    background: #ffffff;
+    border: 2px solid var(--green);
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: var(--shadow-lvl2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .aliado-badge-top {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--orange);
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+  }
+  .aliado-icon-wrap {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: var(--green-light);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .aliado-featured h3 {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--green-dark);
+    margin-bottom: 12px;
+  }
+  .aliado-featured p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #444444;
+  }
+  .aliados-pillars-card {
+    background: var(--green-dark);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: var(--shadow-lvl2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .aliados-pillars-card h4 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+  .aliados-pillars-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .aliados-pillars-card li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.9);
+  }
+  .aliados-pillars-card li i {
+    color: var(--orange);
+    font-size: 16px;
+  }
+
+  .aliado-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .aliado-photo-thumb {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lvl1);
+    position: relative;
+  }
+  .aliado-photo-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .aliado-photo-thumb:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Modal Lightbox */
+  .lightbox-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .lightbox-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  }
+  .lightbox-title {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 16px;
+    text-align: center;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    background: #ffffff;
+    color: #122A17;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .lightbox-close:hover {
+    transform: scale(1.1);
+    background: var(--orange);
+    color: #ffffff;
+  }
+  .mv-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4a4a4a;
+  }
+
+  /* ===== SISTEMA DE ANIMACIONES INTERSECTION OBSERVER ===== */
+  /* Fallback: por defecto todo es visible si no hay JS o si prefiere movimiento reducido */
+  .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Cuando JS está activo, ocultamos elementos para la entrada progresiva */
+  body.js-ready .reveal {
+    opacity: 0;
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  body.js-ready .reveal-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  body.js-ready .reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  body.js-ready .reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  body.js-ready .reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  /* Estado visible activado por scroll */
+  body.js-ready .is-visible {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+  }
+
+  /* Stagger Delays */
+  .delay-100 { transition-delay: 100ms !important; }
+  .delay-200 { transition-delay: 200ms !important; }
+  .delay-300 { transition-delay: 300ms !important; }
+  .delay-400 { transition-delay: 400ms !important; }
+  .delay-500 { transition-delay: 500ms !important; }
+
+  /* Desactivación respetando prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+    .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+
+  /* ===== NAVBAR RESPONSIVE TABLET & DESKTOP (≥ 900px) ===== */
+  @media (min-width: 900px) {
+    .header-inner {
+      padding: 12px 24px;
+    }
+    .nav-brand {
+      width: auto;
+      margin: 0;
+      flex-shrink: 0;
+    }
+    .nav-logo {
+      max-width: 64px;
+      max-height: 50px;
+    }
+    .nav-toggle {
+      display: none !important;
+    }
+    .nav-menu {
+      position: static;
+      max-height: none !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      width: auto;
+    }
+    .nav-list {
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      width: auto;
+    }
+    .nav-link {
+      padding: 6px 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      position: relative;
+      width: auto;
+      border-radius: 6px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 8px;
+      right: 8px;
+      height: 2px;
+      background: var(--green);
+      transform: scaleX(0);
+      transition: transform 0.25s ease;
+      border-radius: 2px;
+    }
+    .nav-link:hover::after, .nav-link.active::after {
+      transform: scaleX(1);
+    }
+    .nav-link:hover, .nav-link.active {
+      background: transparent;
+      color: var(--green);
+      padding-left: 8px;
+    }
+    .nav-cta {
+      margin-top: 0;
+      width: auto;
+      font-size: 13.5px;
+      padding: 8px 18px;
+      min-height: 38px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(240,114,3,0.2);
+    }
+
+    /* Hero Header Block Desktop */
+    .hero-header-block {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .hero-logo-col {
+      width: auto;
+      max-width: 440px;
+      flex: 1.1;
+      justify-content: flex-start;
+    }
+    .hero-header-logo {
+      max-width: 380px;
+    }
+    .hero-divider {
+      display: block;
+      width: 3px;
+      height: 120px;
+      background: var(--green);
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .hero-slogan-col {
+      flex: 1.25;
+    }
+    .hero-slogan-col .headline {
+      border-left: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.15;
+    }
+  }
+
+  /* ===== TABLET MEDIA QUERY (768px - 1024px) ===== */
+  @media (min-width: 768px) {
+    .wrap { padding: 32px 24px 0; }
+    .cta-group { flex-direction: row; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .btn { width: auto; font-size: 13.5px; padding: 12px 18px; white-space: nowrap; }
+    .pilares-grid, .testimonios-grid { grid-template-columns: 1fr 1fr; }
+    .helice-grid { grid-template-columns: repeat(3, 1fr); }
+    .svc-row { grid-template-columns: repeat(3, 1fr); }
+    .ejes-grid { grid-template-columns: repeat(3, 1fr); }
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+    .footer-top { flex-direction: row; justify-content: space-between; text-align: left; padding: 0 28px 0 0; border-radius: 999px; min-height: 90px; }
+    .footer-blob { width: 260px; height: 90px; border-radius: 0 999px 999px 0; justify-content: center; padding: 0 24px; flex-shrink: 0; }
+    .footer-msg { text-align: center; flex: 1; padding: 0 20px; }
+    .footer-social { width: auto; text-align: center; flex-shrink: 0; }
+  }
+
+  /* ===== DESKTOP MEDIA QUERY (> 1024px) ===== */
+  @media (min-width: 1025px) {
+    .wrap { padding: 40px 24px 0; }
+    .top-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; }
+    .nav-logo { max-width: 68px; max-height: 52px; }
+    .nav-list { gap: 22px; }
+    .cta-group { flex-direction: row; }
+    .btn { width: auto; }
+    .helice-grid { grid-template-columns: repeat(5, 1fr); }
+    .ejes-grid { grid-template-columns: repeat(5, 1fr); }
+    .values { display: flex; }
+    .values .v { border-left: 1px solid rgba(255,255,255,.2); background: transparent; padding: 0 6px; }
+    .values .v:first-child { border-left: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR RESPONSIVE ORGÁNICO ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="nav-brand" aria-label="Inicio Fundación Justicia Global">
+      <img src="public/img/nav-logo-emblem.png" alt="Fundación Justicia Global" width="500" height="500" class="nav-logo">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="#top" class="nav-link active">Inicio</a></li>
+        <li><a href="#nosotros" class="nav-link">Quiénes Somos</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#aliados" class="nav-link">Aliados</a></li>
+        <li><a href="#galeria" class="nav-link">Galería</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-primary nav-cta">
+        <i class="fa-solid fa-calendar-check"></i> Agendar
+      </a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- ===== HERO & TOP GRID ===== -->
+  <section id="top" class="hero-section">
+    <!-- ===== BANNER CABECERA INSTITUCIONAL (JUSTO DEBAJO DEL NAVBAR) ===== -->
+    <div class="hero-header-block reveal-scale">
+      <div class="hero-logo-col">
+        <img src="public/img/logo.png" alt="Fundación Justicia Global — Derechos Humanos y Gestión Social" width="1018" height="682" class="hero-header-logo">
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-slogan-col">
+        <h1 class="headline">
+          <span class="l1">POR UN MUNDO</span>
+          <span class="l2">MÁS JUSTO,</span>
+          <span class="l3">TRANSPARENTE</span>
+          <span class="l4">E INCLUSIVO</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="top-grid">
+      <div class="col-main">
+
+        <p class="lede reveal-up delay-100">
+          Promovemos los <b>derechos humanos</b> y la <b>responsabilidad social</b>
+          empresarial mediante auditorías y consultorías especializadas, orientadas a
+          garantizar <b>justicia, transparencia e integridad</b>,
+          <b class="o">combatir la corrupción</b> y <b class="o">reducir la desigualdad</b>,
+          fortaleciendo a comunidades vulnerables y servidores públicos en Colombia
+          y a nivel global.
+        </p>
+
+        <div class="cta-group reveal-up delay-200">
+          <a href="https://wa.me/573162462649?text=Hola,%20deseo%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20y%20proyectos" target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Técnico
+          </a>
+          <a href="#contacto" class="btn btn-primary">
+            <i class="fa-solid fa-calendar-check"></i> Agendar Consultoría
+          </a>
+          <a href="#servicios" class="btn btn-outline">
+            <i class="fa-solid fa-list-check"></i> Ver Servicios
+          </a>
+        </div>
+
+        <span class="services-pill reveal-up delay-300">NUESTROS SERVICIOS</span>
+
+        <ul class="services-list">
+          <li class="reveal-left delay-100">
+            <span class="svc-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+            <p><b>AUDITORÍAS Y CONSULTORÍAS</b> <b class="o">ESPECIALIZADAS</b></p>
+          </li>
+          <li class="reveal-left delay-200">
+            <span class="svc-icon"><i class="fa-solid fa-file-lines"></i></span>
+            <p><b>FORMULACIÓN DE PROYECTOS</b> <b class="o">MGA Y MULTILATERALES</b></p>
+          </li>
+          <li class="reveal-left delay-300">
+            <span class="svc-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <p><b>EDUCACIÓN CONTINUADA</b> Y <b class="o">DIPLOMADOS</b></p>
+          </li>
+          <li class="reveal-left delay-400">
+            <span class="svc-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+            <p><b>VOLUNTARIADO SOCIAL</b> Y <b class="o">AUDITORÍA DE IMPACTO</b></p>
+          </li>
+          <li class="reveal-left delay-400">
+            <span class="svc-icon"><i class="fa-solid fa-handshake"></i></span>
+            <p>Promovemos la <b>JUSTICIA</b>, la <b>TRANSPARENCIA</b> y la <b>INTEGRIDAD</b></p>
+          </li>
+          <li class="reveal-left delay-500">
+            <span class="svc-icon"><i class="fa-solid fa-people-group"></i></span>
+            <p>Combatimos la <b class="o">CORRUPCIÓN</b> y reducimos la <b class="o">DESIGUALDAD</b></p>
+          </li>
+          <li class="reveal-left delay-500">
+            <span class="svc-icon"><i class="fa-solid fa-globe"></i></span>
+            <p>Impulsamos el desarrollo de <b>COMUNIDADES VULNERABLES</b> y <b>SERVIDORES PÚBLICOS</b> en Colombia y a nivel <b class="o">GLOBAL</b></p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-visual reveal-right">
+        <div class="panel">
+          <img class="hero-img" src="public/img/03_imagen_globo.png" alt="Manos sosteniendo el globo terráqueo — Fundación Justicia Global" width="1000" height="750">
+
+          <div class="band">
+            <div class="kicker">TRABAJAMOS HOY</div>
+            <h3>POR UN MAÑANA</h3>
+            <div class="script">
+              con dignidad
+              <svg viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M4 10 Q150 2 296 12" stroke="var(--green)" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+            </div>
+
+            <div class="values">
+              <div class="v"><i class="fa-solid fa-people-group"></i><div>JUSTICIA</div></div>
+              <div class="v"><i class="fa-solid fa-shield-halved"></i><div>TRANSPARENCIA</div></div>
+              <div class="v"><i class="fa-solid fa-handshake"></i><div>INTEGRIDAD</div></div>
+              <div class="v"><i class="fa-solid fa-chart-column"></i><div>IMPACTO SOCIAL</div></div>
+            </div>
+          </div>
+
+          <div class="svc-row">
+            <div class="svc-card">
+              <img src="public/img/svc-proyectos.png" alt="Formulación de proyectos MGA" width="400" height="260">
+              <span>FORMULACIÓN<br>DE PROYECTOS</span>
+            </div>
+            <div class="svc-card">
+              <img src="public/img/svc-educacion.png" alt="Educación continuada" width="400" height="260">
+              <span>EDUCACIÓN<br>CONTINUADA</span>
+            </div>
+            <div class="svc-card">
+              <img src="public/img/svc-voluntariado.png" alt="Voluntariado social" width="400" height="260">
+              <span>VOLUNTARIADO<br>SOCIAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARCO LEGAL Y COMPROMISO ===== -->
+  <section class="pilares" style="margin-top:40px;">
+    <div class="legal-block reveal-up delay-100">
+      <h4>MARCO OPERATIVO Y REGISTRO CIIU</h4>
+      <p>Desarrollamos nuestras actividades bajo la Clasificación Industrial Internacional Uniforme (<b>CIIU</b>): <b>7020</b> (Consultoría de gestión), <b>8559</b> (Educación n.c.p.), <b>6910</b> (Actividades jurídicas) y <b class="o">9499 (Otras asociaciones n.c.p.)</b>.</p>
+    </div>
+
+    <div class="legal-block reveal-up delay-200">
+      <h4>COMPROMISO SOCIAL Y TRANSPARENCIA FINANCIERA</h4>
+      <p>La Fundación es una entidad de <b>interés general</b> y <b>acceso comunitario</b>. Las rentas y excedentes obtenidos se destinan e invierten en su totalidad en el <b>objeto social institucional</b>, estando <b class="o">expresamente prohibida la distribución de remanentes</b>.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN QUIÉNES SOMOS, MISIÓN Y VISIÓN ===== -->
+  <section id="nosotros" class="nosotros-section reveal-up">
+    <div class="nosotros-title-block">
+      <span class="nosotros-tag">Nuestra Identidad Institucional</span>
+      <h2>Fundación Justicia Global</h2>
+    </div>
+
+    <div class="nosotros-grid">
+      <div class="mv-card quienes reveal-left delay-100">
+        <div class="mv-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <h3>¿Quiénes Somos?</h3>
+        <p>Somos una entidad sin ánimo de lucro y de utilidad común (<b>ESAL</b>), constituida bajo el marco legal colombiano (<b>Decreto 2150 de 1995</b>). Nacemos como un <b>brazo técnico articulador</b> dedicado a la <b>formación</b>, <b>consultoría de gestión</b>, <b class="o">veeduría ciudadana</b> y formulación rigurosa de <b class="o">proyectos sociales y ambientales</b>.</p>
+      </div>
+
+      <div class="mv-card mision reveal-up delay-200">
+        <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Nuestra Misión</h3>
+        <p>Promover los <b>derechos humanos</b>, la <b>responsabilidad social empresarial</b> y la <b>transparencia</b> en la gestión pública y privada. A través de <b>proyectos MGA</b>, <b>investigación aplicada</b> y la articulación de la <b>Quinta Hélice</b> (Academia, Industria, Estado, Sociedad y Medio Ambiente), <b class="o">combatimos la corrupción</b> y <b class="o">reducimos la desigualdad territorial</b>.</p>
+      </div>
+
+      <div class="mv-card vision reveal-right delay-300">
+        <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Nuestra Visión</h3>
+        <p>Consolidarnos como el <b>referente técnico y estratégico</b> nacional e internacional en la construcción de <b>soluciones éticas e inclusivas</b>, garantizando que los recursos públicos y programas de desarrollo se traduzcan en <b class="o">bienestar social sostenible con dignidad</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN BIENVENIDA DE LA PRESIDENCIA ===== -->
+  <section id="presidencia" class="presidencia-section reveal-up">
+    <div class="presidencia-card">
+      <div class="presidencia-header">
+        <div class="presidencia-avatar">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <div class="presidencia-info">
+          <h3>Jonatan Mercado Alcina</h3>
+          <span>Cofundador, Presidente & Representante Legal</span>
+        </div>
+      </div>
+      <div class="presidencia-body">
+        <p>Les doy la más cordial bienvenida a una organización creada con la convicción de que la <b>justicia debe convertirse en acciones capaces de transformar realidades</b>.</p>
+        <p>Trabajamos por los <b>derechos humanos</b>, la <b>transparencia</b>, la <b>integridad</b> y la <b>responsabilidad social</b>, mediante conocimiento especializado, consultorías, auditorías, educación y proyectos de impacto social.</p>
+        <p>Nuestro compromiso es consolidar una Fundación con <b>vocación de servicio</b>, <b>rigor profesional</b> y <b class="o">visión internacional</b>, fortaleciendo instituciones, protegiendo derechos y generando oportunidades.</p>
+        
+        <div class="presidencia-quote">
+          <i class="fa-solid fa-quote-left" style="color:var(--orange); margin-right:8px;"></i>
+          "Porque creemos que un mundo más justo no se espera: <b class="o">se construye</b>."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN NUESTROS ALIADOS ESTRATÉGICOS ===== -->
+  <section id="aliados" class="aliados-section reveal-up">
+    <div class="aliados-header">
+      <span class="aliados-tag">Alianzas que Generan Impacto</span>
+      <h2>NUESTROS ALIADOS ESTRATÉGICOS</h2>
+      <p>Construimos alianzas para <b>transformar realidades</b>. Creemos que las grandes transformaciones no se construyen de manera aislada: se logran cuando instituciones, empresas, comunidades y personas unen sus capacidades alrededor de propósitos comunes.</p>
+    </div>
+
+    <div class="aliados-grid">
+      <div class="aliado-featured reveal-left delay-100">
+        <div>
+          <span class="aliado-badge-top">Aliado Destacado</span>
+          <div class="aliado-icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Universidad Libre Seccional Barranquilla</h3>
+          <p>Nos llena de especial orgullo contar con la <b>Universidad Libre Seccional Barranquilla</b> como un aliado estratégico de alto nivel, compartiendo conocimiento científico, desarrollo de proyectos de investigación aplicada y formación de capacidades territoriales.</p>
+          
+          <div class="aliado-gallery">
+            <div class="aliado-photo-thumb" onclick="openLightbox('public/img/convenio-firma-unilibre.jpg', 'Firma de Convenio Marco — Fundación Justicia Global y Universidad Libre Seccional Barranquilla')">
+              <img src="public/img/convenio-firma-unilibre.jpg" alt="Firma de Convenio Marco de Cooperación">
+            </div>
+            <div class="aliado-photo-thumb" onclick="openLightbox('public/img/convenio-directivos-unilibre.jpg', 'Ceremonia de Firma de Convenio Marco de Cooperación Institucional')">
+              <img src="public/img/convenio-directivos-unilibre.jpg" alt="Directivos y Delegación Institucional">
+            </div>
+            <div class="aliado-photo-thumb" onclick="openLightbox('public/img/convenio-campus-unilibre.jpg', 'Delegación de la Fundación Justicia Global en el Campus de la Universidad Libre Seccional Barranquilla')">
+              <img src="public/img/convenio-campus-unilibre.jpg" alt="Delegación en Campus Universidad Libre">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aliados-pillars-card reveal-right delay-200">
+        <h4>Pilares de Nuestras Alianzas</h4>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> Transferencia y gestión del conocimiento</li>
+          <li><i class="fa-solid fa-circle-check"></i> Desarrollo e investigación de proyectos MGA</li>
+          <li><i class="fa-solid fa-circle-check"></i> Fortalecimiento de capacidades institucionales</li>
+          <li><i class="fa-solid fa-circle-check"></i> Soluciones éticas de alto impacto social</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN GALERÍA DE FOTOS E IMPACTO ===== -->
+  <section id="galeria" class="galeria-section reveal-up">
+    <div class="galeria-header">
+      <span class="galeria-tag">Galería de Proyectos e Impacto</span>
+      <h2>Transformando Realidades en el Territorio</h2>
+    </div>
+
+    <div class="galeria-grid">
+      <div class="galeria-item reveal-up delay-100" onclick="openLightbox('public/img/convenio-firma-unilibre.jpg', 'Firma de Convenio Marco de Cooperación entre la Fundación Justicia Global y la Universidad Libre Seccional Barranquilla')">
+        <div class="galeria-img-wrap">
+          <img src="public/img/convenio-firma-unilibre.jpg" alt="Firma de Convenio Marco Universidad Libre">
+          <div class="galeria-overlay">
+            <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+        </div>
+        <div class="galeria-caption">
+          <span class="galeria-badge">Alianza Estratégica</span>
+          <h4>Firma de Convenio — Universidad Libre</h4>
+        </div>
+      </div>
+
+      <div class="galeria-item reveal-up delay-200" onclick="openLightbox('public/img/convenio-directivos-unilibre.jpg', 'Ceremonia Oficial y Delegación Directiva — Universidad Libre y Fundación Justicia Global')">
+        <div class="galeria-img-wrap">
+          <img src="public/img/convenio-directivos-unilibre.jpg" alt="Delegación Directiva e Institucional">
+          <div class="galeria-overlay">
+            <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+        </div>
+        <div class="galeria-caption">
+          <span class="galeria-badge">Ceremonia Oficial</span>
+          <h4>Directivos y Delegación Institucional</h4>
+        </div>
+      </div>
+
+      <div class="galeria-item reveal-up delay-300" onclick="openLightbox('public/img/convenio-campus-unilibre.jpg', 'Delegación de la Fundación Justicia Global en las Instalaciones del Campus Universidad Libre Seccional Barranquilla')">
+        <div class="galeria-img-wrap">
+          <img src="public/img/convenio-campus-unilibre.jpg" alt="Delegación Campus Universidad Libre">
+          <div class="galeria-overlay">
+            <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+        </div>
+        <div class="galeria-caption">
+          <span class="galeria-badge">Investigación & Desarrollo</span>
+          <h4>Campus Universidad Libre Barranquilla</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal Viewer -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Cerrar ventana"><i class="fa-solid fa-xmark"></i></button>
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-title" id="lightboxTitle"></div>
+    </div>
+  </div>
+
+  <!-- ===== SECCIÓN DE CONTACTO & FORMULARIO ===== -->
+  <section id="contacto" class="contact-section reveal-up">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>¿Tienes un proyecto o consulta técnica?</h3>
+        <p>Ponte en contacto con nuestro equipo de dirección y asesores para estructurar propuestas MGA, convenios académicos o consultorías de sostenibilidad.</p>
+        
+        <div class="direct-channels">
+          <a href="https://wa.me/573162462649?text=Hola,%20quisiera%20solicitar%20asesor%C3%ADa%20técnica" target="_blank" class="channel-card">
+            <div class="c-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <b>WhatsApp Técnico Directo</b>
+              <span>+57 316 2462649 — Respuesta rápida</span>
+            </div>
+          </a>
+          <a href="mailto:contacto@fundacionjusticiaglobal.org" class="channel-card">
+            <div class="c-icon mail"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <b>Correo Institucional</b>
+              <span>contacto@fundacionjusticiaglobal.org</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/fjusticiaglobal?stkn=MTk3a3Ywa3BoNnE4YQ==" target="_blank" class="channel-card" style="border-left: 4px solid #E1306C;">
+            <div class="c-icon" style="background:#FEE6EE; color:#E1306C;"><i class="fa-brands fa-instagram"></i></div>
+            <div style="flex:1;">
+              <b>Instagram Oficial — @fjusticiaglobal</b>
+              <span>Síguenos para conocer noticias e impacto social</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Nos pondremos en contacto muy pronto.');">
+        <div class="form-group">
+          <label for="nombre">Nombre Completo *</label>
+          <input type="text" id="nombre" required placeholder="Ej. Dra. María Pérez">
+        </div>
+        <div class="form-group">
+          <label for="tipo">¿A qué sector o institución perteneces? *</label>
+          <select id="tipo" required>
+            <option value="">Selecciona una opción...</option>
+            <option value="universidad">Universidad / Institución Educativa</option>
+            <option value="empresa">Empresa / Sector Privado (RSE - ESG)</option>
+            <option value="gobierno">Entidad Pública / Gobierno Local</option>
+            <option value="cooperacion">Cooperación Internacional / Fondos</option>
+            <option value="comunidad">Organización Social / Comunidad</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico *</label>
+          <input type="email" id="email" required placeholder="correo@entidad.org">
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Descripción de la necesidad o proyecto *</label>
+          <textarea id="mensaje" rows="4" required placeholder="Ej. Requerimos formulación MGA para un proyecto ambiental o asesoría en Plan de Desarrollo..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:8px;">
+          <i class="fa-solid fa-paper-plane"></i> Solicitar Acompañamiento Técnico
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer reveal-up">
+    <div class="footer-top">
+      <div class="footer-blob"><i class="fa-solid fa-globe"></i> COLOMBIA<br>Y EL MUNDO</div>
+      <div class="footer-msg">
+        Construimos soluciones éticas para transformar realidades territoriales.
+        <b>¡Juntos generamos cambio!</b>
+      </div>
+      <div class="footer-social">
+        <span class="label">SÍGUENOS</span>
+        <div class="icons">
+          <a href="https://www.facebook.com/share/1EXgjUVpbJ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/fjusticiaglobal?stkn=MTk3a3Ywa3BoNnE4YQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <i class="fa-solid fa-globe"></i>www.fundacionjusticiaglobal.org
+    </div>
+    <div class="credit">© 2026 Fundación Justicia Global. Todos los derechos reservados.</div>
+  </footer>
+</div>
+
+<!-- ===== SCRIPT DE NAVEGACIÓN Y ANIMACIONES ===== -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Activamos la clase js-ready en el body para habilitar las transiciones de scroll
+    document.body.classList.add('js-ready');
+
+    // === LÓGICA DEL NAVBAR RESPONSIVE ===
+    const siteHeader = document.getElementById('siteHeader');
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Sombra y fondo dinámico en scroll
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 20) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+
+      // Resaltado dinámico del enlace activo según el scroll
+      let currentSection = 'top';
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach(function(section) {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSection || (currentSection === 'top' && link.getAttribute('href') === '#top')) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+
+    // Alternar menú hamburguesa móvil
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = navMenu.classList.contains('active');
+        if (isOpen) {
+          closeNavMenu();
+        } else {
+          openNavMenu();
+        }
+      });
+
+      function openNavMenu() {
+        navMenu.classList.add('active');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        const icon = navToggle.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
+      }
+
+      function closeNavMenu() {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        const icon = navToggle.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
+
+      // Cerrar menú al hacer clic en un enlace de navegación
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          closeNavMenu();
+        });
+      });
+
+      // Cerrar menú al hacer clic fuera
+      document.addEventListener('click', function(e) {
+        if (!siteHeader.contains(e.target)) {
+          closeNavMenu();
+        }
+      });
+    }
+
+    // Configuración del Intersection Observer para scroll storytelling con alta sensibilidad
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -30px 0px',
+      threshold: 0.05
+    };
+
+    const observer = new IntersectionObserver(function(entries, obs) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale');
+    revealElements.forEach(function(el) {
+      // Si el elemento ya está en la pantalla inicial (Hero), hacerlo visible rápidamente
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        setTimeout(function() {
+          el.classList.add('is-visible');
+        }, 50);
+      } else {
+        observer.observe(el);
+      }
+  // === LÓGICA DEL LIGHTBOX MODAL DE GALERÍA ===
+  function openLightbox(src, title) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const titleEl = document.getElementById('lightboxTitle');
+    if (modal && img && titleEl) {
+      img.src = src;
+      img.alt = title;
+      titleEl.textContent = title;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeLightbox(e) {
+    if (e) e.stopPropagation();
+    const modal = document.getElementById('lightboxModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>
+
+</body>
+</html>
