@@ -1598,6 +1598,38 @@
     .values .v { border-left: 1px solid rgba(255,255,255,.2); background: transparent; padding: 0 6px; }
     .values .v:first-child { border-left: none; }
   }
+
+  /* ===== FRANJA NEGRA DE CIERRE / FOOTER CREDIT BAR ===== */
+  .bottom-black-bar {
+    width: 100%;
+    background: #09090b;
+    color: #e4e4e7;
+    text-align: center;
+    padding: 18px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13.5px;
+    letter-spacing: 0.3px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 16px;
+    margin-top: 40px;
+  }
+  .bottom-black-bar a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .bottom-black-bar a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+  }
+  .bottom-black-bar .sep {
+    color: rgba(255, 255, 255, 0.3);
+  }
 </style>
 </head>
 <body>
@@ -2002,8 +2034,14 @@
     <div class="footer-bottom">
       <i class="fa-solid fa-globe"></i>www.fundacionjusticiaglobal.org
     </div>
-    <div class="credit">© 2026 Fundación Justicia Global. Todos los derechos reservados.</div>
   </footer>
+</div>
+
+<!-- ===== FRANJA NEGRA DE CIERRE DE PÁGINA ===== -->
+<div class="bottom-black-bar">
+  <span>© 2026 <b>Fundación Justicia Global</b>. Todos los derechos reservados.</span>
+  <span class="sep">|</span>
+  <span>Desarrollado por <a href="https://fidelmercadotech.com/" target="_blank" rel="noopener noreferrer">Fidel Mercado Tech</a></span>
 </div>
 
 <!-- ===== SCRIPT DE NAVEGACIÓN Y ANIMACIONES ===== -->
