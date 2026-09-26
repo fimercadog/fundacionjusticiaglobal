@@ -11,9 +11,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="public/img/logo.png">
 <link rel="icon" type="image/png" sizes="16x16" href="public/img/logo.png">
 <link rel="apple-touch-icon" sizes="180x180" href="public/img/logo.png">
-<!-- <link rel="manifest" href="public/manifest.json"> -->
 
-<!-- Nombres y Leyendas de Aplicación Web (Favicon / App Title) -->
+<!-- Nombres y Leyendas de Aplicación Web -->
 <meta name="application-name" content="Fundación Justicia Global">
 <meta name="apple-mobile-web-app-title" content="Justicia Global">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -42,7 +41,7 @@
 <meta name="twitter:description" content="Transformamos realidades territoriales mediante la formulación rigurosa de proyectos MGA, la investigación aplicada y la articulación de la Quinta Hélice.">
 <meta name="twitter:image" content="public/img/og-banner.jpg">
 
-<!-- Schema.org JSON-LD para SEO y buscadores -->
+<!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,6 +58,7 @@
   ]
 }
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -106,18 +106,9 @@
   }
 
   /* ===== HIGHLIGHTS DE COLOR VERDE Y NARANJA EN TEXTOS ===== */
-  b, strong {
-    color: var(--green);
-    font-weight: 800;
-  }
-  b.o, strong.o, .o {
-    color: var(--orange);
-    font-weight: 800;
-  }
-  b.g, strong.g, .g {
-    color: var(--green);
-    font-weight: 800;
-  }
+  b, strong { color: var(--green); font-weight: 800; }
+  b.o, strong.o, .o { color: var(--orange); font-weight: 800; }
+  b.g, strong.g, .g { color: var(--green); font-weight: 800; }
 
   /* ===== ANIMACIONES SUAVES Y ELEGANTES PARA TODOS LOS ÍCONOS ===== */
   i, .fa, .fa-solid, .fa-brands, .fa-regular {
@@ -125,7 +116,6 @@
     transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease, filter 0.3s ease;
   }
 
-  /* Micro-animación en hover (directo o desde su contenedor) */
   i:hover,
   a:hover i,
   button:hover i,
@@ -143,16 +133,18 @@
   .footer-blob:hover i,
   .aliado-badge-bottom:hover i,
   .galeria-item:hover i,
-  .nav-link:hover i {
+  .nav-link:hover i,
+  .pilar-card:hover i,
+  .sector-card:hover i,
+  .modelo-step:hover i,
+  .investigacion-card:hover i {
     transform: scale(1.22) rotate(6deg);
   }
 
-  /* Clic interactivo en íconos */
   i:active, a:active i, button:active i, .btn:active i {
     transform: scale(0.9) rotate(-4deg);
   }
 
-  /* Respiración sutil continua para íconos en tarjetas y badges */
   .servicios-icon i,
   .valores-icon i,
   .nosotros-icon i,
@@ -163,7 +155,10 @@
   .aliados-tag i,
   .asesoria-tag i,
   .programas-tag i,
-  .impacto-item i {
+  .impacto-item i,
+  .pilar-icon i,
+  .sector-icon i,
+  .investigacion-icon i {
     animation: iconGentlePulse 3.5s ease-in-out infinite;
   }
 
@@ -199,12 +194,11 @@
     left: 50%;
     transform: translateX(-50%);
     width: auto;
-    max-width: 95vw;
+    max-width: 96vw;
     z-index: 99999;
     pointer-events: auto;
   }
 
-  /* Ocultar elementos móviles en Escritorio */
   .nav-toggle, #navToggle,
   .nav-menu, #navMenu {
     display: none !important;
@@ -216,11 +210,11 @@
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    gap: 2px 4px;
+    gap: 2px 3px;
     list-style: none;
     margin: 0 auto;
     padding: 5px 12px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -232,10 +226,10 @@
   .nav-link {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 11.5px;
     color: var(--ink);
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px 9px;
     border-radius: 20px;
     white-space: nowrap;
     transition: color 0.3s ease, background 0.3s ease;
@@ -247,40 +241,24 @@
     background: var(--green-light);
   }
 
-  /* Ajuste para pantallas de laptop/escritorio medio (769px - 1300px) para que las 13 secciones quepan completas */
-  @media (min-width: 769px) and (max-width: 1300px) {
+  @media (min-width: 769px) and (max-width: 1250px) {
     .nav-link {
-      font-size: 11px !important;
-      padding: 4px 6px !important;
+      font-size: 10.5px !important;
+      padding: 4px 5px !important;
     }
     .nav-list {
-      gap: 1px 2px !important;
-      padding: 4px 8px !important;
+      gap: 1px !important;
+      padding: 4px 6px !important;
     }
   }
 
-  /* ===== NAVEGACIÓN MÓVIL (<769px): NO NAVBAR, SOLO BOTÓN FLOTANTE + OVERLAY ===== */
+  /* ===== NAVEGACIÓN MÓVIL (<769px) ===== */
   @media (max-width: 768px) {
-    /* Ajustes para evitar desbordamiento horizontal en pantallas de 375px */
-    .hero-header-logo {
-      max-width: 280px !important;
-    }
+    .hero-header-logo { max-width: 280px !important; }
+    .headline { font-size: 24px !important; text-align: center !important; }
+    .hero-slogan-col { justify-content: center !important; }
+    .header-nav { display: none !important; }
 
-    .headline {
-      font-size: 24px !important;
-      text-align: center !important;
-    }
-
-    .hero-slogan-col {
-      justify-content: center !important;
-    }
-
-    /* El navbar de escritorio desaparece por completo en móvil */
-    .header-nav {
-      display: none !important;
-    }
-
-    /* BOTÓN HAMBURGUESA FLOTANTE FIJO (FIXED top: 20px; right: 20px;) */
     .nav-toggle, #navToggle {
       display: flex !important;
       align-items: center !important;
@@ -309,7 +287,6 @@
       background: var(--green-dark) !important;
     }
 
-    /* MENÚ OVERLAY FLOTANTE (FIXED fuera del flujo, z-index 2147483646) */
     .nav-menu, #navMenu {
       display: block !important;
       position: fixed !important;
@@ -377,15 +354,12 @@
       background: var(--green-light) !important;
     }
 
-    [id] {
-      scroll-margin-top: 20px;
-    }
+    [id] { scroll-margin-top: 20px; }
 
     section {
       width: 100%;
-      min-height: 100vh;
-      min-height: 100dvh;
-      padding: 65px 18px 40px;
+      min-height: auto !important;
+      padding: 60px 18px 40px !important;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -395,46 +369,52 @@
   }
 
   /* ===== REGLA MAESTRA DE SECCIONES (ESTRUCTURAL RESPONSIVE) ===== */
-  .wrap {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .section-container {
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  .wrap { width: 100%; margin: 0 auto; padding: 0; box-sizing: border-box; }
+  .section-container { width: 100%; max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
 
   section {
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 75px 24px;
+    padding: 80px 24px;
     box-sizing: border-box;
     position: relative;
   }
 
-  /* ===== SECCIÓN 1: HEADER BANNER INSTITUCIONAL (#top) ===== */
+  /* BOTONES GENERALES */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 14.5px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary { background: var(--green); color: #ffffff; box-shadow: 0 4px 14px rgba(127, 153, 44, 0.35); }
+  .btn-primary:hover { background: #6b8223; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(127, 153, 44, 0.45); }
+  .btn-outline { background: transparent; color: var(--green-dark); border: 2px solid var(--green); }
+  .btn-outline:hover { background: var(--green-light); color: var(--green-dark); transform: translateY(-2px); }
+
+  .hero-btn-group { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 20px; }
+
+  /* ===== 01. HERO / PORTADA (#top) ===== */
   .header-banner-section {
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 85px 24px 40px;
+    padding: 95px 24px 60px;
     background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
   }
 
   .hero-header-block {
@@ -443,1170 +423,264 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1180px;
+    max-width: 1100px;
     margin: 0 auto;
-    gap: 24px;
+    gap: 22px;
+    text-align: center;
   }
 
-  @media (min-width: 900px) {
-    .hero-header-block {
-      flex-direction: row;
-      justify-content: center;
-      gap: 52px;
-    }
+  .hero-logo-col img { max-width: 360px; height: auto; margin: 0 auto; }
+  .hero-subtitle-pill {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 6px 18px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .hero-main-title {
+    font-size: clamp(26px, 4vw, 44px);
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.2;
+    margin: 8px 0;
+  }
+  .hero-keywords {
+    font-size: clamp(14px, 2vw, 18px);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: var(--orange);
+    letter-spacing: 0.5px;
+  }
+  .hero-description {
+    font-size: clamp(15px, 2.2vw, 18px);
+    line-height: 1.65;
+    color: #444444;
+    max-width: 860px;
+    margin: 0 auto;
   }
 
-  /* ===== SECCIÓN 2: PRESENTACIÓN PRINCIPAL Y PANEL DE VALORES (#hero-principal) ===== */
-  .hero-principal-section {
+  /* ===== 02. ¿QUIÉNES SOMOS? (#nosotros) ===== */
+  .nosotros-section {
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
+    padding: 80px 24px;
     background: #fbfdf7;
     border-top: 1px solid rgba(127, 153, 44, 0.12);
     border-bottom: 1px solid rgba(127, 153, 44, 0.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
   }
 
-  .hero-logo-col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  .nosotros-title-block { text-align: center; margin-bottom: 32px; }
+  .nosotros-tag { display: inline-block; background: var(--green-light); color: var(--green); font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12.5px; padding: 6px 16px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; }
+  .nosotros-title-block h2 { font-size: clamp(24px, 3.5vw, 36px); color: var(--green-dark); font-weight: 900; }
+  .nosotros-title-block p.sub { font-size: 15.5px; color: #555; max-width: 800px; margin: 8px auto 0; }
 
-  .hero-header-logo {
-    width: 100%;
-    max-width: 440px;
-    height: auto;
-    object-fit: contain;
-  }
+  .nosotros-grid { display: grid; grid-template-columns: 1fr; gap: 20px; width: 100%; }
+  @media (min-width: 768px) { .nosotros-grid { grid-template-columns: repeat(3, 1fr); } }
 
-  .hero-divider {
-    display: none;
-  }
-
-  @media (min-width: 900px) {
-    .hero-divider {
-      display: block;
-      width: 4px;
-      height: 160px;
-      background: var(--green);
-      border-radius: 4px;
-      flex-shrink: 0;
-    }
-  }
-
-  .hero-slogan-col {
-    display: flex;
-    align-items: center;
-  }
-
-  .headline {
-    margin: 0;
-    font-weight: 900;
-    font-size: clamp(28px, 4.2vw, 54px);
-    line-height: 1.15;
-    letter-spacing: .2px;
-    text-align: left;
-  }
-  .headline .l1 { color: var(--ink); display: block; }
-  .headline .l2 { color: var(--green); display: block; }
-  .headline .l3 { color: var(--orange); display: block; }
-  .headline .l4 { color: var(--ink); display: block; }
-
-  .top-grid {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    gap: 24px;
-    flex: 1;
-    justify-content: center;
-  }
-
-  @media (min-width: 1025px) {
-    .top-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 36px;
-      align-items: center;
-    }
-  }
-
-  .col-main, .col-visual {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .lede {
-    font-size: 15.5px;
-    line-height: 1.6;
-    color: var(--body-text);
-    margin-bottom: 20px;
-  }
-  .lede b { color: var(--green); font-weight: 800; }
-  .lede b.o { color: var(--orange); font-weight: 800; }
-
-  /* CTAs & Botones */
-  .cta-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 12px 22px;
-    min-height: 46px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
-    cursor: pointer;
-    border: none;
-    white-space: nowrap;
-  }
-  .btn:hover {
-    transform: translateY(-3px);
-  }
-  .btn:active {
-    transform: translateY(0) scale(0.97);
-  }
-  .btn-primary { background: var(--orange); color: var(--white); box-shadow: 0 6px 18px rgba(240,114,3,0.25); }
-  .btn-primary:hover { background: var(--orange-dark); box-shadow: 0 10px 24px rgba(240,114,3,0.38); }
-  .btn-whatsapp { background: #25D366; color: var(--white); box-shadow: 0 6px 18px rgba(37,211,102,0.25); }
-  .btn-whatsapp:hover { background: #1da851; box-shadow: 0 10px 24px rgba(37,211,102,0.38); }
-  .btn-outline { background: transparent; color: var(--green-dark); border: 2px solid var(--green); }
-  .btn-outline:hover { background: var(--green); color: var(--white); box-shadow: 0 6px 18px rgba(127,153,44,0.3); }
-
-  /* Panel Hero */
-  .panel {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.06);
-    background: var(--white);
-    width: 100%;
-  }
-  .panel .hero-img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-  .panel:hover .hero-img {
-    transform: scale(1.04);
-  }
-
-  .band {
-    background: var(--green-dark);
-    color: #fff;
-    text-align: center;
-    padding: 18px 16px;
-    width: 100%;
-  }
-  .band .kicker {
-    font-family: 'Poppins', sans-serif;
-    color: var(--green);
-    font-weight: 800;
-    letter-spacing: 1px;
-    font-size: 12px;
-  }
-  .band h3 {
-    margin: 2px 0 0;
-    font-size: clamp(18px, 4vw, 24px);
-    font-weight: 800;
-  }
-  .band .script {
-    font-family: 'Caveat', cursive;
-    color: var(--orange);
-    font-size: clamp(26px, 6vw, 36px);
-    font-weight: 700;
-    display: inline-block;
-  }
-
-  .values {
-    display: flex;
-    justify-content: space-around;
-    gap: 8px;
-    margin-top: 12px;
-    width: 100%;
-  }
-  .values .v {
-    padding: 4px;
-    text-align: center;
-  }
-  .values .v i { font-size: 16px; color: var(--green); margin-bottom: 2px; }
-  .values .v div { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 10.5px; }
-
-  /* ===== SECCIÓN 05: NUESTROS SERVICIOS DEDICADA (#servicios - 100vh) ===== */
-  .servicios-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-
-  .section-container {
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .section-head {
-    text-align: center;
-    margin-bottom: 32px;
-    width: 100%;
-  }
-  .services-pill {
-    display: inline-block;
-    background: var(--green-light);
-    color: var(--green);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 12.5px;
-    letter-spacing: 1px;
-    padding: 6px 16px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  .section-head h2 {
-    font-size: clamp(24px, 3.5vw, 36px);
-    font-weight: 900;
-    color: var(--green-dark);
-    margin-bottom: 8px;
-  }
-  .section-head p {
-    font-size: 15px;
-    color: #4a4a4a;
-    max-width: 760px;
-    margin: 0 auto;
-    line-height: 1.55;
-  }
-
-  .servicios-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 100%;
-  }
-  @media (min-width: 768px) {
-    .servicios-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  .servicio-card {
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 24px;
-    box-shadow: var(--shadow-lvl1);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-  }
-  .servicio-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: var(--green);
-  }
-  .servicio-card:nth-child(2)::before { background: var(--orange); }
-  .servicio-card:nth-child(3)::before { background: var(--green-dark); }
-  .servicio-card:nth-child(4)::before { background: var(--orange-dark); }
-
-  .servicio-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lvl3);
-    border-color: rgba(127,153,44,0.3);
-  }
-
-  .servicio-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    background: var(--green-light);
-    color: var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    margin-bottom: 16px;
-    transition: transform 0.4s ease;
-  }
-  .servicio-card:hover .servicio-icon {
-    transform: scale(1.15) rotate(4deg);
-    background: var(--green);
-    color: #fff;
-  }
-  .servicio-card:nth-child(2):hover .servicio-icon { background: var(--orange); }
-  .servicio-card:nth-child(3):hover .servicio-icon { background: var(--green-dark); }
-  .servicio-card:nth-child(4):hover .servicio-icon { background: var(--orange-dark); }
-
-  .servicio-card h3 {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--ink);
-    margin-bottom: 10px;
-  }
-  .servicio-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #4a4a4a;
-  }
-
-  /* ===== SECCIÓN 3: MARCO LEGAL Y COMPROMISO (.pilares - 100vh) ===== */
-  .pilares-section {
-    background: #ffffff;
-  }
-  .legal-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 100%;
-  }
-  @media (min-width: 768px) {
-    .legal-grid { grid-template-columns: 1fr 1fr; }
-  }
-
-  .legal-block {
-    background: #ffffff;
-    border-left: 5px solid var(--green);
-    border-radius: 0 16px 16px 0;
-    padding: 28px 24px;
-    border: 1px solid var(--border-color);
-    border-left: 5px solid var(--green);
-    box-shadow: var(--shadow-lvl1);
-  }
-  .legal-block.orange { border-left-color: var(--orange); }
-  .legal-block h4 {
-    margin: 0 0 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 16px;
-    color: var(--green-dark);
-  }
-  .legal-block p {
-    margin: 0;
-    font-size: 14.5px;
-    line-height: 1.6;
-    color: #3d3d3d;
-  }
-
-  /* ===== SECCIÓN 03: QUIÉNES SOMOS, MISIÓN Y VISIÓN (#nosotros) ===== */
-  .nosotros-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .nosotros-title-block {
-    text-align: center;
-    margin-bottom: 32px;
-  }
-  .nosotros-tag {
-    display: inline-block;
-    background: var(--green-light);
-    color: var(--green);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 12.5px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 6px 16px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-  .nosotros-title-block h2 {
-    font-size: clamp(24px, 3.5vw, 36px);
-    color: var(--green-dark);
-    font-weight: 900;
-  }
-  .nosotros-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 100%;
-  }
-  @media (min-width: 768px) {
-    .nosotros-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
   .mv-card {
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 28px 22px;
-    box-shadow: var(--shadow-lvl1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
+    background: #ffffff; border: 1px solid var(--border-color); border-radius: 20px; padding: 28px 22px; box-shadow: var(--shadow-lvl1); transition: transform 0.4s ease, box-shadow 0.4s ease; display: flex; flex-direction: column; position: relative; overflow: hidden;
   }
   .mv-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--green); }
   .mv-card.mision::before { background: var(--orange); }
   .mv-card.vision::before { background: var(--green-dark); }
   .mv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lvl2); }
-  .mv-icon {
-    width: 50px; height: 50px; border-radius: 14px; background: var(--green-light); color: var(--green);
-    display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px;
-  }
+  .mv-icon { width: 50px; height: 50px; border-radius: 14px; background: var(--green-light); color: var(--green); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
   .mv-card.mision .mv-icon { background: #fff3e6; color: var(--orange); }
   .mv-card.vision .mv-icon { background: #eef4d8; color: var(--green-dark); }
   .mv-card h3 { font-size: 19px; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
   .mv-card p { font-size: 14px; line-height: 1.6; color: #4a4a4a; }
 
-  /* ===== SECCIÓN 06: NUESTRO ENFOQUE / VALORES (#valores) ===== */
-  .valores-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #fbfdf7;
-    border-top: 1px solid rgba(127, 153, 44, 0.12);
-    border-bottom: 1px solid rgba(127, 153, 44, 0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-  .valores-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 100%;
-  }
-  @media (min-width: 600px) {
-    .valores-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 1024px) {
-    .valores-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  .valor-card {
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 26px 20px;
-    box-shadow: var(--shadow-lvl1);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-  }
-  .valor-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lvl2);
-  }
-  .valor-number {
-    font-family: 'Poppins', sans-serif;
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--orange);
-    margin-bottom: 8px;
-    display: inline-block;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease, text-shadow 0.3s ease;
-    animation: numGentleBounce 3.6s ease-in-out infinite;
-    will-change: transform;
-  }
+  .principios-list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+  .principio-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; line-height: 1.5; color: #333; }
+  .principio-item i { color: var(--orange); font-size: 16px; margin-top: 2px; }
 
-  .valor-card:hover .valor-number,
-  .valor-number:hover {
-    transform: translateY(-4px) scale(1.25) rotate(-6deg);
-    color: var(--orange);
-    text-shadow: 0 4px 14px rgba(240, 114, 3, 0.4);
-  }
+  /* ===== 03. NUESTROS 4 PILARES (#pilares) ===== */
+  .pilares-section { width: 100%; padding: 80px 24px; background: #ffffff; }
+  .section-head { text-align: center; margin-bottom: 32px; }
+  .services-pill { display: inline-block; background: var(--green-light); color: var(--green); font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12.5px; padding: 6px 16px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; }
+  .section-head h2 { font-size: clamp(24px, 3.5vw, 36px); color: var(--green-dark); font-weight: 900; }
+  .section-head p { font-size: 15.5px; color: #555; max-width: 780px; margin: 8px auto 0; }
 
-  @keyframes numGentleBounce {
-    0%, 100% {
-      transform: translateY(0) scale(1);
-    }
-    50% {
-      transform: translateY(-3px) scale(1.08);
-      text-shadow: 0 4px 10px rgba(240, 114, 3, 0.25);
-    }
-  }
-  .valor-card h3 {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--green-dark);
-    margin-bottom: 8px;
-  }
-  .valor-card p {
-    font-size: 13.5px;
-    line-height: 1.6;
-    color: #444444;
-  }
+  .pilares-grid { display: grid; grid-template-columns: 1fr; gap: 24px; width: 100%; }
+  @media (min-width: 768px) { .pilares-grid { grid-template-columns: repeat(2, 1fr); } }
 
-  /* ===== SECCIÓN 07: NUESTROS PROGRAMAS (#programas) ===== */
-  .programas-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+  .pilar-card {
+    background: #ffffff; border: 1px solid rgba(127, 153, 44, 0.2); border-radius: 20px; padding: 30px 24px; box-shadow: var(--shadow-lvl1); transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; display: flex; flex-direction: column; position: relative; overflow: hidden;
   }
-  .programas-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    width: 100%;
-  }
-  @media (min-width: 768px) {
-    .programas-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  .programa-card {
-    background: #ffffff;
-    border: 1px solid rgba(127, 153, 44, 0.2);
-    border-radius: 20px;
-    padding: 28px 24px;
-    box-shadow: var(--shadow-lvl1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .programa-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lvl2);
-    border-color: var(--green);
-  }
-  .programa-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: var(--green-light);
-    color: var(--green-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    margin-bottom: 16px;
-  }
-  .programa-card h3 {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--green-dark);
-    margin-bottom: 10px;
-  }
-  .programa-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #4a4a4a;
-    margin-bottom: 16px;
-  }
+  .pilar-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--green); }
+  .pilar-card:nth-child(2)::before { background: var(--orange); }
+  .pilar-card:nth-child(3)::before { background: var(--green-dark); }
+  .pilar-card:nth-child(4)::before { background: linear-gradient(90deg, var(--green), var(--orange)); }
+  .pilar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lvl2); border-color: var(--green); }
 
-  /* ===== SECCIÓN 06: NUESTRO IMPACTO EN EL TERRITORIO (#impacto) ===== */
-  .impacto-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #fbfdf7;
-    border-top: 1px solid rgba(127, 153, 44, 0.12);
-    border-bottom: 1px solid rgba(127, 153, 44, 0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .impacto-card {
-    background: linear-gradient(135deg, var(--green-dark) 0%, #1c3b22 100%);
-    color: #ffffff;
-    border-radius: 24px;
-    padding: 36px 30px;
-    box-shadow: var(--shadow-lvl2);
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .impacto-card h3 {
-    font-size: clamp(22px, 3vw, 30px);
-    font-weight: 900;
-    color: #ffffff;
-  }
-  .impacto-card p {
-    font-size: 15.5px;
-    line-height: 1.65;
-    color: rgba(255, 255, 255, 0.92);
-  }
-  .impacto-highlights {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 10px;
-  }
-  @media (min-width: 650px) {
-    .impacto-highlights {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  .impacto-item {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .impacto-item i {
-    font-size: 24px;
-    color: var(--orange);
-    flex-shrink: 0;
-  }
-  .impacto-item span {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: #ffffff;
-  }
+  .pilar-number { font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 900; color: var(--orange); margin-bottom: 6px; display: inline-block; }
+  .pilar-icon { width: 50px; height: 50px; border-radius: 14px; background: var(--green-light); color: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+  .pilar-card h3 { font-size: 19px; font-weight: 800; color: var(--green-dark); margin-bottom: 10px; }
+  .pilar-card p { font-size: 14px; line-height: 1.65; color: #4a4a4a; }
 
-  /* ===== SECCIÓN 08: TRANSPARENCIA INSTITUCIONAL Y MARCO OPERATIVO (#transparencia) ===== */
-  .transparencia-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #fbfdf7;
-    border-top: 1px solid rgba(127, 153, 44, 0.12);
-    border-bottom: 1px solid rgba(127, 153, 44, 0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-  }
+  /* ===== 04. ¿CON QUIÉNES TRABAJAMOS? (#con-quienes-trabajamos) ===== */
+  .sectores-section { width: 100%; padding: 80px 24px; background: #fbfdf7; border-top: 1px solid rgba(127, 153, 44, 0.12); border-bottom: 1px solid rgba(127, 153, 44, 0.12); }
+  .sectores-grid { display: grid; grid-template-columns: 1fr; gap: 20px; width: 100%; }
+  @media (min-width: 600px) { .sectores-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .sectores-grid { grid-template-columns: repeat(3, 1fr); } }
 
-  /* ===== SECCIÓN 04: MENSAJE DE LA PRESIDENCIA (#presidencia) ===== */
-  .presidencia-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #fbfdf7;
-    border-top: 1px solid rgba(127, 153, 44, 0.12);
-    border-bottom: 1px solid rgba(127, 153, 44, 0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
+  .sector-card {
+    background: #ffffff; border: 1px solid var(--border-color); border-radius: 20px; padding: 26px 20px; box-shadow: var(--shadow-lvl1); transition: transform 0.35s ease, box-shadow 0.35s ease; display: flex; flex-direction: column;
   }
-  .presidencia-card {
-    background: #ffffff;
-    border: 1px solid rgba(127, 153, 44, 0.25);
-    border-radius: 24px;
-    padding: 38px 32px;
-    box-shadow: var(--shadow-lvl2);
-    position: relative;
-    width: 100%;
-    max-width: 920px;
-    margin: 0 auto;
-  }
-  .presidencia-card::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--green); border-radius: 24px 0 0 24px;
-  }
-  .presidencia-header { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
-  .presidencia-avatar {
-    width: 64px; height: 64px; border-radius: 50%; background: var(--green-dark); color: #fff;
-    display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(18,42,23,0.2);
-  }
-  .presidencia-info h3 { font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 2px; }
-  .presidencia-info span { font-size: 13px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--orange); text-transform: uppercase; letter-spacing: 0.5px; }
-  .presidencia-body p { font-size: 15.5px; line-height: 1.68; color: #333333; margin-bottom: 14px; }
-  .presidencia-quote {
-    background: #fbfdf7; border-left: 4px solid var(--orange); border-radius: 12px; padding: 16px 20px;
-    font-size: 16.5px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--green-dark); margin-top: 18px;
-    box-shadow: var(--shadow-lvl1);
-  }
+  .sector-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lvl2); border-color: var(--green); }
+  .sector-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--green-light); color: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+  .sector-card h3 { font-size: 17px; font-weight: 800; color: var(--green-dark); margin-bottom: 8px; }
+  .sector-card p { font-size: 13.5px; line-height: 1.6; color: #4a4a4a; }
 
-  /* ===== SECCIÓN 07: NUESTROS ALIADOS ESTRATÉGICOS (#aliados) ===== */
-  .aliados-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
+  /* ===== 05. NUESTRO MODELO DE TRABAJO (#modelo-trabajo) ===== */
+  .modelo-section { width: 100%; padding: 80px 24px; background: #ffffff; }
+  .modelo-flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; width: 100%; margin: 30px 0 20px; }
+  .modelo-step {
+    background: #ffffff; border: 2px solid var(--green); border-radius: 18px; padding: 20px 16px; min-width: 170px; flex: 1 1 170px; max-width: 210px; text-align: center; box-shadow: var(--shadow-lvl1); transition: transform 0.35s ease, box-shadow 0.35s ease; display: flex; flex-direction: column; align-items: center; gap: 8px;
   }
-  .aliados-header { text-align: center; margin-bottom: 28px; }
-  .aliados-tag { display: inline-block; background: var(--green-light); color: var(--green); font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12.5px; padding: 6px 16px; border-radius: 20px; margin-bottom: 8px; text-transform: uppercase; }
-  .aliados-header h2 { font-size: clamp(24px, 3.5vw, 36px); color: var(--green-dark); font-weight: 900; }
+  .modelo-step:hover { transform: translateY(-5px); box-shadow: var(--shadow-lvl2); border-color: var(--orange); }
+  .modelo-step-num { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 800; color: #ffffff; background: var(--green); padding: 3px 10px; border-radius: 12px; text-transform: uppercase; }
+  .modelo-step-icon { font-size: 26px; color: var(--orange); }
+  .modelo-step h4 { font-size: 14.5px; font-weight: 900; color: var(--green-dark); letter-spacing: 0.5px; }
+  .modelo-arrow { font-size: 20px; color: var(--green); display: flex; align-items: center; justify-content: center; }
+  @media (max-width: 768px) { .modelo-arrow { transform: rotate(90deg); margin: 2px 0; } }
+  .modelo-caption { font-size: 15.5px; font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--green-dark); text-align: center; max-width: 780px; margin-top: 14px; }
+
+  /* ===== 06. PROYECTOS E IMPACTO (#proyectos-impacto) ===== */
+  .proyectos-section { width: 100%; padding: 80px 24px; background: #fbfdf7; border-top: 1px solid rgba(127, 153, 44, 0.12); border-bottom: 1px solid rgba(127, 153, 44, 0.12); }
+  .proyectos-grid { display: grid; grid-template-columns: 1fr; gap: 24px; width: 100%; }
+  @media (min-width: 768px) { .proyectos-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .proyecto-card {
+    background: #ffffff; border: 1px solid var(--border-color); border-radius: 20px; padding: 24px; box-shadow: var(--shadow-lvl1); transition: transform 0.35s ease, box-shadow 0.35s ease; display: flex; flex-direction: column; gap: 14px;
+  }
+  .proyecto-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lvl2); border-color: var(--green); }
+  .proyecto-img-thumb { aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; cursor: pointer; border: 1px solid var(--border-color); position: relative; }
+  .proyecto-img-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .proyecto-meta { display: flex; flex-direction: column; gap: 6px; }
+  .proyecto-meta-item { font-size: 13.5px; color: #444; line-height: 1.5; }
+  .proyecto-meta-item b { color: var(--green-dark); font-weight: 800; }
+
+  /* ===== 07. ALIANZAS ESTRATÉGICAS (#aliados) ===== */
+  .aliados-section { width: 100%; padding: 80px 24px; background: #ffffff; }
   .aliados-grid { display: grid; grid-template-columns: 1fr; gap: 20px; width: 100%; }
   @media (min-width: 768px) { .aliados-grid { grid-template-columns: 1.2fr 0.8fr; } }
+
   .aliado-featured {
-    background: #ffffff; border: 2px solid var(--green); border-radius: 20px; padding: 28px 24px; box-shadow: var(--shadow-lvl2); position: relative;
-    display: flex; flex-direction: column; justify-content: space-between;
+    background: #ffffff; border: 2px solid var(--green); border-radius: 20px; padding: 28px 24px; box-shadow: var(--shadow-lvl2); position: relative; display: flex; flex-direction: column; justify-content: space-between;
   }
-  .aliado-featured h3 {
-    font-size: clamp(20px, 2.5vw, 24px);
-    font-weight: 900;
-    color: var(--green-dark);
-    margin-bottom: 12px;
-    line-height: 1.3;
-  }
-  .aliado-featured-footer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 18px;
-  }
+  .aliado-featured h3 { font-size: clamp(20px, 2.5vw, 24px); font-weight: 900; color: var(--green-dark); margin-bottom: 12px; line-height: 1.3; }
+  .aliado-featured-footer { display: flex; justify-content: flex-end; margin-top: 18px; }
   .aliado-badge-bottom {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--orange);
-    color: #ffffff;
-    font-size: 11px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    padding: 6px 14px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 3px 10px rgba(240, 114, 3, 0.25);
+    display: inline-flex; align-items: center; gap: 6px; background: var(--orange); color: #ffffff; font-size: 11px; font-family: 'Poppins', sans-serif; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 3px 10px rgba(240, 114, 3, 0.25);
   }
   .aliado-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
-  
-  .aliado-photo-thumb {
-    aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; cursor: pointer; border: 1px solid var(--border-color); position: relative;
-  }
-  .aliado-photo-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
-  .aliado-photo-thumb:hover img { transform: scale(1.04); }
-  
+  .aliado-photo-thumb { aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; cursor: pointer; border: 1px solid var(--border-color); position: relative; }
+  .aliado-photo-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
   .aliados-pillars-card {
     background: var(--green-dark); color: #ffffff; border-radius: 20px; padding: 28px 24px; display: flex; flex-direction: column; justify-content: center;
   }
-  .aliados-pillars-card h4 { font-size: 19px; font-weight: 800; margin-bottom: 14px; }
+  .aliados-pillars-card h4 { font-size: 19px; font-weight: 800; margin-bottom: 14px; color: #fff; }
   .aliados-pillars-card ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .aliados-pillars-card li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.9); }
   .aliados-pillars-card li i { color: var(--orange); }
 
-  /* ===== SECCIÓN 10: GALERÍA DE FOTOS E IMPACTO (#galeria) ===== */
-  .galeria-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .galeria-header { text-align: center; margin-bottom: 28px; }
-  .galeria-tag { display: inline-block; background: var(--green-light); color: var(--green); font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12.5px; padding: 6px 16px; border-radius: 20px; margin-bottom: 8px; text-transform: uppercase; }
-  .galeria-header h2 { font-size: clamp(24px, 3.5vw, 36px); color: var(--green-dark); font-weight: 900; }
-  .galeria-grid { display: grid; grid-template-columns: 1fr; gap: 20px; width: 100%; }
-  @media (min-width: 600px) { .galeria-grid { grid-template-columns: repeat(3, 1fr); } }
+  /* ===== 08. INVESTIGACIÓN Y CONOCIMIENTO (#investigacion-conocimiento) ===== */
+  .investigacion-section { width: 100%; padding: 80px 24px; background: #fbfdf7; border-top: 1px solid rgba(127, 153, 44, 0.12); border-bottom: 1px solid rgba(127, 153, 44, 0.12); }
+  .investigacion-grid { display: grid; grid-template-columns: 1fr; gap: 20px; width: 100%; }
+  @media (min-width: 600px) { .investigacion-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .investigacion-grid { grid-template-columns: repeat(3, 1fr); } }
 
-  .galeria-item {
-    background: #ffffff; border: 1px solid var(--border-color); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-lvl1);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease; cursor: pointer; display: flex; flex-direction: column;
+  .investigacion-card {
+    background: #ffffff; border: 1px solid var(--border-color); border-radius: 20px; padding: 26px 20px; box-shadow: var(--shadow-lvl1); transition: transform 0.35s ease, box-shadow 0.35s ease; display: flex; flex-direction: column;
   }
-  .galeria-item:hover { transform: translateY(-6px); box-shadow: var(--shadow-lvl3); }
-  .galeria-img-wrap { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #f0f4ea; }
-  .galeria-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
-  .galeria-item:hover .galeria-img-wrap img { transform: scale(1.04); }
+  .investigacion-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lvl2); border-color: var(--green); }
+  .investigacion-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--green-light); color: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+  .investigacion-card h3 { font-size: 17px; font-weight: 800; color: var(--green-dark); margin-bottom: 8px; }
+  .investigacion-card p { font-size: 13.5px; line-height: 1.6; color: #4a4a4a; }
 
-  /* Overlay de Ícono Naranja para Ampliar Imagen Completa */
-  .galeria-overlay {
-    position: absolute; inset: 0; background: rgba(18, 42, 23, 0.45); backdrop-filter: blur(2px);
-    display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.5s ease-in-out;
+  /* ===== 09. PRESIDENCIA (#presidencia) ===== */
+  .presidencia-section { width: 100%; padding: 80px 24px; background: #ffffff; }
+  .presidencia-card {
+    background: #ffffff; border: 1px solid rgba(127, 153, 44, 0.25); border-radius: 24px; padding: 38px 32px; box-shadow: var(--shadow-lvl2); position: relative; width: 100%; max-width: 920px; margin: 0 auto;
   }
-  .galeria-item:hover .galeria-overlay, .aliado-photo-thumb:hover .galeria-overlay { opacity: 1; }
+  .presidencia-card::before { content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--green); border-radius: 24px 0 0 24px; }
+  .presidencia-header { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+  .presidencia-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--green-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; box-shadow: 0 4px 12px rgba(18,42,23,0.2); }
+  .presidencia-info h3 { font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 2px; }
+  .presidencia-info span { font-size: 13px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--orange); text-transform: uppercase; letter-spacing: 0.5px; }
+  .presidencia-body p { font-size: 15.5px; line-height: 1.68; color: #333333; margin-bottom: 14px; }
+  .presidencia-quote { background: #fbfdf7; border-left: 4px solid var(--orange); border-radius: 12px; padding: 16px 20px; font-size: 16.5px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--green-dark); margin-top: 18px; box-shadow: var(--shadow-lvl1); }
 
-  .galeria-zoom-icon {
-    width: 52px; height: 52px; border-radius: 50%; background: var(--orange); color: #fff;
-    display: flex; align-items: center; justify-content: center; font-size: 22px;
-    box-shadow: 0 4px 16px rgba(240,114,3,0.45); transform: scale(0.9);
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
-  }
-  .galeria-item:hover .galeria-zoom-icon, .aliado-photo-thumb:hover .galeria-zoom-icon { transform: scale(1.1); }
+  /* ===== 10. TRANSPARENCIA INSTITUCIONAL (#transparencia) ===== */
+  .transparencia-section { width: 100%; padding: 80px 24px; background: #fbfdf7; border-top: 1px solid rgba(127, 153, 44, 0.12); border-bottom: 1px solid rgba(127, 153, 44, 0.12); }
+  .transparencia-grid { display: grid; grid-template-columns: 1fr; gap: 20px; width: 100%; max-width: 1050px; margin: 0 auto; }
+  @media (min-width: 650px) { .transparencia-grid { grid-template-columns: repeat(2, 1fr); } }
+  .transparencia-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 20px; padding: 26px 22px; box-shadow: var(--shadow-lvl1); transition: transform 0.35s ease, box-shadow 0.35s ease; display: flex; flex-direction: column; gap: 10px; }
+  .transparencia-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lvl2); border-color: var(--green); }
+  .transparencia-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--green-light); color: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 4px; }
+  .transparencia-card h3 { font-size: 17.5px; font-weight: 800; color: var(--green-dark); }
+  .transparencia-card p { font-size: 13.5px; line-height: 1.6; color: #4a4a4a; }
+  .ciiu-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .ciiu-pill { background: #eef4d8; color: var(--green-dark); font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 10px; border: 1px solid rgba(127,153,44,0.3); }
 
-  .galeria-caption { padding: 14px 18px; }
-  .galeria-badge { font-size: 11px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--orange); text-transform: uppercase; display: block; margin-bottom: 2px; }
-  .galeria-caption h4 { font-size: 15px; font-weight: 800; color: var(--ink); }
+  /* ===== 11. CONTACTO / CTA FINAL (#contacto) ===== */
+  .contacto-section { width: 100%; padding: 80px 24px; background: #ffffff; }
+  .contacto-container { width: 100%; max-width: 1050px; margin: 0 auto; }
+  .contacto-grid { display: grid; grid-template-columns: 1fr; gap: 32px; width: 100%; }
+  @media (min-width: 850px) { .contacto-grid { grid-template-columns: 0.9fr 1.1fr; } }
 
-  /* Modal Lightbox */
-  .lightbox-modal {
-    position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(8px);
-    display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
+  .contacto-cta-card {
+    background: linear-gradient(135deg, var(--green-dark) 0%, #1c3b22 100%); color: #ffffff; border-radius: 24px; padding: 36px 30px; box-shadow: var(--shadow-lvl2); display: flex; flex-direction: column; justify-content: space-between; gap: 20px;
   }
-  .lightbox-modal.active { opacity: 1; pointer-events: auto; }
-  .lightbox-content { position: relative; max-width: 92vw; max-height: 88vh; display: flex; flex-direction: column; align-items: center; }
-  .lightbox-content img { max-width: 100%; max-height: 78vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
-  .lightbox-title { color: #ffffff; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; margin-top: 14px; text-align: center; }
-  .lightbox-close {
-    position: absolute; top: -42px; right: 0; background: #ffffff; color: #122A17; border: none; width: 36px; height: 36px; border-radius: 50%;
-    font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s ease, background 0.2s ease;
-  }
-  .lightbox-close:hover { transform: scale(1.1); background: var(--orange); color: #ffffff; }
+  .contacto-cta-card h2 { font-size: clamp(24px, 3.2vw, 34px); font-weight: 900; color: #ffffff; line-height: 1.2; }
+  .contacto-cta-card p { font-size: 15.5px; line-height: 1.65; color: rgba(255,255,255,0.92); }
 
-  /* ===== SECCIÓN 11: ASESORÍA TÉCNICA DIRECTA (#asesoria) ===== */
-  .asesoria-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #fbfdf7;
-    border-top: 1px solid rgba(127, 153, 44, 0.12);
-    border-bottom: 1px solid rgba(127, 153, 44, 0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .asesoria-card {
-    background: #ffffff;
-    border: 1px solid rgba(127, 153, 44, 0.25);
-    border-radius: 24px;
-    padding: 36px 32px;
-    box-shadow: var(--shadow-lvl2);
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  @media (max-width: 600px) {
-    .asesoria-card {
-      padding: 24px 18px;
-    }
-  }
-  .asesoria-head {
-    text-align: center;
-    max-width: 850px;
-    margin: 0 auto;
-  }
-  .asesoria-tag {
-    display: inline-block;
-    background: var(--green-light);
-    color: var(--green);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 12.5px;
-    padding: 6px 16px;
-    border-radius: 20px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-  }
-  .asesoria-head h2 {
-    font-size: clamp(24px, 3.5vw, 36px);
-    font-weight: 900;
-    color: var(--green-dark);
-    margin-bottom: 12px;
-  }
-  .asesoria-head p {
-    font-size: 15.5px;
-    line-height: 1.65;
-    color: #3d3d3d;
-  }
+  .contacto-info-list { display: flex; flex-direction: column; gap: 14px; }
+  .contacto-info-item { display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,0.08); padding: 12px 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.15); color: #fff; text-decoration: none; font-size: 14px; font-weight: 700; transition: background 0.3s ease, transform 0.3s ease; }
+  .contacto-info-item:hover { background: rgba(255,255,255,0.18); transform: translateX(4px); }
+  .contacto-info-item i { font-size: 22px; color: var(--orange); }
 
-  .asesoria-channels-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    width: 100%;
-    margin-top: 8px;
-  }
-  @media (min-width: 768px) {
-    .asesoria-channels-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  .asesoria-channel-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    padding: 24px 18px;
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 18px;
-    text-decoration: none;
-    color: var(--ink);
-    box-shadow: var(--shadow-lvl1);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-  .asesoria-channel-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lvl2);
-    border-color: var(--green);
-  }
-  .asesoria-channel-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    flex-shrink: 0;
-  }
-  .asesoria-channel-card strong {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--green-dark);
-  }
-  .asesoria-channel-card span {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.4;
-  }
+  .contacto-form-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 24px; padding: 36px 32px; box-shadow: var(--shadow-lvl2); position: relative; }
+  .contacto-form-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, var(--green) 0%, var(--orange) 100%); border-radius: 24px 24px 0 0; }
+  .contact-form-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 600px) { .contact-form-grid { grid-template-columns: 1fr 1fr; } .form-group.full-width { grid-column: span 2; } }
 
-  /* ===== SECCIÓN 12: FORMULARIO DE CONTACTO (#contacto) ===== */
-  .contacto-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .contacto-form-container {
-    width: 100%;
-    max-width: 840px;
-    margin: 0 auto;
-  }
-  .contacto-form-card {
-    background: #ffffff;
-    border: 1px solid rgba(127, 153, 44, 0.25);
-    border-radius: 24px;
-    padding: 36px 32px;
-    box-shadow: var(--shadow-lvl2);
-    width: 100%;
-    position: relative;
-  }
-  @media (max-width: 600px) {
-    .contacto-form-card {
-      padding: 26px 20px;
-      border-radius: 20px;
-    }
-  }
-  .contacto-form-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, var(--green) 0%, var(--orange) 100%);
-    border-radius: 24px 24px 0 0;
-  }
-  .contacto-form-head {
-    text-align: center;
-    margin-bottom: 26px;
-  }
-  .contacto-form-head h2 {
-    font-size: clamp(22px, 3.2vw, 30px);
-    font-weight: 900;
-    color: var(--green-dark);
-    margin-bottom: 6px;
-  }
-  .contacto-form-head p {
-    font-size: 14px;
-    color: #666;
-  }
-  .contact-form-header h3 {
-    font-size: 20px;
-    font-weight: 900;
-    color: var(--green-dark);
-    margin-bottom: 4px;
-  }
-  .contact-form-header p {
-    font-size: 13.5px;
-    color: #666;
-  }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-family: 'Poppins', sans-serif; font-size: 12.5px; font-weight: 800; color: var(--ink); }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid #e0e0e0; border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 14px; color: var(--body-text); background: #fafafa; transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--green); background: #ffffff; box-shadow: 0 0 0 4px rgba(127, 153, 44, 0.15); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
 
-  .contact-form-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  @media (min-width: 600px) {
-    .contact-form-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-    .form-group.full-width {
-      grid-column: span 2;
-    }
-  }
+  .form-checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin-top: 4px; }
+  .checkbox-label { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 12.5px; line-height: 1.45; color: #555; }
+  .checkbox-label input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--green); cursor: pointer; }
+  .politicas-link { color: var(--green); font-weight: 800; text-decoration: underline; }
 
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .form-group label {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12.5px;
-    font-weight: 800;
-    color: var(--ink);
-    letter-spacing: 0.2px;
-  }
-  .form-group input, .form-group select, .form-group textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid #e0e0e0;
-    border-radius: 12px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 14px;
-    color: var(--body-text);
-    background: #fafafa;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-  }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--green);
-    background: #ffffff;
-    box-shadow: 0 0 0 4px rgba(127, 153, 44, 0.15);
-  }
-  .form-group textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
+  .btn-submit-contact { width: 100%; margin-top: 10px; padding: 14px 24px; font-size: 15px; font-weight: 800; }
 
-  .btn-submit-contact {
-    width: 100%;
-    margin-top: 10px;
-    padding: 14px 24px;
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-  }
+  /* ===== 12. POLÍTICAS DE PRIVACIDAD (#politicas) ===== */
+  .politicas-section { width: 100%; padding: 80px 24px; background: #fbfdf7; border-top: 1px solid rgba(127, 153, 44, 0.12); border-bottom: 1px solid rgba(127, 153, 44, 0.12); }
+  .politicas-card { background: #ffffff; border: 1px solid rgba(127, 153, 44, 0.25); border-radius: 24px; padding: 38px 32px; box-shadow: var(--shadow-lvl2); width: 100%; max-width: 980px; margin: 0 auto; text-align: center; }
+  .politicas-card h2 { font-size: clamp(22px, 3.2vw, 30px); font-weight: 900; color: var(--green-dark); margin-bottom: 6px; }
+  .politicas-card p.subtitle { font-size: 14px; color: #666; margin-bottom: 24px; }
+  .politicas-grid { display: grid; grid-template-columns: 1fr; gap: 16px; text-align: left; }
+  @media (min-width: 768px) { .politicas-grid { grid-template-columns: 1fr 1fr; } }
+  .politica-block { background: #ffffff; border: 1px solid var(--border-color); border-radius: 16px; padding: 22px 20px; box-shadow: var(--shadow-lvl1); }
+  .politica-block.orange { border-color: rgba(240, 114, 3, 0.25); }
+  .politica-block h4 { font-size: 16px; font-weight: 800; color: var(--green-dark); margin-bottom: 8px; }
+  .politica-block.orange h4 { color: var(--orange); }
+  .politica-block p { font-size: 13.5px; line-height: 1.6; color: #4a4a4a; }
 
-  /* ===== BOTÓN FLOTANTE DE WHATSAPP PALPITANTE REAL ===== */
-  .whatsapp-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 62px;
-    height: 62px;
-    background-color: #25D366;
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 34px;
-    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.5);
-    z-index: 9999;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    animation: waHeartbeat 1.6s ease-in-out infinite;
-  }
+  /* ===== WHATSAPP FLOAT ===== */
+  .whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 62px; height: 62px; background-color: #25D366; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 34px; box-shadow: 0 4px 18px rgba(37, 211, 102, 0.5); z-index: 9999; text-decoration: none; transition: transform 0.3s ease, background-color 0.3s ease; animation: waHeartbeat 1.6s ease-in-out infinite; }
+  .whatsapp-float:hover { transform: scale(1.18); background-color: #1da851; color: #ffffff; }
 
-  .whatsapp-float::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background-color: rgba(37, 211, 102, 0.6);
-    z-index: -1;
-    animation: waRipple 2s linear infinite;
-  }
-
-  .whatsapp-float::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background-color: rgba(37, 211, 102, 0.4);
-    z-index: -2;
-    animation: waRipple 2s linear infinite 0.6s;
-  }
-
-  .whatsapp-float:hover {
-    transform: scale(1.18);
-    background-color: #1da851;
-    color: #ffffff;
-  }
-
-  /* Animaciones combinadas: Latido (Heartbeat) u Ondas Expansivas (Ripple) */
   @keyframes waHeartbeat {
     0% { transform: scale(1); }
     14% { transform: scale(1.12); }
@@ -1615,274 +689,47 @@
     70% { transform: scale(1); }
   }
 
-  @keyframes waRipple {
-    0% {
-      width: 62px;
-      height: 62px;
-      opacity: 0.8;
-    }
-    100% {
-      width: 120px;
-      height: 120px;
-      opacity: 0;
-    }
-  }
+  /* ===== 13. FOOTER INSTITUCIONAL (#footer-section) ===== */
+  .footer-section { width: 100%; padding: 60px 24px 0; background: #ffffff; }
+  .footer-container { width: 100%; max-width: 1180px; margin: 0 auto; }
+  .footer { display: flex; flex-direction: column; gap: 30px; }
+  .footer-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+  .footer-blob { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 15px; color: var(--green-dark); line-height: 1.3; }
+  .footer-msg { font-size: 14.5px; color: #555; max-width: 500px; }
+  .footer-social { display: flex; flex-direction: column; gap: 6px; }
+  .footer-social .label { font-size: 11px; font-family: 'Poppins', sans-serif; font-weight: 800; color: #888; letter-spacing: 1px; }
+  .footer-social .icons { display: flex; gap: 10px; }
+  .footer-social a { width: 38px; height: 38px; border-radius: 50%; background: var(--green-light); color: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: 16px; text-decoration: none; transition: background 0.3s ease, color 0.3s ease; }
+  .footer-social a:hover { background: var(--green); color: #fff; }
 
-  /* ===== SECCIÓN 14: POLÍTICAS DE PRIVACIDAD (#politicas) ===== */
-  .politicas-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 75px 24px;
-    background: #fbfdf7;
-    border-top: 1px solid rgba(127, 153, 44, 0.12);
-    border-bottom: 1px solid rgba(127, 153, 44, 0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .politicas-card {
-    background: #ffffff;
-    border: 1px solid rgba(127, 153, 44, 0.25);
-    border-radius: 24px;
-    padding: 38px 32px;
-    box-shadow: var(--shadow-lvl2);
-    width: 100%;
-    max-width: 980px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  @media (max-width: 600px) {
-    .politicas-card { padding: 26px 20px; border-radius: 20px; }
-  }
-  .politicas-card h2 {
-    font-size: clamp(22px, 3.2vw, 30px);
-    font-weight: 900;
-    color: var(--green-dark);
-    margin-bottom: 6px;
-  }
-  .politicas-card p.subtitle {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 24px;
-  }
-  .politicas-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    text-align: left;
-  }
-  @media (min-width: 768px) {
-    .politicas-grid { grid-template-columns: 1fr 1fr; }
-  }
-  .politica-block {
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-left: 5px solid var(--green);
-    border-radius: 14px;
-    padding: 20px;
-    box-shadow: var(--shadow-lvl1);
-  }
-  .politica-block.orange { border-left-color: var(--orange); }
-  .politica-block h4 {
-    font-size: 15.5px;
-    font-weight: 800;
-    color: var(--green-dark);
-    margin-bottom: 6px;
-  }
-  .politica-block p {
-    font-size: 13.5px;
-    line-height: 1.6;
-    color: #444444;
-  }
+  .footer-nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 18px; padding: 20px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+  .footer-nav-links .nav-link { font-size: 12px; color: #555; text-decoration: none; font-weight: 700; }
+  .footer-nav-links .nav-link:hover { color: var(--green); }
 
-  /* ESTILOS DE CHECKBOX DE POLÍTICAS EN FORMULARIO DE CONTACTO */
-  .form-checkbox-group {
-    margin-top: 6px;
-  }
-  .checkbox-label {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 10px !important;
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    color: #333333 !important;
-    cursor: pointer !important;
-    line-height: 1.45 !important;
-    text-align: left !important;
-  }
-  .checkbox-label input[type="checkbox"] {
-    width: 18px !important;
-    height: 18px !important;
-    margin-top: 2px !important;
-    cursor: pointer !important;
-    accent-color: var(--green) !important;
-    flex-shrink: 0 !important;
-  }
-  .politicas-link {
-    color: var(--green) !important;
-    font-weight: 800 !important;
-    text-decoration: underline !important;
-  }
-  .politicas-link:hover {
-    color: var(--orange) !important;
-  }
+  .footer-bottom { text-align: center; padding: 14px 0; font-size: 13px; color: #777; font-weight: 700; }
 
-  /* ===== SECCIÓN 15: FOOTER INSTITUCIONAL (#footer-section) ===== */
-  .footer-section {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: 60px 0 0;
-    background: #ffffff;
-    border-top: 1px solid rgba(127, 153, 44, 0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .footer-container {
-    width: 100%;
-    max-width: 1180px;
-    padding: 0 24px;
-    margin: auto 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-  .footer { width: 100%; box-sizing: border-box; }
-  .footer-top {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
-    background: var(--white);
-    border: 3px solid var(--green);
-    border-radius: 24px;
-    padding: 20px 16px;
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-    overflow: hidden;
-  }
-  .footer-blob {
-    background: var(--green);
-    color: #fff;
-    width: 100%;
-    padding: 14px 20px;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 15.5px;
-    line-height: 1.2;
-    letter-spacing: .3px;
-  }
-  .footer-blob i { font-size: 30px; flex-shrink: 0; }
-  .footer-msg {
-    font-size: 15px;
-    line-height: 1.45;
-    color: #262626;
-    font-family: 'Nunito', sans-serif;
-  }
-  .footer-msg b {
-    display: block;
-    color: var(--green);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 18.5px;
-    margin-top: 4px;
-  }
-  .footer-social { width: 100%; text-align: center; }
-  .footer-social .label {
-    color: var(--orange);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 13px;
-    letter-spacing: .6px;
-    margin-bottom: 6px;
-    display: block;
-  }
-  .footer-social .icons { display: flex; gap: 12px; justify-content: center; align-items: center; }
-  .footer-social .icons a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--green);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 18px;
-    transition: transform 0.25s ease, background-color 0.25s ease;
-    box-shadow: 0 2px 8px rgba(127,153,44,0.3);
-  }
-  .footer-social .icons a:hover {
-    transform: scale(1.15) rotate(4deg);
-    background: var(--orange);
-  }
-  .footer-bottom {
-    background: var(--green);
-    color: #fff;
-    text-align: center;
-    padding: 14px;
-    font-size: 14.5px;
-    font-weight: 700;
-    border-radius: 0 0 20px 20px;
-    margin: 8px auto 0;
-    width: 100%;
-    max-width: 1180px;
-  }
+  .bottom-black-bar { background: var(--green-dark); color: rgba(255, 255, 255, 0.85); text-align: center; padding: 16px 20px; font-size: 12.5px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; margin-top: 30px; }
+  .bottom-black-bar a { color: var(--orange); text-decoration: none; font-weight: 800; }
 
-  @media (min-width: 768px) {
-    .footer-top { flex-direction: row; justify-content: space-between; text-align: left; padding: 0 28px 0 0; border-radius: 999px; min-height: 86px; }
-    .footer-blob { width: 260px; height: 86px; border-radius: 0 999px 999px 0; justify-content: center; padding: 0 24px; flex-shrink: 0; }
-    .footer-msg { text-align: center; flex: 1; padding: 0 20px; }
-    .footer-social { width: auto; text-align: center; flex-shrink: 0; }
-  }
+  /* LIGHTBOX MODAL */
+  .lightbox-modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.9); z-index: 999999; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; padding: 20px; box-sizing: border-box; }
+  .lightbox-modal.active { opacity: 1; visibility: visible; }
+  .lightbox-content { max-width: 90vw; max-height: 80vh; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain; }
+  .lightbox-title { color: #ffffff; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; margin-top: 16px; text-align: center; max-width: 800px; }
+  .lightbox-close { position: absolute; top: 20px; right: 24px; color: #ffffff; font-size: 32px; cursor: pointer; background: none; border: none; transition: transform 0.2s ease; }
+  .lightbox-close:hover { transform: scale(1.2); color: var(--orange); }
 
-  .footer-nav-links {
-    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px;
-    margin: 20px auto 14px; width: 100%; max-width: 1000px;
-  }
-  .footer-nav-links a {
-    color: var(--green-dark); font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 12.5px;
-    text-decoration: none; padding: 4px 10px; border-radius: 12px; transition: color 0.2s ease, background 0.2s ease;
-  }
-  .footer-nav-links a:hover {
-    color: var(--orange); background: rgba(240, 114, 3, 0.08); text-decoration: underline;
-  }
+  /* ANIMACIONES DE REVELACIÓN (SCROLL REVEAL) */
+  .reveal-scale { opacity: 1; transform: scale(1); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal-up { opacity: 1; transform: translateY(0); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal-left { opacity: 1; transform: translateX(0); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal-right { opacity: 1; transform: translateX(0); transition: opacity 0.8s ease, transform 0.8s ease; }
 
-  .bottom-black-bar {
-    width: 100%; background: #09090b; color: #e4e4e7; text-align: center; padding: 14px 20px; font-family: 'Poppins', sans-serif; font-size: 13px;
-    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 16px;
-  }
-  .bottom-black-bar a { color: #ffffff; font-weight: 700; text-decoration: none; }
-  .bottom-black-bar a:hover { color: var(--orange); text-decoration: underline; }
-
-  /* ===== ANIMACIONES REVEAL SUAVES Y PROGRESIVAS ===== */
-  .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale {
-    opacity: 1; transform: none; transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
+  body.js-ready .reveal-scale { opacity: 0; transform: scale(0.95); will-change: opacity, transform; }
   body.js-ready .reveal-up { opacity: 0; transform: translateY(20px); will-change: opacity, transform; }
   body.js-ready .reveal-left { opacity: 0; transform: translateX(-20px); will-change: opacity, transform; }
   body.js-ready .reveal-right { opacity: 0; transform: translateX(20px); will-change: opacity, transform; }
-  body.js-ready .is-visible { opacity: 1 !important; transform: translate(0, 0) !important; }
+  body.js-ready .is-visible { opacity: 1 !important; transform: translate(0, 0) scale(1) !important; }
 
   @media (prefers-reduced-motion: reduce) {
     *:not(.whatsapp-float):not(.whatsapp-float::before):not(.whatsapp-float::after) { animation: none !important; transition: none !important; }
@@ -1895,20 +742,16 @@
 <nav id="headerNav" class="header-nav" aria-label="Navegación principal en escritorio">
   <ul class="nav-list">
     <li><a href="#top" class="nav-link active">Inicio</a></li>
-    <li><a href="#hero-principal" class="nav-link">Compromiso & Impacto</a></li>
     <li><a href="#nosotros" class="nav-link">Quiénes Somos</a></li>
-    <li><a href="#presidencia" class="nav-link">Presidencia</a></li>
-    <li><a href="#servicios" class="nav-link">Servicios</a></li>
-    <li><a href="#valores" class="nav-link">Valores</a></li>
-    <li><a href="#programas" class="nav-link">Programas</a></li>
-    <li><a href="#impacto" class="nav-link">Impacto</a></li>
+    <li><a href="#pilares" class="nav-link">Pilares</a></li>
+    <li><a href="#con-quienes-trabajamos" class="nav-link">Sectores</a></li>
+    <li><a href="#modelo-trabajo" class="nav-link">Modelo</a></li>
+    <li><a href="#proyectos-impacto" class="nav-link">Proyectos</a></li>
     <li><a href="#aliados" class="nav-link">Aliados</a></li>
+    <li><a href="#investigacion-conocimiento" class="nav-link">Investigación</a></li>
+    <li><a href="#presidencia" class="nav-link">Presidencia</a></li>
     <li><a href="#transparencia" class="nav-link">Transparencia</a></li>
-    <li><a href="#galeria" class="nav-link">Galería</a></li>
-    <li><a href="#asesoria" class="nav-link">Asesoría</a></li>
     <li><a href="#contacto" class="nav-link">Contacto</a></li>
-    <li><a href="#politicas" class="nav-link">Políticas</a></li>
-    <li><a href="#footer-section" class="nav-link">Footer</a></li>
   </ul>
 </nav>
 
@@ -1921,90 +764,90 @@
 <div id="navMenu" class="nav-menu">
   <ul class="nav-list">
     <li><a href="#top" class="nav-link active">Inicio</a></li>
-    <li><a href="#hero-principal" class="nav-link">Compromiso & Impacto</a></li>
     <li><a href="#nosotros" class="nav-link">Quiénes Somos</a></li>
-    <li><a href="#presidencia" class="nav-link">Presidencia</a></li>
-    <li><a href="#servicios" class="nav-link">Servicios</a></li>
-    <li><a href="#valores" class="nav-link">Valores</a></li>
-    <li><a href="#programas" class="nav-link">Programas</a></li>
-    <li><a href="#impacto" class="nav-link">Impacto</a></li>
+    <li><a href="#pilares" class="nav-link">Pilares</a></li>
+    <li><a href="#con-quienes-trabajamos" class="nav-link">Sectores</a></li>
+    <li><a href="#modelo-trabajo" class="nav-link">Modelo</a></li>
+    <li><a href="#proyectos-impacto" class="nav-link">Proyectos</a></li>
     <li><a href="#aliados" class="nav-link">Aliados</a></li>
+    <li><a href="#investigacion-conocimiento" class="nav-link">Investigación</a></li>
+    <li><a href="#presidencia" class="nav-link">Presidencia</a></li>
     <li><a href="#transparencia" class="nav-link">Transparencia</a></li>
-    <li><a href="#galeria" class="nav-link">Galería</a></li>
-    <li><a href="#asesoria" class="nav-link">Asesoría</a></li>
     <li><a href="#contacto" class="nav-link">Contacto</a></li>
-    <li><a href="#politicas" class="nav-link">Políticas</a></li>
-    <li><a href="#footer-section" class="nav-link">Footer</a></li>
   </ul>
 </div>
 
 <div class="wrap">
 
-  <!-- ===== 01. HEADER BANNER INSTITUCIONAL (#top) ===== -->
+  <!-- ===== 01. HERO / PORTADA (#top - Fondo #ffffff) ===== -->
   <section id="top" class="header-banner-section">
     <div class="section-container">
-      <!-- BANNER INSTITUCIONAL CON LOGO OFICIAL + DIVISOR + ESLOGAN (Imagen 1) -->
       <div class="hero-header-block reveal-scale">
         <div class="hero-logo-col">
           <img src="public/img/logo.png" alt="Fundación Justicia Global — Derechos Humanos y Gestión Social" width="1018" height="682" class="hero-header-logo">
         </div>
-        <div class="hero-divider"></div>
-        <div class="hero-slogan-col">
-          <h1 class="headline">
-            <span class="l1">POR UN MUNDO</span>
-            <span class="l2">MÁS JUSTO,</span>
-            <span class="l3">TRANSPARENTE</span>
-            <span class="l4">E INCLUSIVO</span>
-          </h1>
+        
+        <span class="hero-subtitle-pill"><i class="fa-solid fa-scale-balanced" style="margin-right:6px;"></i> FUNDACIÓN JUSTICIA GLOBAL</span>
+
+        <h1 class="hero-main-title">JUSTICIA QUE SE CONVIERTE EN ACCIÓN</h1>
+
+        <div class="hero-keywords">
+          Derechos Humanos &middot; Transparencia &middot; Integridad &middot; Desarrollo Sostenible
+        </div>
+
+        <p class="hero-description">
+          Una organización que articula <b>conocimiento especializado</b>, <b>instituciones</b> y <b>territorio</b> para transformar realidades con rigor técnico, ética y sostenibilidad.
+        </p>
+
+        <div class="hero-btn-group">
+          <a href="#nosotros" class="btn btn-primary"><i class="fa-solid fa-users"></i> CONOCE NUESTRA FUNDACIÓN</a>
+          <a href="#contacto" class="btn btn-outline"><i class="fa-solid fa-handshake"></i> TRABAJEMOS JUNTOS</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 02. SECCIÓN PRESENTACIÓN INSTITUCIONAL (#hero-principal) ===== -->
-  <section id="hero-principal" class="hero-principal-section">
+  <!-- ===== 02. ¿QUIÉNES SOMOS? (#nosotros - Fondo #fbfdf7) ===== -->
+  <section id="nosotros" class="nosotros-section">
     <div class="section-container">
-      <div class="top-grid">
-        <div class="col-main reveal-left">
-          <span style="display:inline-block; padding: 6px 14px; background: var(--green-light); color: var(--green); border-radius: 20px; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 14px; text-transform: uppercase;">
-            <i class="fa-solid fa-leaf" style="margin-right: 6px;"></i> Compromiso & Impacto Social
-          </span>
-          <h2 style="font-family: 'Poppins', sans-serif; font-size: clamp(24px, 3.2vw, 36px); font-weight: 900; color: var(--green-dark); line-height: 1.25; margin-bottom: 18px;">
-            Transformamos realidades con rigor técnico, ética y sostenibilidad
-          </h2>
-          <p class="lede">
-            Promovemos los <b>derechos humanos</b> y la <b>responsabilidad social</b>
-            empresarial mediante auditorías y consultorías especializadas, orientadas a
-            garantizar <b>justicia, transparencia e integridad</b>,
-            <b class="o">combatir la corrupción</b> y <b class="o">reducir la desigualdad</b>.
-          </p>
+      <div class="nosotros-title-block reveal-up">
+        <span class="nosotros-tag">NUESTRA IDENTIDAD INSTITUCIONAL</span>
+        <h2>FUNDACIÓN JUSTICIA GLOBAL</h2>
+        <p class="sub">Una organización orientada a la promoción de los derechos humanos, la transparencia, la integridad y la responsabilidad social.</p>
+      </div>
 
-          <div class="cta-group">
-            <a href="https://wa.me/573162462649?text=Hola,%20deseo%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20y%20proyectos" target="_blank" class="btn btn-whatsapp">
-              <i class="fa-brands fa-whatsapp"></i> WhatsApp Directo
-            </a>
-            <a href="#contacto" class="btn btn-primary">
-              <i class="fa-solid fa-calendar-check"></i> Agendar Consultoría
-            </a>
-            <a href="#servicios" class="btn btn-outline">
-              <i class="fa-solid fa-list-check"></i> Ver Servicios
-            </a>
-          </div>
+      <div class="nosotros-grid">
+        <div class="mv-card quienes reveal-left">
+          <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Nuestra Misión</h3>
+          <p>Promover los <b>derechos humanos</b>, la <b>responsabilidad social empresarial</b> y la <b>transparencia</b> en la gestión pública y privada. A través de <b>proyectos MGA</b>, <b>investigación aplicada</b> y la articulación de la Quinta Hélice, <b class="o">combatimos la corrupción</b> y <b class="o">reducimos la desigualdad territorial</b>.</p>
         </div>
 
-        <div class="col-visual reveal-right">
-          <div class="panel">
-            <img class="hero-img" src="public/img/03_imagen_globo.png" alt="Manos sosteniendo el globo terráqueo — Fundación Justicia Global" width="1000" height="750">
-            <div class="band">
-              <div class="kicker">TRABAJAMOS HOY</div>
-              <h3>POR UN MAÑANA</h3>
-              <div class="script">con dignidad</div>
-              <div class="values">
-                <div class="v"><i class="fa-solid fa-people-group"></i><div>JUSTICIA</div></div>
-                <div class="v"><i class="fa-solid fa-shield-halved"></i><div>TRANSPARENCIA</div></div>
-                <div class="v"><i class="fa-solid fa-handshake"></i><div>INTEGRIDAD</div></div>
-                <div class="v"><i class="fa-solid fa-chart-column"></i><div>IMPACTO</div></div>
-              </div>
+        <div class="mv-card mision reveal-up">
+          <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Nuestra Visión</h3>
+          <p>Consolidarnos como el <b>referente técnico y estratégico</b> nacional e internacional en la construcción de <b>soluciones éticas e inclusivas</b>, garantizando que los recursos públicos se traduzcan en <b class="o">bienestar social sostenible con dignidad</b>.</p>
+        </div>
+
+        <div class="mv-card vision reveal-right">
+          <div class="mv-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Principios Fundamentales</h3>
+          <div class="principios-list">
+            <div class="principio-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Justicia:</b> Equidad social y defensa integral de derechos en el territorio.</span>
+            </div>
+            <div class="principio-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Transparencia:</b> Gobernanza limpia, veeduría y control social activo.</span>
+            </div>
+            <div class="principio-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Integridad:</b> Imparcialidad, debida diligencia y rigor profesional.</span>
+            </div>
+            <div class="principio-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Impacto Social:</b> Soluciones sostenibles de alto valor para las comunidades.</span>
             </div>
           </div>
         </div>
@@ -2012,204 +855,213 @@
     </div>
   </section>
 
-  <!-- ===== 02. SECCIÓN QUIÉNES SOMOS (#nosotros) ===== -->
-  <section id="nosotros" class="nosotros-section">
-    <div class="section-container">
-      <div class="nosotros-title-block reveal-up">
-        <span class="nosotros-tag">NUESTRA IDENTIDAD INSTITUCIONAL</span>
-        <h2>FUNDACIÓN JUSTICIA GLOBAL</h2>
-      </div>
-
-      <div class="nosotros-grid">
-        <div class="mv-card quienes reveal-left">
-          <div class="mv-icon"><i class="fa-solid fa-building-columns"></i></div>
-          <h3>¿Quiénes Somos?</h3>
-          <p>Somos una entidad sin ánimo de lucro y de utilidad común (<b>ESAL</b>), constituida bajo el marco legal colombiano (<b>Decreto 2150 de 1995</b>). Nacemos como un <b>brazo técnico articulador</b> dedicado a la <b>formación</b>, <b>consultoría de gestión</b>, <b class="o">veeduría ciudadana</b> y formulación rigurosa de <b class="o">proyectos sociales y ambientales</b>.</p>
-        </div>
-
-        <div class="mv-card mision reveal-up">
-          <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
-          <h3>Nuestra Misión</h3>
-          <p>Promover los <b>derechos humanos</b>, la <b>responsabilidad social empresarial</b> y la <b>transparencia</b> en la gestión pública y privada. A través de <b>proyectos MGA</b>, <b>investigación aplicada</b> y la articulación de la Quinta Hélice, <b class="o">combatimos la corrupción</b> y <b class="o">reducimos la desigualdad territorial</b>.</p>
-        </div>
-
-        <div class="mv-card vision reveal-right">
-          <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
-          <h3>Nuestra Visión</h3>
-          <p>Consolidarnos como el <b>referente técnico y estratégico</b> nacional e internacional en la construcción de <b>soluciones éticas e inclusivas</b>, garantizando que los recursos públicos se traduzcan en <b class="o">bienestar social sostenible con dignidad</b>.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 04. SECCIÓN MENSAJE DE LA PRESIDENCIA (#presidencia) ===== -->
-  <section id="presidencia" class="presidencia-section">
-    <div class="section-container">
-      <div class="presidencia-card reveal-up">
-        <div class="presidencia-header">
-          <div class="presidencia-avatar">
-            <i class="fa-solid fa-user-tie"></i>
-          </div>
-          <div class="presidencia-info">
-            <h3>Jonatan Mercado Alcina</h3>
-            <span>COFUNDADOR, PRESIDENTE & REPRESENTANTE LEGAL</span>
-          </div>
-        </div>
-        <div class="presidencia-body">
-          <p>Les doy la más cordial bienvenida a una organización creada con la convicción de que la <b>justicia debe convertirse en acciones capaces de transformar realidades</b>.</p>
-          <p>Trabajamos por los <b>derechos humanos</b>, la <b>transparencia</b>, la <b>integridad</b> y la <b>responsabilidad social</b>, mediante conocimiento especializado, consultorías, auditorías, educación y <b class="o">proyectos de impacto social</b>.</p>
-          <p>Nuestro compromiso es consolidar una Fundación con <b>vocación de servicio</b>, <b>rigor profesional</b> y <b class="o">visión internacional</b>, fortaleciendo instituciones, protegiendo derechos y generando oportunidades.</p>
-          
-          <div class="presidencia-quote">
-            <i class="fa-solid fa-quote-left" style="color:var(--orange); margin-right:8px;"></i>
-            "Porque creemos que un mundo más justo no se espera: <b class="o">se construye</b>."
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 03. SECCIÓN NUESTROS SERVICIOS (#servicios) ===== -->
-  <section id="servicios" class="servicios-section">
+  <!-- ===== 03. NUESTROS 4 PILARES (#pilares - Fondo #ffffff) ===== -->
+  <section id="pilares" class="pilares-section">
     <div class="section-container">
       <div class="section-head reveal-up">
-        <span class="services-pill">PORTAFOLIO INSTITUCIONAL</span>
-        <h2>NUESTROS SERVICIOS ESPECIALIZADOS</h2>
-        <p>Transformamos realidades mediante la investigación aplicada, formulación rigurosa de proyectos y la capacitación técnica continua.</p>
+        <span class="services-pill">EJE ESTRATÉGICO INSTITUCIONAL</span>
+        <h2>NUESTROS 4 PILARES DE ACCIÓN</h2>
+        <p>Articulamos nuestra acción técnica e institucional a través de cuatro líneas fundamentales de intervención.</p>
       </div>
 
-      <div class="servicios-grid">
-        <div class="servicio-card reveal-up">
-          <div class="servicio-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h3>1. EDUCACIÓN CONTINUADA</h3>
-          <p>Diseñamos, implementamos y ejecutamos programas de <b>educación continuada</b>, formación académica no formal, seminarios, diplomados, conferencias y talleres prácticos orientados a la capacitación de <b>comunidades vulnerables</b>, <b>servidores públicos</b>, <b>líderes sociales</b> y organizaciones en materia de <b class="o">derechos humanos</b>, <b class="o">sostenibilidad</b>, <b class="o">mecanismos de participación ciudadana</b> y desarrollo comunitario.</p>
+      <div class="pilares-grid">
+        <div class="pilar-card reveal-up">
+          <span class="pilar-number">01</span>
+          <div class="pilar-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Educación y Formación</h3>
+          <p>Diseñamos, implementamos y ejecutamos programas de <b>educación continuada</b>, capacitación a servidores públicos, talleres con líderes sociales y diplomados académicos orientados al desarrollo territorial, <b class="o">derechos humanos</b> y <b class="o">mecanismos de participación ciudadana</b>.</p>
         </div>
 
-        <div class="servicio-card reveal-up">
-          <div class="servicio-icon"><i class="fa-solid fa-briefcase"></i></div>
-          <h3>2. CONSULTORÍA DE GESTIÓN</h3>
-          <p>Prestamos servicios de consultoría, asesoría y orientación técnica a <b>entidades públicas, privadas y de la sociedad civil</b> en la implementación, adopción y evaluación de estándares nacionales e internacionales de <b>derechos humanos</b>, <b class="o">debida diligencia</b>, <b class="o">gobernanza</b>, <b class="o">sostenibilidad</b> y programas de <b class="o">responsabilidad social empresarial</b> interna y externa.</p>
+        <div class="pilar-card reveal-up">
+          <span class="pilar-number">02</span>
+          <div class="pilar-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Consultoría y Fortalecimiento Institucional</h3>
+          <p>Prestamos consultoría especializada a entidades públicas y privadas en adopción de estándares de <b>debida diligencia</b>, <b>gobernanza</b>, <b>responsabilidad social empresarial</b>, sostenibilidad y <b class="o">auditoría social de cumplimiento normativo</b>.</p>
         </div>
 
-        <div class="servicio-card reveal-up">
-          <div class="servicio-icon"><i class="fa-solid fa-file-lines"></i></div>
-          <h3>3. FORMULACIÓN Y GESTIÓN DE PROYECTOS</h3>
-          <p>Estructuramos, formulamos, coordinamos, cofinanciamos y ejecutamos <b>planes, programas y proyectos</b> de desarrollo social, comunitario, humanitario y ambiental ante <b>organismos de cooperación local, nacional e internacional</b>, orientados a buscar el <b class="o">bienestar general</b>, el <b class="o">acceso comunitario</b> y el <b class="o">mejoramiento de las condiciones de vida</b> de las poblaciones objetivo.</p>
+        <div class="pilar-card reveal-up">
+          <span class="pilar-number">03</span>
+          <div class="pilar-icon"><i class="fa-solid fa-file-lines"></i></div>
+          <h3>Formulación y Gestión de Proyectos</h3>
+          <p>Estructuramos, formulamos y gestionamos <b>planes, programas y proyectos</b> de desarrollo social, comunitario y ambiental bajo metodología <b>MGA</b> ante organismos de cooperación local, nacional e internacional.</p>
         </div>
 
-        <div class="servicio-card reveal-up">
-          <div class="servicio-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-          <h3>4. AUDITORÍA SOCIAL DE IMPACTO Y CUMPLIMIENTO NORMATIVO</h3>
-          <p>Desarrollamos <b>auditorías sociales</b>, evaluaciones de impacto, <b>veedurías ciudadanas</b> y análisis jurídicos sobre la gestión de servidores públicos, entidades estatales y organizaciones privadas, orientados a emitir diagnósticos y dictámenes técnicos sobre el cumplimiento de estándares legales de <b class="o">derechos humanos</b>, <b class="o">transparencia</b>, <b class="o">debida diligencia</b> y la correcta ejecución de presupuestos públicos.</p>
+        <div class="pilar-card reveal-up">
+          <span class="pilar-number">04</span>
+          <div class="pilar-icon"><i class="fa-solid fa-flask"></i></div>
+          <h3>Investigación y Transformación Social</h3>
+          <p>Desarrollamos <b>investigación aplicada</b>, diagnósticos territoriales de vulnerabilidad, veedurías ciudadanas y la articulación de la <b>Quinta Hélice</b> para convertir el conocimiento científico en <b class="o">transformación social concreta</b>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 04. SECCIÓN NUESTRO ENFOQUE / VALORES (#valores) ===== -->
-  <section id="valores" class="valores-section">
+  <!-- ===== 04. ¿CON QUIÉNES TRABAJAMOS? (#con-quienes-trabajamos - Fondo #fbfdf7) ===== -->
+  <section id="con-quienes-trabajamos" class="sectores-section">
     <div class="section-container">
       <div class="section-head reveal-up">
-        <span class="services-pill">PRINCIPIOS FUNDAMENTALES</span>
-        <h2>NUESTROS VALORES INSTITUCIONALES</h2>
-        <p>Guiamos cada acción técnica, consultoría y proyecto bajo pilares éticos inquebrantables.</p>
+        <span class="services-pill">SECTORES Y ACTORES DE IMPACTO</span>
+        <h2>¿CON QUIÉNES TRABAJAMOS?</h2>
+        <p>Articulamos capacidades entre el sector público, el sector privado, la academia y la sociedad civil para generar valor social.</p>
       </div>
 
-      <div class="valores-grid">
-        <div class="valor-card reveal-up">
-          <div class="valor-number">01</div>
-          <h3>JUSTICIA</h3>
-          <p>Promovemos los derechos humanos y la equidad social en el territorio, garantizando acceso y dignidad para todas las comunidades.</p>
+      <div class="sectores-grid">
+        <div class="sector-card reveal-up">
+          <div class="sector-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <h3>Entidades Públicas</h3>
+          <p>Alcaldías, gobernaciones, ministerios, entes de control y organismos estatales en programas de transparencia, veeduría y fortalecimiento técnico.</p>
         </div>
 
-        <div class="valor-card reveal-up">
-          <div class="valor-number">02</div>
-          <h3>TRANSPARENCIA</h3>
-          <p>Fomentamos la gobernanza limpia, el control social ético y la veeduría ciudadana activa en la administración de recursos públicos.</p>
+        <div class="sector-card reveal-up">
+          <div class="sector-icon"><i class="fa-solid fa-building"></i></div>
+          <h3>Empresas y Organizaciones Privadas</h3>
+          <p>Compañías e industrias comprometidas con la responsabilidad social empresarial, la debida diligencia en derechos humanos y la sostenibilidad.</p>
         </div>
 
-        <div class="valor-card reveal-up">
-          <div class="valor-number">03</div>
-          <h3>INTEGRIDAD</h3>
-          <p>Aplicamos rigor técnico, imparcialidad y debida diligencia legal en cada auditoría, formación y consultoría ejecutada.</p>
+        <div class="sector-card reveal-up">
+          <div class="sector-icon"><i class="fa-solid fa-school"></i></div>
+          <h3>Universidades e Instituciones Educativas</h3>
+          <p>Alianzas de investigación aplicada, convenios marco de cooperación, grupos de estudio científico y proyectos de educación continuada.</p>
         </div>
 
-        <div class="valor-card reveal-up">
-          <div class="valor-number">04</div>
-          <h3>IMPACTO SOCIAL</h3>
-          <p>Construimos soluciones sostenibles de alto valor que transforman realidades territoriales y reducen la desigualdad.</p>
+        <div class="sector-card reveal-up">
+          <div class="sector-icon"><i class="fa-solid fa-users-line"></i></div>
+          <h3>Organizaciones Sociales</h3>
+          <p>Líderes comunitarios, ONG, asociaciones de base y colectivos ciudadanos en procesos de veeduría, control social y formación de capacidades.</p>
+        </div>
+
+        <div class="sector-card reveal-up">
+          <div class="sector-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Comunidades y Territorios</h3>
+          <p>Poblaciones vulnerables y territorios rurales/urbanos que requieren cierre de brechas sociales, equidad y desarrollo sostenible con dignidad.</p>
+        </div>
+
+        <div class="sector-card reveal-up">
+          <div class="sector-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+          <h3>Organismos de Cooperación y Aliados</h3>
+          <p>Agencias internacionales, bancas de desarrollo y redes globales en la cofinanciación y ejecución de proyectos de impacto social.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 05. SECCIÓN NUESTROS PROGRAMAS (#programas) ===== -->
-  <section id="programas" class="programas-section">
+  <!-- ===== 05. NUESTRO MODELO DE TRABAJO (#modelo-trabajo - Fondo #ffffff) ===== -->
+  <section id="modelo-trabajo" class="modelo-section">
     <div class="section-container">
       <div class="section-head reveal-up">
-        <span class="services-pill">LÍNEAS DE ACCIÓN</span>
-        <h2>NUESTROS PROGRAMAS TÉCNICOS Y SOCIALES</h2>
-        <p>Estructuramos e implementamos programas estratégicos orientados al desarrollo integral del territorio.</p>
+        <span class="services-pill">METODOLOGÍA DE GESTIÓN</span>
+        <h2>NUESTRO MODELO DE TRABAJO</h2>
+        <p>Una ruta estratégica y rigurosa para transformar necesidades territoriales en resultados sostenibles.</p>
       </div>
 
-      <div class="programas-grid">
-        <div class="programa-card reveal-up">
-          <div class="programa-icon"><i class="fa-solid fa-users-gear"></i></div>
-          <h3>Red de Formación Comunitaria y Liderazgo</h3>
-          <p>Capacitación continua a comunidades vulnerables, líderes sociales y servidores públicos en derechos humanos, veeduría y gobernanza.</p>
-          <a href="#contacto" class="btn btn-outline" style="font-size:12.5px; padding:6px 14px; align-self:flex-start;"><i class="fa-solid fa-arrow-right"></i> Solicitar Información</a>
+      <div class="modelo-flow reveal-up">
+        <div class="modelo-step">
+          <span class="modelo-step-num">PASO 01</span>
+          <div class="modelo-step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h4>INVESTIGAMOS</h4>
         </div>
+        <div class="modelo-arrow"><i class="fa-solid fa-angle-right"></i></div>
 
-        <div class="programa-card reveal-up">
-          <div class="programa-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <h3>Estructuración de Proyectos de Desarrollo MGA</h3>
-          <p>Formulación rigurosa bajo metodología MGA nacional e internacional para la captación de recursos y cofinanciación pública y privada.</p>
-          <a href="#contacto" class="btn btn-outline" style="font-size:12.5px; padding:6px 14px; align-self:flex-start;"><i class="fa-solid fa-arrow-right"></i> Consultar Proyectos</a>
+        <div class="modelo-step">
+          <span class="modelo-step-num">PASO 02</span>
+          <div class="modelo-step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h4>FORMULAMOS</h4>
         </div>
+        <div class="modelo-arrow"><i class="fa-solid fa-angle-right"></i></div>
 
-        <div class="programa-card reveal-up">
-          <div class="programa-icon"><i class="fa-solid fa-diagram-project"></i></div>
-          <h3>Articulación de la Quinta Hélice</h3>
-          <p>Integración armónica entre la Academia, el Estado, la Empresa privada, la Sociedad civil y la Sostenibilidad Ambiental.</p>
-          <a href="#contacto" class="btn btn-outline" style="font-size:12.5px; padding:6px 14px; align-self:flex-start;"><i class="fa-solid fa-arrow-right"></i> Conocer Convenios</a>
+        <div class="modelo-step">
+          <span class="modelo-step-num">PASO 03</span>
+          <div class="modelo-step-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <h4>ARTICULAMOS</h4>
         </div>
+        <div class="modelo-arrow"><i class="fa-solid fa-angle-right"></i></div>
 
-        <div class="programa-card reveal-up">
-          <div class="programa-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-          <h3>Auditoría de Cumplimiento & Veeduría Ciudadana</h3>
-          <p>Evaluación de impacto, diagnóstico de debida diligencia y acompañamiento técnico a veedurías ciudadanas territoriales.</p>
-          <a href="#contacto" class="btn btn-outline" style="font-size:12.5px; padding:6px 14px; align-self:flex-start;"><i class="fa-solid fa-arrow-right"></i> Solicitar Auditoría</a>
+        <div class="modelo-step">
+          <span class="modelo-step-num">PASO 04</span>
+          <div class="modelo-step-icon"><i class="fa-solid fa-gears"></i></div>
+          <h4>EJECUTAMOS</h4>
         </div>
+        <div class="modelo-arrow"><i class="fa-solid fa-angle-right"></i></div>
+
+        <div class="modelo-step">
+          <span class="modelo-step-num">PASO 05</span>
+          <div class="modelo-step-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h4>MEDIMOS</h4>
+        </div>
+      </div>
+
+      <div class="modelo-caption reveal-up">
+        Convertimos conocimiento especializado en soluciones concretas para instituciones, comunidades y territorios.
       </div>
     </div>
   </section>
 
-  <!-- ===== 06. SECCIÓN NUESTRO IMPACTO (#impacto) ===== -->
-  <section id="impacto" class="impacto-section">
+  <!-- ===== 06. PROYECTOS E IMPACTO (#proyectos-impacto - Fondo #fbfdf7) ===== -->
+  <section id="proyectos-impacto" class="proyectos-section">
     <div class="section-container">
-      <div class="impacto-card reveal-up">
-        <h3>NUESTRO COMPROMISO E IMPACTO EN EL TERRITORIO</h3>
-        <p>Acompañamos a entidades públicas, privadas y académicas en la construcción de soluciones éticas de alto valor. A través de convenios de cooperación internacional, proyectos MGA e investigación aplicada, transformamos conocimiento en bienestar sostenible para las comunidades.</p>
-        
-        <div class="impacto-highlights">
-          <div class="impacto-item">
-            <i class="fa-solid fa-handshake-angle"></i>
-            <span>Alianzas Académicas Institucionales de Alto Nivel</span>
+      <div class="section-head reveal-up">
+        <span class="services-pill">EVIDENCIA DE GESTIÓN</span>
+        <h2>PROYECTOS E IMPACTO EN EL TERRITORIO</h2>
+        <p>Acompañamos la transformación social mediante evidencias de gestión, investigación aplicada y alianzas estratégicas.</p>
+      </div>
+
+      <div class="proyectos-grid">
+        <div class="proyecto-card reveal-up">
+          <div class="proyecto-img-thumb" onclick="window.openLightbox('public/img/convenio-firma-unilibre.jpg', 'Firma de Convenio Marco — Fundación Justicia Global y Universidad Libre Seccional Barranquilla')">
+            <img src="public/img/convenio-firma-unilibre.jpg" alt="Firma de Convenio Marco de Cooperación Institucional">
           </div>
-          <div class="impacto-item">
-            <i class="fa-solid fa-folder-check"></i>
-            <span>Rigurosa Formulación y Ejecución de Proyectos MGA</span>
+          <div class="proyecto-meta">
+            <div class="proyecto-meta-item"><b>PROYECTO:</b> Convenio Marco de Cooperación e Investigación Aplicada</div>
+            <div class="proyecto-meta-item"><b>ALIADO:</b> Universidad Libre Seccional Barranquilla</div>
+            <div class="proyecto-meta-item"><b>TERRITORIO:</b> Barranquilla & Región Caribe</div>
+            <div class="proyecto-meta-item"><b>OBJETIVO:</b> Desarrollo de investigación científica aplicada y formación técnica.</div>
+            <div class="proyecto-meta-item"><b>IMPACTO:</b> Transferencia de conocimiento y fortalecimiento institucional del talento territorial.</div>
           </div>
-          <div class="impacto-item">
-            <i class="fa-solid fa-gavel"></i>
-            <span>Veeduría Ética y Auditoría Social Transparente</span>
+        </div>
+
+        <div class="proyecto-card reveal-up">
+          <div class="proyecto-img-thumb" onclick="window.openLightbox('public/img/convenio-directivos-unilibre.jpg', 'Ceremonia de Firma de Convenio Marco de Cooperación Institucional')">
+            <img src="public/img/convenio-directivos-unilibre.jpg" alt="Directivos y Delegación Institucional">
+          </div>
+          <div class="proyecto-meta">
+            <div class="proyecto-meta-item"><b>PROYECTO:</b> Articulación de la Quinta Hélice y Veeduría Ciudadana</div>
+            <div class="proyecto-meta-item"><b>ALIADO:</b> Delegación Directiva Universidad Libre & FJG</div>
+            <div class="proyecto-meta-item"><b>TERRITORIO:</b> Barranquilla, Atlántico</div>
+            <div class="proyecto-meta-item"><b>OBJETIVO:</b> Fomento de la gobernanza transparente y auditoría social normativamente soportada.</div>
+            <div class="proyecto-meta-item"><b>IMPACTO:</b> Compromiso ético institucional para el desarrollo de proyectos regionales de alto valor.</div>
+          </div>
+        </div>
+
+        <div class="proyecto-card reveal-up">
+          <div class="proyecto-img-thumb" onclick="window.openLightbox('public/img/galeria-convenio-directivos-1.jpg', 'Mesas Técnicas para Formulación de Proyectos de Impacto Social')">
+            <img src="public/img/galeria-convenio-directivos-1.jpg" alt="Mesas Técnicas para Formulación MGA">
+          </div>
+          <div class="proyecto-meta">
+            <div class="proyecto-meta-item"><b>PROYECTO:</b> Formulación Técnica MGA de Proyectos de Impacto Social</div>
+            <div class="proyecto-meta-item"><b>ALIADO:</b> Equipos Técnicos y Académicos Especializados</div>
+            <div class="proyecto-meta-item"><b>TERRITORIO:</b> Caribe Colombiano</div>
+            <div class="proyecto-meta-item"><b>OBJETIVO:</b> Estructuración rigurosa bajo estándares de la Metodología General Ajustada.</div>
+            <div class="proyecto-meta-item"><b>IMPACTO:</b> Viabilidad técnica e inversión social con máxima eficiencia presupuestal.</div>
+          </div>
+        </div>
+
+        <div class="proyecto-card reveal-up">
+          <div class="proyecto-img-thumb" onclick="window.openLightbox('public/img/convenio-campus-unilibre.jpg', 'Delegación Institucional en Campus Universidad Libre Barranquilla')">
+            <img src="public/img/convenio-campus-unilibre.jpg" alt="Delegación en Campus Universidad Libre">
+          </div>
+          <div class="proyecto-meta">
+            <div class="proyecto-meta-item"><b>PROYECTO:</b> Educación Continuada y Capacitación Territorial</div>
+            <div class="proyecto-meta-item"><b>ALIADO:</b> Comunidad Académica & Representantes Territoriales</div>
+            <div class="proyecto-meta-item"><b>TERRITORIO:</b> Campus Universidad Libre Barranquilla</div>
+            <div class="proyecto-meta-item"><b>OBJETIVO:</b> Talleres prácticos sobre derechos humanos y mecanismos de participación.</div>
+            <div class="proyecto-meta-item"><b>IMPACTO:</b> Más de 500 líderes e investigadores vinculados a procesos de formación.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 07. SECCIÓN NUESTROS ALIADOS ESTRATÉGICOS (#aliados) ===== -->
+  <!-- ===== 07. ALIANZAS ESTRATÉGICAS (#aliados - Fondo #ffffff) ===== -->
   <section id="aliados" class="aliados-section">
     <div class="section-container">
       <div class="aliados-header reveal-up">
@@ -2225,21 +1077,12 @@
           <div class="aliado-gallery">
             <div class="aliado-photo-thumb" onclick="window.openLightbox('public/img/convenio-firma-unilibre.jpg', 'Firma de Convenio Marco — Fundación Justicia Global y Universidad Libre Seccional Barranquilla')">
               <img src="public/img/convenio-firma-unilibre.jpg" alt="Firma de Convenio Marco de Cooperación">
-              <div class="galeria-overlay">
-                <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-              </div>
             </div>
             <div class="aliado-photo-thumb" onclick="window.openLightbox('public/img/convenio-directivos-unilibre.jpg', 'Ceremonia de Firma de Convenio Marco de Cooperación Institucional')">
               <img src="public/img/convenio-directivos-unilibre.jpg" alt="Directivos y Delegación Institucional">
-              <div class="galeria-overlay">
-                <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-              </div>
             </div>
             <div class="aliado-photo-thumb" onclick="window.openLightbox('public/img/convenio-campus-unilibre.jpg', 'Delegación de la Fundación Justicia Global en el Campus de la Universidad Libre Seccional Barranquilla')">
               <img src="public/img/convenio-campus-unilibre.jpg" alt="Delegación en Campus Universidad Libre">
-              <div class="galeria-overlay">
-                <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-              </div>
             </div>
           </div>
 
@@ -2261,199 +1104,197 @@
     </div>
   </section>
 
-  <!-- ===== 08. SECCIÓN TRANSPARENCIA INSTITUCIONAL (#transparencia) ===== -->
+  <!-- ===== 08. INVESTIGACIÓN Y CONOCIMIENTO (#investigacion-conocimiento - Fondo #fbfdf7) ===== -->
+  <section id="investigacion-conocimiento" class="investigacion-section">
+    <div class="section-container">
+      <div class="section-head reveal-up">
+        <span class="services-pill">CAPACIDAD TÉCNICA E INTELECTUAL</span>
+        <h2>INVESTIGACIÓN Y GENERACIÓN DE CONOCIMIENTO</h2>
+        <p>Generamos, sistematizamos y transferimos conocimiento riguroso para la toma de decisiones estratégicas.</p>
+      </div>
+
+      <div class="investigacion-grid">
+        <div class="investigacion-card reveal-up">
+          <div class="investigacion-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h3>1. Investigación Aplicada</h3>
+          <p>Estudios científicos y proyectos de investigación aplicados a la resolución de problemáticas territoriales reales.</p>
+        </div>
+
+        <div class="investigacion-card reveal-up">
+          <div class="investigacion-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3>2. Estudios y Diagnósticos</h3>
+          <p>Caracterización socioeconómica, líneas de base y diagnósticos técnicos de vulnerabilidad comunitaria.</p>
+        </div>
+
+        <div class="investigacion-card reveal-up">
+          <div class="investigacion-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+          <h3>3. Educación Continuada</h3>
+          <p>Diseño de diplomados, talleres de capacitación técnica y programas de actualización académica no formal.</p>
+        </div>
+
+        <div class="investigacion-card reveal-up">
+          <div class="investigacion-icon"><i class="fa-solid fa-newspaper"></i></div>
+          <h3>4. Publicaciones & Boletines</h3>
+          <p>Difusión de artículos científicos, guías metodológicas de veeduría y documentos de análisis institucional.</p>
+        </div>
+
+        <div class="investigacion-card reveal-up">
+          <div class="investigacion-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3>5. Análisis Territorial</h3>
+          <p>Evaluación de impacto social, mapeo de actores clave y caracterización de entornos de intervención.</p>
+        </div>
+
+        <div class="investigacion-card reveal-up">
+          <div class="investigacion-icon"><i class="fa-solid fa-gavel"></i></div>
+          <h3>6. Políticas Públicas</h3>
+          <p>Formulación de insumos técnicos y recomendaciones para el diseño y evaluación de políticas públicas inclusivas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 09. PRESIDENCIA / LIDERAZGO INSTITUCIONAL (#presidencia - Fondo #ffffff) ===== -->
+  <section id="presidencia" class="presidencia-section">
+    <div class="section-container">
+      <div class="presidencia-card reveal-up">
+        <div class="presidencia-header">
+          <div class="presidencia-avatar">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div class="presidencia-info">
+            <h3>Jonatan Carlos Mercado Alcina</h3>
+            <span>COFUNDADOR, PRESIDENTE & REPRESENTANTE LEGAL</span>
+          </div>
+        </div>
+        <div class="presidencia-body">
+          <p>Les doy la más cordial bienvenida a una organización creada con la convicción de que la <b>justicia debe convertirse en acciones capaces de transformar realidades</b>.</p>
+          <p>Trabajamos por los <b>derechos humanos</b>, la <b>transparencia</b>, la <b>integridad</b> y la <b>responsabilidad social</b>, mediante conocimiento especializado, consultorías, auditorías, educación y <b class="o">proyectos de impacto social</b>.</p>
+          <p>Nuestro compromiso es consolidar una Fundación con <b>vocación de servicio</b>, <b>rigor profesional</b> y <b class="o">visión internacional</b>, fortaleciendo instituciones, protegiendo derechos y generando oportunidades.</p>
+          
+          <div class="presidencia-quote">
+            <i class="fa-solid fa-quote-left" style="color:var(--orange); margin-right:8px;"></i>
+            "Porque creemos que un mundo más justo no se espera: <b class="o">se construye</b>."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10. TRANSPARENCIA INSTITUCIONAL (#transparencia - Fondo #fbfdf7) ===== -->
   <section id="transparencia" class="transparencia-section">
     <div class="section-container">
       <div class="section-head reveal-up">
-        <span class="services-pill">TRANSPARENCIA Y NORMATIVA</span>
-        <h2>MARCO OPERATIVO Y REGISTRO INSTITUCIONAL</h2>
+        <span class="services-pill">BUEN GOBIERNO Y CUMPLIMIENTO LEGAL</span>
+        <h2>TRANSPARENCIA INSTITUCIONAL</h2>
+        <p>Información legal, jurídica y de gobierno disponible para control social y veeduría abierta.</p>
       </div>
 
-      <div class="legal-grid">
-        <div class="legal-block reveal-left">
-          <h4>MARCO OPERATIVO Y REGISTRO CIIU</h4>
-          <p>Todas las actividades que realizamos en nuestros pilares de servicios se ejecutan bajo la Clasificación Industrial Internacional Uniforme (<b>CIIU</b>) registrada formalmente por la fundación: <b>7020</b> (Actividades de consultoría de gestión), <b>8559</b> (Otros tipos de educación n.c.p.), <b>6910</b> (Actividades jurídicas) y <b>9499</b> (Actividades de otras asociaciones n.c.p.).</p>
+      <div class="transparencia-grid">
+        <div class="transparencia-card reveal-up">
+          <div class="transparencia-icon"><i class="fa-solid fa-landmark"></i></div>
+          <h3>Naturaleza Jurídica & Registro ESAL</h3>
+          <p>Entidad sin ánimo de lucro (<b>ESAL</b>) de utilidad común, constituida bajo el marco legal colombiano (<b>Decreto 2150 de 1995</b>). Inscripción en Cámara de Comercio y RUT oficial vigentes.</p>
         </div>
 
-        <div class="legal-block orange reveal-right">
-          <h4>COMPROMISO SOCIAL Y TRANSPARENCIA FINANCIERA</h4>
-          <p>La Fundación es una entidad de <b>interés general</b> y <b>acceso comunitario</b>. En consecuencia, las rentas, ingresos y excedentes que se obtengan en el desarrollo de estos cuatro pilares se destinarán e invertirán en su totalidad en el <b>objeto social institucional</b>, estando <b class="o">expresamente prohibida la distribución de excedentes o remanentes</b> a sus fundadores, directivos o miembros.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECCIÓN 7: GALERÍA DE FOTOS E IMPACTO (#galeria - 100vh) ===== -->
-  <section id="galeria" class="galeria-section">
-    <div class="section-container">
-      <div class="galeria-header reveal-up">
-        <span class="galeria-tag">GALERÍA DE PROYECTOS E IMPACTO</span>
-        <h2>TRANSFORMANDO REALIDADES EN EL TERRITORIO</h2>
-      </div>
-
-      <div class="galeria-grid">
-        <div class="galeria-item reveal-up" onclick="window.openLightbox('public/img/convenio-firma-unilibre.jpg', 'Firma de Convenio Marco de Cooperación entre la Fundación Justicia Global y la Universidad Libre Seccional Barranquilla')">
-          <div class="galeria-img-wrap">
-            <img src="public/img/convenio-firma-unilibre.jpg" alt="Firma de Convenio Marco Universidad Libre">
-            <div class="galeria-overlay">
-              <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-            </div>
-          </div>
-          <div class="galeria-caption">
-            <span class="galeria-badge">Alianza Estratégica</span>
-            <h4>Firma de Convenio — Universidad Libre</h4>
+        <div class="transparencia-card reveal-up">
+          <div class="transparencia-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3>Códigos CIIU Habilitados</h3>
+          <p>Actividades económicas autorizadas en nuestro objeto social:</p>
+          <div class="ciiu-pills">
+            <span class="ciiu-pill">CIIU 7020 — Consultoría de gestión</span>
+            <span class="ciiu-pill">CIIU 8559 — Educación continuada</span>
+            <span class="ciiu-pill">CIIU 6910 — Actividades jurídicas</span>
+            <span class="ciiu-pill">CIIU 9499 — Servicios comunitarios</span>
           </div>
         </div>
 
-        <div class="galeria-item reveal-up" onclick="window.openLightbox('public/img/convenio-directivos-unilibre.jpg', 'Ceremonia Oficial y Delegación Directiva — Universidad Libre y Fundación Justicia Global')">
-          <div class="galeria-img-wrap">
-            <img src="public/img/convenio-directivos-unilibre.jpg" alt="Delegación Directiva e Institucional">
-            <div class="galeria-overlay">
-              <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-            </div>
-          </div>
-          <div class="galeria-caption">
-            <span class="galeria-badge">Ceremonia Oficial</span>
-            <h4>Directivos y Delegación Institucional</h4>
-          </div>
+        <div class="transparencia-card reveal-up">
+          <div class="transparencia-icon"><i class="fa-solid fa-coins"></i></div>
+          <h3>Destinación Social de Recursos</h3>
+          <p>El 100% de los excedentes y recursos ejecutados se reinvierten exclusivamente en la consecución del objeto social y el bienestar de las comunidades atendidas.</p>
         </div>
 
-        <div class="galeria-item reveal-up" onclick="window.openLightbox('public/img/galeria-convenio-directivos-1.jpg', 'Delegación Directiva de la Fundación Justicia Global en Ceremonia de Convenio')">
-          <div class="galeria-img-wrap">
-            <img src="public/img/galeria-convenio-directivos-1.jpg" alt="Delegación Directiva Fundación Justicia Global">
-            <div class="galeria-overlay">
-              <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-            </div>
-          </div>
-          <div class="galeria-caption">
-            <span class="galeria-badge">Cooperación Institucional</span>
-            <h4>Delegación Directiva e Integrantes</h4>
-          </div>
-        </div>
-
-        <div class="galeria-item reveal-up" onclick="window.openLightbox('public/img/galeria-convenio-directivos-2.jpg', 'Encuentro de Cooperación Institucional y Firma de Alianzas')">
-          <div class="galeria-img-wrap">
-            <img src="public/img/galeria-convenio-directivos-2.jpg" alt="Encuentro de Cooperación e Integración">
-            <div class="galeria-overlay">
-              <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-            </div>
-          </div>
-          <div class="galeria-caption">
-            <span class="galeria-badge">Encuentro de Trabajo</span>
-            <h4>Reunión de Cooperación & Alianzas</h4>
-          </div>
-        </div>
-
-        <div class="galeria-item reveal-up" onclick="window.openLightbox('public/img/convenio-campus-unilibre.jpg', 'Delegación de la Fundación Justicia Global en las Instalaciones del Campus Universidad Libre Seccional Barranquilla')">
-          <div class="galeria-img-wrap">
-            <img src="public/img/convenio-campus-unilibre.jpg" alt="Delegación Campus Universidad Libre">
-            <div class="galeria-overlay">
-              <span class="galeria-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-            </div>
-          </div>
-          <div class="galeria-caption">
-            <span class="galeria-badge">Investigación & Desarrollo</span>
-            <h4>Campus Universidad Libre Barranquilla</h4>
-          </div>
+        <div class="transparencia-card reveal-up">
+          <div class="transparencia-icon"><i class="fa-solid fa-file-shield"></i></div>
+          <h3>Gobierno Institucional & Habeas Data</h3>
+          <p>Adopción de estándares de buen gobierno corporativo, rendición pública de cuentas y cumplimiento estricto de la <b>Ley 1581 de 2012</b> de protección de datos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LIGHTBOX MODAL DE VISUALIZACIÓN A PANTALLA COMPLETA -->
-  <div class="lightbox-modal" id="lightboxModal" onclick="window.closeLightbox(event)">
-    <div class="lightbox-content" onclick="event.stopPropagation()">
-      <button class="lightbox-close" onclick="window.closeLightbox(event)" aria-label="Cerrar ventana"><i class="fa-solid fa-xmark"></i></button>
-      <img id="lightboxImg" src="" alt="">
-      <div class="lightbox-title" id="lightboxTitle"></div>
-    </div>
-  </div>
-
-  <!-- ===== SECCIÓN: ¿TIENES UN PROYECTO O CONSULTA TÉCNICA? (#asesoria) ===== -->
-  <section id="asesoria" class="asesoria-section">
-    <div class="section-container">
-      <div class="asesoria-card reveal-up">
-        <div class="asesoria-head">
-          <span class="asesoria-tag"><i class="fa-solid fa-headset"></i> ATENCIÓN Y ASESORÍA INSTITUCIONAL</span>
-          <h2>¿Tienes un proyecto o consulta técnica?</h2>
-          <p>Ponte en contacto con nuestro equipo de dirección y asesores para estructurar propuestas MGA, convenios académicos o consultorías de sostenibilidad.</p>
-        </div>
-
-        <div class="asesoria-channels-grid">
-          <a href="https://wa.me/573162462649?text=Hola,%20quisiera%20solicitar%20asesor%C3%ADa%20t%C3%A9cnica" target="_blank" rel="noopener noreferrer" class="asesoria-channel-card" style="border-top: 4px solid #25D366;">
-            <div class="asesoria-channel-icon" style="background: #E6F9ED; color: #25D366;">
-              <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            <strong>WhatsApp Técnico Directo</strong>
-            <span>+57 316 2462649 — Respuesta rápida</span>
-          </a>
-
-          <a href="mailto:contacto@fundacionjusticiaglobal.org" class="asesoria-channel-card" style="border-top: 4px solid var(--orange);">
-            <div class="asesoria-channel-icon" style="background: #FFF0E6; color: var(--orange);">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <strong>Correo Institucional</strong>
-            <span>contacto@fundacionjusticiaglobal.org</span>
-          </a>
-
-          <a href="https://www.instagram.com/fjusticiaglobal?stkn=MTk3a3Ywa3BoNnE4YQ==" target="_blank" rel="noopener noreferrer" class="asesoria-channel-card" style="border-top: 4px solid #E1306C;">
-            <div class="asesoria-channel-icon" style="background: #FEE6EE; color: #E1306C;">
-              <i class="fa-brands fa-instagram"></i>
-            </div>
-            <strong>Instagram Oficial — @fjusticiaglobal</strong>
-            <span>Síguenos para conocer noticias e impacto social</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECCIÓN 10: FORMULARIO DE CONTACTO (#contacto) ===== -->
+  <!-- ===== 11. CONTACTO / CTA FINAL (#contacto - Fondo #ffffff) ===== -->
   <section id="contacto" class="contacto-section">
-    <div class="section-container">
-      <div class="contacto-form-container">
-        <div class="contacto-form-card reveal-up">
-          <div class="contacto-form-head">
-            <span class="asesoria-tag"><i class="fa-solid fa-paper-plane"></i> ATENCIÓN DIRECTA</span>
-            <h2>FORMULARIO DE CONTACTO</h2>
-            <p>Diligencia los siguientes campos y nuestro equipo de asesores técnicos se pondrá en contacto a la brevedad.</p>
+    <div class="section-container contacto-container">
+      <div class="contacto-grid">
+        <div class="contacto-cta-card reveal-left">
+          <div>
+            <span style="display:inline-block; padding: 6px 14px; background: rgba(255,255,255,0.15); color: #fff; border-radius: 20px; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 14px; text-transform: uppercase;">
+              <i class="fa-solid fa-handshake"></i> TRABAJEMOS JUNTOS
+            </span>
+            <h2>CONSTRUYAMOS UNA SOLUCIÓN</h2>
+            <p style="margin-top: 14px;">
+              ¿Tienes un proyecto, una necesidad institucional o una iniciativa de impacto social? La Fundación Justicia Global puede acompañarte en su formulación, articulación y desarrollo.
+            </p>
           </div>
 
-          <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Tu consulta ha sido enviada con éxito. Nuestro equipo se pondrá en contacto a la brevedad.');">
+          <div class="contacto-info-list">
+            <a href="https://wa.me/573162462649?text=Hola,%20quisiera%20solicitar%20informaci%C3%B3n%20y%20asesor%C3%ADa%20técnica%20de%20la%20Fundaci%C3%B3n%20Justicia%20Global" target="_blank" rel="noopener noreferrer" class="contacto-info-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Contactar por WhatsApp (+57 316 2462649)</span>
+            </a>
+            <a href="mailto:contacto@fundacionjusticiaglobal.org" class="contacto-info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>contacto@fundacionjusticiaglobal.org</span>
+            </a>
+            <div class="contacto-info-item" style="cursor:default;">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Colombia y el Mundo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-form-card reveal-right">
+          <div class="contacto-form-head">
+            <h2>Envíanos un Mensaje</h2>
+            <p>Diligencia el formulario y nuestro equipo técnico se pondrá en contacto a la brevedad.</p>
+          </div>
+
+          <form action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Nos pondremos en contacto muy pronto.');">
             <div class="contact-form-grid">
               <div class="form-group">
                 <label for="nombre">Nombre Completo *</label>
-                <input type="text" id="nombre" required placeholder="Ej. Dra. María Pérez">
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. María Pérez" required>
               </div>
 
               <div class="form-group">
-                <label for="email">Correo Electrónico *</label>
-                <input type="email" id="email" required placeholder="correo@entidad.org">
+                <label for="correo">Correo Electrónico *</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
               </div>
 
               <div class="form-group">
                 <label for="telefono">Teléfono / WhatsApp *</label>
-                <input type="tel" id="telefono" required placeholder="+57 300 000 0000">
+                <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" required>
               </div>
 
               <div class="form-group">
-                <label for="asunto">Asunto / Tipo de Solicitud *</label>
-                <select id="asunto" required>
-                  <option value="">Selecciona una opción...</option>
-                  <option value="mga">Formulación de Proyectos MGA</option>
-                  <option value="investigacion">Investigación Aplicada / Quinta Hélice</option>
-                  <option value="convenio">Convenios Marco Académicos / Alianzas</option>
-                  <option value="rse">Consultoría RSE & Sostenibilidad ESG</option>
-                  <option value="otro">Otra consulta general</option>
+                <label for="asunto">Asunto o Interés *</label>
+                <select id="asunto" name="asunto" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="Proyectos MGA">Formulación de Proyectos MGA</option>
+                  <option value="Consultoría RSE">Consultoría & Debida Diligencia</option>
+                  <option value="Educación Continuada">Educación Continuada & Capacitación</option>
+                  <option value="Alianzas Quinta Hélice">Alianzas Institucionales</option>
+                  <option value="Auditoría Social">Auditoría Social & Veeduría</option>
+                  <option value="Otro">Otro Asunto</option>
                 </select>
               </div>
 
               <div class="form-group full-width">
-                <label for="mensaje">Mensaje *</label>
-                <textarea id="mensaje" rows="4" required placeholder="Describe brevemente las necesidades de tu entidad o propuesta..."></textarea>
+                <label for="mensaje">Mensaje o Detalles de la Solicitud *</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente tu necesidad o proyecto..." required></textarea>
               </div>
 
-              <!-- CHECKBOX DE ACEPTACIÓN DE POLÍTICAS DE PRIVACIDAD -->
               <div class="form-group full-width form-checkbox-group">
                 <label class="checkbox-label" for="politicasCheck">
                   <input type="checkbox" id="politicasCheck" required>
@@ -2471,11 +1312,11 @@
     </div>
   </section>
 
-  <!-- ===== 14. SECCIÓN POLÍTICAS DE PRIVACIDAD (#politicas - 100vh) ===== -->
+  <!-- ===== 12. SECCIÓN POLÍTICAS DE PRIVACIDAD (#politicas - Fondo #fbfdf7) ===== -->
   <section id="politicas" class="politicas-section">
     <div class="section-container">
       <div class="politicas-card reveal-up">
-        <span class="asesoria-tag"><i class="fa-solid fa-shield-halved"></i> MARCO LEGAL Y HABEAS DATA</span>
+        <span class="services-pill"><i class="fa-solid fa-shield-halved"></i> MARCO LEGAL Y HABEAS DATA</span>
         <h2>POLÍTICAS DE PRIVACIDAD Y TRATAMIENTO DE DATOS PERSONALES</h2>
         <p class="subtitle">En cumplimiento de la Ley Estatutaria 1581 de 2012 y el Decreto 1377 de 2013 de la República de Colombia</p>
 
@@ -2513,7 +1354,7 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- ===== 15. SECCIÓN FOOTER INSTITUCIONAL (#footer-section) ===== -->
+  <!-- ===== 13. SECCIÓN FOOTER INSTITUCIONAL (#footer-section - Fondo #ffffff) ===== -->
   <section id="footer-section" class="footer-section">
     <div class="footer-container">
       <footer class="footer">
@@ -2532,23 +1373,19 @@
           </div>
         </div>
 
-        <!-- NAVEGACIÓN RÁPIDA DENTRO DEL FOOTER -->
         <div class="footer-nav-links">
           <a href="#top" class="nav-link">Inicio</a>
-          <a href="#hero-principal" class="nav-link">Compromiso & Impacto</a>
           <a href="#nosotros" class="nav-link">Quiénes Somos</a>
-          <a href="#presidencia" class="nav-link">Presidencia</a>
-          <a href="#servicios" class="nav-link">Servicios</a>
-          <a href="#valores" class="nav-link">Valores</a>
-          <a href="#programas" class="nav-link">Programas</a>
-          <a href="#impacto" class="nav-link">Impacto</a>
+          <a href="#pilares" class="nav-link">Pilares</a>
+          <a href="#con-quienes-trabajamos" class="nav-link">Sectores</a>
+          <a href="#modelo-trabajo" class="nav-link">Modelo</a>
+          <a href="#proyectos-impacto" class="nav-link">Proyectos</a>
           <a href="#aliados" class="nav-link">Aliados</a>
+          <a href="#investigacion-conocimiento" class="nav-link">Investigación</a>
+          <a href="#presidencia" class="nav-link">Presidencia</a>
           <a href="#transparencia" class="nav-link">Transparencia</a>
-          <a href="#galeria" class="nav-link">Galería</a>
-          <a href="#asesoria" class="nav-link">Asesoría</a>
           <a href="#contacto" class="nav-link">Contacto</a>
           <a href="#politicas" class="nav-link">Políticas</a>
-          <a href="#footer-section" class="nav-link">Footer</a>
         </div>
 
         <div class="footer-bottom">
@@ -2565,9 +1402,14 @@
   </section>
 </div>
 
-<!-- ===== SCRIPT DE NAVEGACIÓN, OBSERVER Y LIGHTBOX GLOBAL ===== -->
+<!-- MODAL LIGHTBOX PARA VISUALIZACIÓN DE FOTOGRAFÍAS -->
+<div id="lightboxModal" class="lightbox-modal" onclick="window.closeLightbox(event)">
+  <button type="button" class="lightbox-close" aria-label="Cerrar visor" onclick="window.closeLightbox(event)">&times;</button>
+  <img id="lightboxImg" class="lightbox-content" src="" alt="Vista ampliada" onclick="event.stopPropagation()">
+  <div id="lightboxTitle" class="lightbox-title"></div>
+</div>
+
 <script>
-  // Exposición global para el visor de imágenes Lightbox
   window.openLightbox = function(src, title) {
     const modal = document.getElementById('lightboxModal');
     const img = document.getElementById('lightboxImg');
@@ -2631,7 +1473,6 @@
       });
     }, { passive: true });
 
-    // Navegación suave garantizada para todos los enlaces del menú
     navLinks.forEach(function(link) {
       link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
