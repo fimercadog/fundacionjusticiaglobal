@@ -241,6 +241,30 @@
     background: var(--green-light);
   }
 
+  .nav-btn-cta {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    color: #ffffff !important;
+    background: var(--green) !important;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 2px;
+    box-shadow: 0 2px 8px rgba(127, 153, 44, 0.3);
+  }
+
+  .nav-btn-cta:hover {
+    background: var(--green-dark) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(127, 153, 44, 0.4);
+  }
+
   @media (min-width: 769px) and (max-width: 1250px) {
     .nav-link {
       font-size: 10.5px !important;
@@ -604,18 +628,18 @@
   .investigacion-card h3 { font-size: 17px; font-weight: 800; color: var(--green-dark); margin-bottom: 8px; }
   .investigacion-card p { font-size: 13.5px; line-height: 1.6; color: #4a4a4a; }
 
-  /* ===== 09. PRESIDENCIA (#presidencia) ===== */
-  .presidencia-section { width: 100%; padding: 80px 24px; background: #ffffff; }
-  .presidencia-card {
+  /* ===== 09. DIRECTOR EJECUTIVO (#director-ejecutivo) ===== */
+  .director-ejecutivo-section { width: 100%; padding: 80px 24px; background: #ffffff; }
+  .director-ejecutivo-card {
     background: #ffffff; border: 1px solid rgba(127, 153, 44, 0.25); border-radius: 24px; padding: 38px 32px; box-shadow: var(--shadow-lvl2); position: relative; width: 100%; max-width: 920px; margin: 0 auto;
   }
-  .presidencia-card::before { content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--green); border-radius: 24px 0 0 24px; }
-  .presidencia-header { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
-  .presidencia-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--green-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; box-shadow: 0 4px 12px rgba(18,42,23,0.2); }
-  .presidencia-info h3 { font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 2px; }
-  .presidencia-info span { font-size: 13px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--orange); text-transform: uppercase; letter-spacing: 0.5px; }
-  .presidencia-body p { font-size: 15.5px; line-height: 1.68; color: #333333; margin-bottom: 14px; }
-  .presidencia-quote { background: #fbfdf7; border-left: 4px solid var(--orange); border-radius: 12px; padding: 16px 20px; font-size: 16.5px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--green-dark); margin-top: 18px; box-shadow: var(--shadow-lvl1); }
+  .director-ejecutivo-card::before { content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--green); border-radius: 24px 0 0 24px; }
+  .director-ejecutivo-header { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+  .director-ejecutivo-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--green-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; box-shadow: 0 4px 12px rgba(18,42,23,0.2); }
+  .director-ejecutivo-info h3 { font-size: 22px; font-weight: 900; color: var(--green-dark); margin-bottom: 2px; }
+  .director-ejecutivo-info span { font-size: 13px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--orange); text-transform: uppercase; letter-spacing: 0.5px; }
+  .director-ejecutivo-body p { font-size: 15.5px; line-height: 1.68; color: #333333; margin-bottom: 14px; }
+  .director-ejecutivo-quote { background: #fbfdf7; border-left: 4px solid var(--orange); border-radius: 12px; padding: 16px 20px; font-size: 16.5px; font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--green-dark); margin-top: 18px; box-shadow: var(--shadow-lvl1); }
 
   /* ===== 10. TRANSPARENCIA INSTITUCIONAL (#transparencia) ===== */
   .transparencia-section { width: 100%; padding: 80px 24px; background: #fbfdf7; border-top: 1px solid rgba(127, 153, 44, 0.12); border-bottom: 1px solid rgba(127, 153, 44, 0.12); }
@@ -742,16 +766,13 @@
 <nav id="headerNav" class="header-nav" aria-label="Navegación principal en escritorio">
   <ul class="nav-list">
     <li><a href="#top" class="nav-link active">Inicio</a></li>
-    <li><a href="#nosotros" class="nav-link">Quiénes Somos</a></li>
-    <li><a href="#pilares" class="nav-link">Pilares</a></li>
-    <li><a href="#con-quienes-trabajamos" class="nav-link">Sectores</a></li>
-    <li><a href="#modelo-trabajo" class="nav-link">Modelo</a></li>
-    <li><a href="#proyectos-impacto" class="nav-link">Proyectos</a></li>
+    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+    <li><a href="#portafolio" class="nav-link">Servicios</a></li>
+    <li><a href="#programas" class="nav-link">Programas</a></li>
+    <li><a href="#proyectos-impacto" class="nav-link">Impacto</a></li>
     <li><a href="#aliados" class="nav-link">Aliados</a></li>
-    <li><a href="#investigacion-conocimiento" class="nav-link">Investigación</a></li>
-    <li><a href="#presidencia" class="nav-link">Presidencia</a></li>
     <li><a href="#transparencia" class="nav-link">Transparencia</a></li>
-    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    <li><a href="#contacto" class="nav-btn-cta"><i class="fa-solid fa-handshake"></i> TRABAJEMOS JUNTOS</a></li>
   </ul>
 </nav>
 
@@ -764,16 +785,13 @@
 <div id="navMenu" class="nav-menu">
   <ul class="nav-list">
     <li><a href="#top" class="nav-link active">Inicio</a></li>
-    <li><a href="#nosotros" class="nav-link">Quiénes Somos</a></li>
-    <li><a href="#pilares" class="nav-link">Pilares</a></li>
-    <li><a href="#con-quienes-trabajamos" class="nav-link">Sectores</a></li>
-    <li><a href="#modelo-trabajo" class="nav-link">Modelo</a></li>
-    <li><a href="#proyectos-impacto" class="nav-link">Proyectos</a></li>
+    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+    <li><a href="#portafolio" class="nav-link">Servicios</a></li>
+    <li><a href="#programas" class="nav-link">Programas</a></li>
+    <li><a href="#proyectos-impacto" class="nav-link">Impacto</a></li>
     <li><a href="#aliados" class="nav-link">Aliados</a></li>
-    <li><a href="#investigacion-conocimiento" class="nav-link">Investigación</a></li>
-    <li><a href="#presidencia" class="nav-link">Presidencia</a></li>
     <li><a href="#transparencia" class="nav-link">Transparencia</a></li>
-    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    <li><a href="#contacto" class="nav-btn-cta"><i class="fa-solid fa-handshake"></i> TRABAJEMOS JUNTOS</a></li>
   </ul>
 </div>
 
@@ -796,7 +814,7 @@
         </div>
 
         <p class="hero-description">
-          Una organización que articula <b>conocimiento especializado</b>, <b>instituciones</b> y <b>territorio</b> para transformar realidades con rigor técnico, ética y sostenibilidad.
+          Promovemos los derechos humanos, la transparencia, la integridad y la responsabilidad social mediante educación, investigación, consultoría, formulación de proyectos y articulación institucional.
         </p>
 
         <div class="hero-btn-group">
@@ -855,13 +873,13 @@
     </div>
   </section>
 
-  <!-- ===== 03. NUESTROS 4 PILARES (#pilares - Fondo #ffffff) ===== -->
-  <section id="pilares" class="pilares-section">
+  <!-- ===== 03. NUESTRO PORTAFOLIO INSTITUCIONAL (#portafolio - Fondo #ffffff) ===== -->
+  <section id="portafolio" class="pilares-section">
     <div class="section-container">
       <div class="section-head reveal-up">
-        <span class="services-pill">EJE ESTRATÉGICO INSTITUCIONAL</span>
-        <h2>NUESTROS 4 PILARES DE ACCIÓN</h2>
-        <p>Articulamos nuestra acción técnica e institucional a través de cuatro líneas fundamentales de intervención.</p>
+        <span class="services-pill">PORTAFOLIO ESTRATÉGICO INSTITUCIONAL</span>
+        <h2>NUESTRO PORTAFOLIO INSTITUCIONAL</h2>
+        <p>Nuestros 4 pilares de acción</p>
       </div>
 
       <div class="pilares-grid">
@@ -888,8 +906,8 @@
 
         <div class="pilar-card reveal-up">
           <span class="pilar-number">04</span>
-          <div class="pilar-icon"><i class="fa-solid fa-flask"></i></div>
-          <h3>Investigación y Transformación Social</h3>
+          <div class="pilar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Auditoría Social, Transparencia y Cumplimiento</h3>
           <p>Desarrollamos <b>investigación aplicada</b>, diagnósticos territoriales de vulnerabilidad, veedurías ciudadanas y la articulación de la <b>Quinta Hélice</b> para convertir el conocimiento científico en <b class="o">transformación social concreta</b>.</p>
         </div>
       </div>
@@ -909,37 +927,37 @@
         <div class="sector-card reveal-up">
           <div class="sector-icon"><i class="fa-solid fa-building-columns"></i></div>
           <h3>Entidades Públicas</h3>
-          <p>Alcaldías, gobernaciones, ministerios, entes de control y organismos estatales en programas de transparencia, veeduría y fortalecimiento técnico.</p>
+          <p>Alcaldías, gobernaciones, ministerios, entes de control y organismos estatales en programas de <b>transparencia</b>, veeduría y <b class="o">fortalecimiento técnico</b>.</p>
         </div>
 
         <div class="sector-card reveal-up">
           <div class="sector-icon"><i class="fa-solid fa-building"></i></div>
           <h3>Empresas y Organizaciones Privadas</h3>
-          <p>Compañías e industrias comprometidas con la responsabilidad social empresarial, la debida diligencia en derechos humanos y la sostenibilidad.</p>
+          <p>Compañías e industrias comprometidas con la <b>responsabilidad social empresarial</b>, la debida diligencia en <b>derechos humanos</b> y la <b class="o">sostenibilidad</b>.</p>
         </div>
 
         <div class="sector-card reveal-up">
           <div class="sector-icon"><i class="fa-solid fa-school"></i></div>
           <h3>Universidades e Instituciones Educativas</h3>
-          <p>Alianzas de investigación aplicada, convenios marco de cooperación, grupos de estudio científico y proyectos de educación continuada.</p>
+          <p>Alianzas de <b>investigación aplicada</b>, convenios marco de cooperación, grupos de estudio científico y proyectos de <b class="o">educación continuada</b>.</p>
         </div>
 
         <div class="sector-card reveal-up">
           <div class="sector-icon"><i class="fa-solid fa-users-line"></i></div>
           <h3>Organizaciones Sociales</h3>
-          <p>Líderes comunitarios, ONG, asociaciones de base y colectivos ciudadanos en procesos de veeduría, control social y formación de capacidades.</p>
+          <p>Líderes comunitarios, ONG, asociaciones de base y colectivos ciudadanos en procesos de <b>veeduría</b>, <b>control social</b> y <b class="o">formación de capacidades</b>.</p>
         </div>
 
         <div class="sector-card reveal-up">
           <div class="sector-icon"><i class="fa-solid fa-location-dot"></i></div>
           <h3>Comunidades y Territorios</h3>
-          <p>Poblaciones vulnerables y territorios rurales/urbanos que requieren cierre de brechas sociales, equidad y desarrollo sostenible con dignidad.</p>
+          <p>Poblaciones vulnerables y territorios rurales/urbanos que requieren <b>cierre de brechas sociales</b>, equidad y <b class="o">desarrollo sostenible con dignidad</b>.</p>
         </div>
 
         <div class="sector-card reveal-up">
           <div class="sector-icon"><i class="fa-solid fa-handshake-angle"></i></div>
           <h3>Organismos de Cooperación y Aliados</h3>
-          <p>Agencias internacionales, bancas de desarrollo y redes globales en la cofinanciación y ejecución de proyectos de impacto social.</p>
+          <p>Agencias internacionales, bancas de desarrollo y redes globales en la <b>cofinanciación y ejecución</b> de <b class="o">proyectos de impacto social</b>.</p>
         </div>
       </div>
     </div>
@@ -996,7 +1014,48 @@
     </div>
   </section>
 
-  <!-- ===== 06. PROYECTOS E IMPACTO (#proyectos-impacto - Fondo #fbfdf7) ===== -->
+  <!-- ===== 06. PROGRAMAS INSTITUCIONALES (#programas - Fondo #ffffff) ===== -->
+  <section id="programas" class="pilares-section">
+    <div class="section-container">
+      <div class="section-head reveal-up">
+        <span class="services-pill">PROGRAMAS INSTITUCIONALES MARCO</span>
+        <h2>NUESTROS PROGRAMAS DE INTERVENCIÓN</h2>
+        <p>Estructuras programáticas continuas diseñadas para generar capacidad instalada y transformación sostenible.</p>
+      </div>
+
+      <div class="pilares-grid">
+        <div class="pilar-card reveal-up">
+          <span class="pilar-number"><i class="fa-solid fa-graduation-cap"></i></span>
+          <div class="pilar-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+          <h3>Programa de Educación Continuada y Capacitación Territorial</h3>
+          <p>Diseñamos, implementamos y ejecutamos programas de <b>educación continuada</b>, capacitación a servidores públicos, talleres con líderes sociales y diplomados académicos orientados al desarrollo territorial, <b class="o">derechos humanos</b> y <b class="o">mecanismos de participación ciudadana</b>.</p>
+        </div>
+
+        <div class="pilar-card reveal-up">
+          <span class="pilar-number"><i class="fa-solid fa-shield-halved"></i></span>
+          <div class="pilar-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3>Programa de Veeduría Ciudadana y Auditoría Social</h3>
+          <p>Desarrollamos <b>veedurías ciudadanas</b>, control social activo y la articulación de la <b>Quinta Hélice</b> para fomentar la gobernanza transparente, imparcialidad, debida diligencia y <b class="o">auditoría social de cumplimiento normativo</b>.</p>
+        </div>
+
+        <div class="pilar-card reveal-up">
+          <span class="pilar-number"><i class="fa-solid fa-file-lines"></i></span>
+          <div class="pilar-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3>Programa MGA de Inversión y Desarrollo Social</h3>
+          <p>Estructuramos, formulamos y gestionamos <b>planes, programas y proyectos</b> de desarrollo social, comunitario y ambiental bajo metodología <b>MGA</b> ante organismos de cooperación local, nacional e internacional.</p>
+        </div>
+
+        <div class="pilar-card reveal-up">
+          <span class="pilar-number"><i class="fa-solid fa-briefcase"></i></span>
+          <div class="pilar-icon"><i class="fa-solid fa-building-user"></i></div>
+          <h3>Programa de Debida Diligencia y RSE</h3>
+          <p>Prestamos consultoría especializada a entidades públicas y privadas en adopción de estándares de <b>debida diligencia</b>, <b>gobernanza</b>, <b>responsabilidad social empresarial</b>, sostenibilidad y <b class="o">derechos humanos</b>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 07. PROYECTOS E IMPACTO (#proyectos-impacto - Fondo #fbfdf7) ===== -->
   <section id="proyectos-impacto" class="proyectos-section">
     <div class="section-container">
       <div class="section-head reveal-up">
@@ -1117,62 +1176,65 @@
         <div class="investigacion-card reveal-up">
           <div class="investigacion-icon"><i class="fa-solid fa-microscope"></i></div>
           <h3>1. Investigación Aplicada</h3>
-          <p>Estudios científicos y proyectos de investigación aplicados a la resolución de problemáticas territoriales reales.</p>
+          <p>Estudios científicos y proyectos de <b>investigación aplicada</b> a la resolución de <b class="o">problemáticas territoriales reales</b>.</p>
         </div>
 
         <div class="investigacion-card reveal-up">
           <div class="investigacion-icon"><i class="fa-solid fa-clipboard-check"></i></div>
           <h3>2. Estudios y Diagnósticos</h3>
-          <p>Caracterización socioeconómica, líneas de base y diagnósticos técnicos de vulnerabilidad comunitaria.</p>
+          <p>Caracterización socioeconómica, <b>líneas de base</b> y diagnósticos técnicos de <b class="o">vulnerabilidad comunitaria</b>.</p>
         </div>
 
         <div class="investigacion-card reveal-up">
           <div class="investigacion-icon"><i class="fa-solid fa-book-open-reader"></i></div>
           <h3>3. Educación Continuada</h3>
-          <p>Diseño de diplomados, talleres de capacitación técnica y programas de actualización académica no formal.</p>
+          <p>Diseño de diplomados, talleres de <b>capacitación técnica</b> y programas de <b class="o">actualización académica no formal</b>.</p>
         </div>
 
         <div class="investigacion-card reveal-up">
           <div class="investigacion-icon"><i class="fa-solid fa-newspaper"></i></div>
           <h3>4. Publicaciones & Boletines</h3>
-          <p>Difusión de artículos científicos, guías metodológicas de veeduría y documentos de análisis institucional.</p>
+          <p>Difusión de <b>artículos científicos</b>, guías metodológicas de veeduría y <b class="o">documentos de análisis institucional</b>.</p>
         </div>
 
         <div class="investigacion-card reveal-up">
           <div class="investigacion-icon"><i class="fa-solid fa-map-location-dot"></i></div>
           <h3>5. Análisis Territorial</h3>
-          <p>Evaluación de impacto social, mapeo de actores clave y caracterización de entornos de intervención.</p>
+          <p>Evaluación de <b>impacto social</b>, mapeo de actores clave y <b class="o">caracterización de entornos de intervención</b>.</p>
         </div>
 
         <div class="investigacion-card reveal-up">
           <div class="investigacion-icon"><i class="fa-solid fa-gavel"></i></div>
           <h3>6. Políticas Públicas</h3>
-          <p>Formulación de insumos técnicos y recomendaciones para el diseño y evaluación de políticas públicas inclusivas.</p>
+          <p>Formulación de <b>insumos técnicos</b> y recomendaciones para el diseño y <b class="o">evaluación de políticas públicas inclusivas</b>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 09. PRESIDENCIA / LIDERAZGO INSTITUCIONAL (#presidencia - Fondo #ffffff) ===== -->
-  <section id="presidencia" class="presidencia-section">
+  <!-- ===== 10. DIRECCIÓN EJECUTIVA (#direccion-ejecutiva - Fondo #ffffff) ===== -->
+  <section id="direccion-ejecutiva" class="director-ejecutivo-section">
     <div class="section-container">
-      <div class="presidencia-card reveal-up">
-        <div class="presidencia-header">
-          <div class="presidencia-avatar">
+      <div class="section-head reveal-up" style="margin-bottom: 24px;">
+        <span class="services-pill">MENSAJE DE LA DIRECCIÓN EJECUTIVA</span>
+        <h2>DIRECCIÓN EJECUTIVA</h2>
+      </div>
+      <div class="director-ejecutivo-card reveal-up">
+        <div class="director-ejecutivo-header">
+          <div class="director-ejecutivo-avatar">
             <i class="fa-solid fa-user-tie"></i>
           </div>
-          <div class="presidencia-info">
+          <div class="director-ejecutivo-info">
             <h3>Jonatan Carlos Mercado Alcina</h3>
-            <span>COFUNDADOR, PRESIDENTE & REPRESENTANTE LEGAL</span>
+            <span>DIRECTOR EJECUTIVO Y REPRESENTANTE LEGAL</span>
           </div>
         </div>
-        <div class="presidencia-body">
+        <div class="director-ejecutivo-body">
           <p>Les doy la más cordial bienvenida a una organización creada con la convicción de que la <b>justicia debe convertirse en acciones capaces de transformar realidades</b>.</p>
           <p>Trabajamos por los <b>derechos humanos</b>, la <b>transparencia</b>, la <b>integridad</b> y la <b>responsabilidad social</b>, mediante conocimiento especializado, consultorías, auditorías, educación y <b class="o">proyectos de impacto social</b>.</p>
           <p>Nuestro compromiso es consolidar una Fundación con <b>vocación de servicio</b>, <b>rigor profesional</b> y <b class="o">visión internacional</b>, fortaleciendo instituciones, protegiendo derechos y generando oportunidades.</p>
           
-          <div class="presidencia-quote">
-            <i class="fa-solid fa-quote-left" style="color:var(--orange); margin-right:8px;"></i>
+          <div class="director-ejecutivo-quote">
             "Porque creemos que un mundo más justo no se espera: <b class="o">se construye</b>."
           </div>
         </div>
@@ -1193,7 +1255,7 @@
         <div class="transparencia-card reveal-up">
           <div class="transparencia-icon"><i class="fa-solid fa-landmark"></i></div>
           <h3>Naturaleza Jurídica & Registro ESAL</h3>
-          <p>Entidad sin ánimo de lucro (<b>ESAL</b>) de utilidad común, constituida bajo el marco legal colombiano (<b>Decreto 2150 de 1995</b>). Inscripción en Cámara de Comercio y RUT oficial vigentes.</p>
+          <p>Entidad sin ánimo de lucro (<b>ESAL</b>) de utilidad común, constituida bajo el marco legal colombiano (<b>Decreto 2150 de 1995</b>). Inscripción en Cámara de Comercio y <b class="o">RUT oficial vigentes</b>.</p>
         </div>
 
         <div class="transparencia-card reveal-up">
@@ -1211,28 +1273,28 @@
         <div class="transparencia-card reveal-up">
           <div class="transparencia-icon"><i class="fa-solid fa-coins"></i></div>
           <h3>Destinación Social de Recursos</h3>
-          <p>El 100% de los excedentes y recursos ejecutados se reinvierten exclusivamente en la consecución del objeto social y el bienestar de las comunidades atendidas.</p>
+          <p>El <b>100% de los excedentes</b> y recursos ejecutados se reinvierten exclusivamente en la consecución del objeto social y el <b class="o">bienestar de las comunidades atendidas</b>.</p>
         </div>
 
         <div class="transparencia-card reveal-up">
           <div class="transparencia-icon"><i class="fa-solid fa-file-shield"></i></div>
           <h3>Gobierno Institucional & Habeas Data</h3>
-          <p>Adopción de estándares de buen gobierno corporativo, rendición pública de cuentas y cumplimiento estricto de la <b>Ley 1581 de 2012</b> de protección de datos.</p>
+          <p>Adopción de estándares de <b>buen gobierno corporativo</b>, rendición pública de cuentas y cumplimiento estricto de la <b>Ley 1581 de 2012</b> de <b class="o">protección de datos</b>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 11. CONTACTO / CTA FINAL (#contacto - Fondo #ffffff) ===== -->
+  <!-- ===== 12. TRABAJEMOS JUNTOS (#contacto - Fondo #ffffff) ===== -->
   <section id="contacto" class="contacto-section">
     <div class="section-container contacto-container">
       <div class="contacto-grid">
         <div class="contacto-cta-card reveal-left">
           <div>
             <span style="display:inline-block; padding: 6px 14px; background: rgba(255,255,255,0.15); color: #fff; border-radius: 20px; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 14px; text-transform: uppercase;">
-              <i class="fa-solid fa-handshake"></i> TRABAJEMOS JUNTOS
+              <i class="fa-solid fa-handshake"></i> CONSTRUYAMOS UNA SOLUCIÓN
             </span>
-            <h2>CONSTRUYAMOS UNA SOLUCIÓN</h2>
+            <h2>TRABAJEMOS JUNTOS</h2>
             <p style="margin-top: 14px;">
               ¿Tienes un proyecto, una necesidad institucional o una iniciativa de impacto social? La Fundación Justicia Global puede acompañarte en su formulación, articulación y desarrollo.
             </p>
@@ -1323,22 +1385,22 @@
         <div class="politicas-grid">
           <div class="politica-block reveal-left">
             <h4>1. Recolección y Captura de Datos Personales</h4>
-            <p>La <b>Fundación Justicia Global</b> recolecta y trata datos de carácter personal (nombre completo, correo electrónico, teléfono/WhatsApp, dirección IP, información de navegación y detalles de solicitudes) suministrados voluntariamente por los usuarios a través de nuestros formularios digitales y canales institucionales.</p>
+            <p>La <b>Fundación Justicia Global</b> recolecta y trata datos de carácter personal (nombre completo, correo electrónico, teléfono/WhatsApp, dirección IP, información de navegación y detalles de solicitudes) suministrados voluntariamente por los usuarios a través de nuestros <b class="o">formularios digitales y canales institucionales</b>.</p>
           </div>
 
           <div class="politica-block orange reveal-right">
             <h4>2. Finalidad y Uso de la Información</h4>
-            <p>Los datos recopilados son utilizados exclusivamente para la gestión de consultorías técnicas, formulación de proyectos <b>MGA</b>, alianzas de <b>Quinta Hélice</b>, investigación aplicada, respuesta a PQRS y envío de boletines informativos solicitados.</p>
+            <p>Los datos recopilados son utilizados exclusivamente para la gestión de consultorías técnicas, formulación de proyectos <b>MGA</b>, alianzas de <b>Quinta Hélice</b>, investigación aplicada, respuesta a PQRS y <b class="o">envío de boletines informativos solicitados</b>.</p>
           </div>
 
           <div class="politica-block orange reveal-left">
             <h4>3. Derechos del Titular (Habeas Data)</h4>
-            <p>Conforme a la Ley 1581 de 2012, usted tiene derecho a conocer, actualizar, rectificar, consultar y solicitar la supresión de sus datos personales mediante comunicación a <b class="o">contacto@fundacionjusticiaglobal.org</b>.</p>
+            <p>Conforme a la <b>Ley 1581 de 2012</b>, usted tiene derecho a conocer, actualizar, rectificar, consultar y solicitar la supresión de sus datos personales mediante comunicación a <b class="o">contacto@fundacionjusticiaglobal.org</b>.</p>
           </div>
 
           <div class="politica-block reveal-right">
             <h4>4. Seguridad, Almacenamiento y Confidencialidad</h4>
-            <p>Implementamos rigurosos estándares técnicos, administrativos y de confidencialidad para proteger sus datos personales contra acceso no autorizado, pérdida, alteración o uso indebido.</p>
+            <p>Implementamos rigurosos estándares <b>técnicos, administrativos y de confidencialidad</b> para proteger sus datos personales contra acceso no autorizado, pérdida, alteración o <b class="o">uso indebido</b>.</p>
           </div>
         </div>
       </div>
@@ -1375,17 +1437,14 @@
 
         <div class="footer-nav-links">
           <a href="#top" class="nav-link">Inicio</a>
-          <a href="#nosotros" class="nav-link">Quiénes Somos</a>
-          <a href="#pilares" class="nav-link">Pilares</a>
-          <a href="#con-quienes-trabajamos" class="nav-link">Sectores</a>
-          <a href="#modelo-trabajo" class="nav-link">Modelo</a>
-          <a href="#proyectos-impacto" class="nav-link">Proyectos</a>
+          <a href="#nosotros" class="nav-link">Nosotros</a>
+          <a href="#portafolio" class="nav-link">Servicios</a>
+          <a href="#programas" class="nav-link">Programas</a>
+          <a href="#proyectos-impacto" class="nav-link">Impacto</a>
           <a href="#aliados" class="nav-link">Aliados</a>
-          <a href="#investigacion-conocimiento" class="nav-link">Investigación</a>
-          <a href="#presidencia" class="nav-link">Presidencia</a>
           <a href="#transparencia" class="nav-link">Transparencia</a>
-          <a href="#contacto" class="nav-link">Contacto</a>
-          <a href="#politicas" class="nav-link">Políticas</a>
+          <a href="#contacto" class="nav-link">Trabajemos Juntos</a>
+          <a href="#politicas" class="nav-link">Políticas de Privacidad</a>
         </div>
 
         <div class="footer-bottom">
